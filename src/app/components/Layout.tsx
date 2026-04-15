@@ -80,7 +80,7 @@ export function Layout() {
               </p>
             </div>
             <div>
-              <h4 className="font-display text-lg mb-4">Resources</h4>
+              <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Resources</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <Link to="/morning" className="hover:text-foreground transition-colors">
@@ -100,7 +100,7 @@ export function Layout() {
               </ul>
             </div>
             <div>
-              <h4 className="font-display text-lg mb-4">Community</h4>
+              <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Community</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors">
