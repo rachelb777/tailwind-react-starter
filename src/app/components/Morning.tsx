@@ -151,7 +151,7 @@ export function Morning() {
             className="text-center mb-12"
           >
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">Morning Routine Tips</h2>
-            <p className="font-body text-lg text-foreground/60">Make the most of your morning practices</p>
+            <p className="font-body text-sm md:text-base lg:text-lg">Make the most of your morning practices</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
