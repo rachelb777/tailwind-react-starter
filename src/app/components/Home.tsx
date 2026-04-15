@@ -76,8 +76,10 @@ export function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-5xl md:text-6xl text-foreground mb-4">Your Wellness Journey</h2>
-            <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+              Your Wellness Journey
+            </h2>
+            <p className="font-body text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto">
               Explore practices designed to harmonize your daily routine
             </p>
           </motion.div>
@@ -149,8 +151,10 @@ export function Home() {
             className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-secondary p-16 text-center"
           >
             <div className="relative z-10">
-              <h2 className="font-display text-5xl md:text-6xl text-white mb-6">Regain Your Natural Balance</h2>
-              <p className="font-body text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6">
+                Regain Your Natural Balance
+              </h2>
+              <p className="font-body text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands discovering the power of daily wellness routines
               </p>
               <Link

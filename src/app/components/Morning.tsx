@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Bell, Play, Sun, Wind } from "lucide-react"; 
+import { Bell, Play, Sun, Wind } from "lucide-react";
 
 export function Morning() {
   const practices = [
@@ -7,7 +7,8 @@ export function Morning() {
       id: "sun-gazing",
       title: "Sun Gazing",
       icon: Sun,
-      description: "Connect with the sun's energy during the first hour after sunrise. This ancient practice helps regulate your circadian rhythm, boost vitamin D production, and enhance mental clarity.",
+      description:
+        "Connect with the sun's energy during the first hour after sunrise. This ancient practice helps regulate your circadian rhythm, boost vitamin D production, and enhance mental clarity.",
       benefits: ["Regulates sleep-wake cycle", "Improves mood and energy", "Supports eye health", "Enhances focus"],
       duration: "5-15 minutes",
       bestTime: "Within 1 hour of sunrise",
@@ -17,7 +18,8 @@ export function Morning() {
       id: "stretching",
       title: "Morning Stretching",
       icon: Wind,
-      description: "Gentle stretching awakens your body, increases blood flow, and prepares you for the day ahead. Focus on slow, mindful movements that honor your body's natural rhythms.",
+      description:
+        "Gentle stretching awakens your body, increases blood flow, and prepares you for the day ahead. Focus on slow, mindful movements that honor your body's natural rhythms.",
       benefits: ["Increases flexibility", "Reduces muscle tension", "Improves circulation", "Enhances body awareness"],
       duration: "10-20 minutes",
       bestTime: "After sun gazing",
@@ -42,11 +44,9 @@ export function Morning() {
             className="text-center mb-16"
           >
             <div className="inline-block mb-6 px-6 py-2 bg-accent/10 rounded-full border border-accent/20">
-              <span className="text-accent font-body text-sm tracking-wide">
-                Morning Practices
-              </span>
+              <span className="text-accent font-body text-sm tracking-wide">Morning Practices</span>
             </div>
-            <h1 className="font-display text-6xl md:text-7xl text-foreground mb-6 leading-tight">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Greet the Day with <span className="text-accent italic">Intention</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
@@ -55,7 +55,6 @@ export function Morning() {
           </motion.div>
         </div>
       </section>
-
       {/* Practices Grid */}
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
@@ -82,7 +81,9 @@ export function Morning() {
                       </motion.button>
                     </div>
                     <div className="absolute top-4 left-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${practice.color} flex items-center justify-center shadow-lg`}>
+                      <div
+                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${practice.color} flex items-center justify-center shadow-lg`}
+                      >
                         <practice.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
@@ -95,18 +96,14 @@ export function Morning() {
                   <div className="p-8">
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h2 className="font-display text-4xl text-foreground mb-2">
+                        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-2">
                           {practice.title}
                         </h2>
-                        <p className="text-sm text-foreground/50 font-body">
-                          Best time: {practice.bestTime}
-                        </p>
+                        <p className="text-sm text-foreground/50 font-body">Best time: {practice.bestTime}</p>
                       </div>
                     </div>
 
-                    <p className="font-body text-foreground/70 leading-relaxed mb-6">
-                      {practice.description}
-                    </p>
+                    <p className="font-body text-foreground/70 leading-relaxed mb-6">{practice.description}</p>
 
                     {/* Benefits */}
                     <div className="mb-6">
@@ -121,37 +118,28 @@ export function Morning() {
                       </ul>
                     </div>
 
-                  
-
-       {/* Go to Community Section Button */}
+                    {/* Go to Community Section Button */}
 
                     <motion.button
-
                       whileHover={{ scale: 1.02 }}
-
                       whileTap={{ scale: 0.98 }}
-                      onClick={() => window.location.href = "/profile#connect-and-bloom"}
-
+                      onClick={() => (window.location.href = "/profile#connect-and-bloom")}
                       className="w-full px-6 py-4 bg-primary text-primary-foreground rounded-2xl font-body text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-primary/20"
-
                     >
-
                       <Bell className="w-5 h-5" />
-
                       See Community Activity {practice.title}
-
                     </motion.button>
-
-                   </div> 
-                    </div>
-                </motion.div>
-                ))}
-
-            </div> {/* Closes the Grid */}
-    </div> {/* Closes the Max-Width Container */}
-</section> {/* Closes the Practices Grid Section */}
-
-{/* Quick Tips Section */}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>{" "}
+          {/* Closes the Grid */}
+        </div>{" "}
+        {/* Closes the Max-Width Container */}
+      </section>{" "}
+      {/* Closes the Practices Grid Section */}
+      {/* Quick Tips Section */}
       {/* Quick Tips Section */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
@@ -162,12 +150,8 @@ export function Morning() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="font-display text-4xl text-foreground mb-4">
-              Morning Routine Tips
-            </h2>
-            <p className="font-body text-lg text-foreground/60">
-              Make the most of your morning practices
-            </p>
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">Morning Routine Tips</h2>
+            <p className="font-body text-lg text-foreground/60">Make the most of your morning practices</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -193,12 +177,8 @@ export function Morning() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="p-6 bg-card rounded-2xl border border-border"
               >
-                <h3 className="font-display text-2xl text-foreground mb-3">
-                  {tip.title}
-                </h3>
-                <p className="font-body text-foreground/60 leading-relaxed">
-                  {tip.description}
-                </p>
+                <h3 className="font-display text-2xl text-foreground mb-3">{tip.title}</h3>
+                <p className="font-body text-foreground/60 leading-relaxed">{tip.description}</p>
               </motion.div>
             ))}
           </div>
@@ -206,4 +186,4 @@ export function Morning() {
       </section>
     </div>
   );
- }
+}
