@@ -66,7 +66,7 @@ export function Layout() {
       {/* Footer */}
       <footer className="border-t border-border bg-muted/30 mt-32">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
