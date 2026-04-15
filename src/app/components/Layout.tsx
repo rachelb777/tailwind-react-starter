@@ -79,8 +79,8 @@ export function Layout() {
                 sustainable habits, one rhythm at a time.
               </p>
             </div>
-            <div>
-              <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Resources</h4>
+            <div className="space-y-6">
+              <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Resources</h4>
               <ul className="space-y-2  text-sm md:text-base text-muted-foreground">
                 <li>
                   <Link to="/morning" className="hover:text-foreground transition-colors duration-200">
@@ -99,7 +99,7 @@ export function Layout() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="space-y-6">
               <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Community</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
