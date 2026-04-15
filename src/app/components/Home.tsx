@@ -7,7 +7,7 @@ export function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[85vh] flex items-start justify-start  overflow-hidden">
+      <section className="relative w-full h-[85vh] flex items-start justify-start  overflow-hidden">
         {/* Full-width Background Image */}
         <div className="absolute inset-0">
           <img
@@ -17,7 +17,7 @@ export function Home() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-40">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-24">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap gap-4 justify-start mt-16 md:mt-40 "
+              className="flex flex-wrap gap-4 justify-start mt-16 md:mt-20 "
             >
               <Link
                 to="/morning"
