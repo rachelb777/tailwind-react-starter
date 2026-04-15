@@ -81,19 +81,19 @@ export function Layout() {
             </div>
             <div>
               <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Resources</h4>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2  text-sm md:text-base text-muted-foreground">
                 <li>
-                  <Link to="/morning" className="hover:text-foreground transition-colors">
+                  <Link to="/morning" className="hover:text-foreground transition-colors duration-200">
                     Morning Practices
                   </Link>
                 </li>
                 <li>
-                  <Link to="/movement" className="hover:text-foreground transition-colors">
+                  <Link to="/movement" className="hover:text-foreground transition-colors duration-200">
                     Movement Guide
                   </Link>
                 </li>
                 <li>
-                  <Link to="/profile" className="hover:text-foreground transition-colors">
+                  <Link to="/profile" className="hover:text-foreground transition-colors duration-200">
                     Your Profile
                   </Link>
                 </li>
@@ -103,24 +103,24 @@ export function Layout() {
               <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Community</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a href="#" className="hover:text-foreground transition-colors duration-200">
                     Join Live Sessions
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a href="#" className="hover:text-foreground transition-colors duration-200">
                     Connect & Bloom
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a href="#" className="hover:text-foreground transition-colors duration-200">
                     Support
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-sm">
+          <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-xs md:text-sm text-muted-foreground ">
             © 2026 Solara. All rights reserved.
           </div>
         </div>
