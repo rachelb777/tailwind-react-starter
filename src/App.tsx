@@ -13,9 +13,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          {/* ADD YOUR CUSTOM ROUTES HERE */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
