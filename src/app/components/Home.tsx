@@ -79,7 +79,7 @@ export function Home() {
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
               Your Wellness Journey
             </h2>
-            <p className="font-body text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 max-w-2xl mx-auto">
               Explore practices designed to harmonize your daily routine
             </p>
           </motion.div>
@@ -154,7 +154,7 @@ export function Home() {
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6">
                 Regain Your Natural Balance
               </h2>
-              <p className="font-body text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              <p className="font-body text-sm md:text-base lg:text-lg text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands discovering the power of daily wellness routines
               </p>
               <Link
