@@ -17,7 +17,7 @@ export function Home() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-40">
+        <div className="relative z-5 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-40">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
