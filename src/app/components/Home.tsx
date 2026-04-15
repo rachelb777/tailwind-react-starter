@@ -37,7 +37,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-body text-xl md:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-12 leading-relaxed max-w-2xl text-left"
+              className="font-body text-xl md:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-0 leading-relaxed max-w-2xl text-left"
             >
               A free community resource for holistic wellness
             </motion.p>
@@ -46,7 +46,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap gap-4 justify-start"
+              className="flex flex-wrap gap-4 justify-start mt-12 md:mt-16 "
             >
               <Link
                 to="/morning"
@@ -76,9 +76,7 @@ export function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-5xl md:text-6xl text-foreground mb-4">
-              Your Wellness Journey
-            </h2>
+            <h2 className="font-display text-5xl md:text-6xl text-foreground mb-4">Your Wellness Journey</h2>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto">
               Explore practices designed to harmonize your daily routine
             </p>
@@ -126,15 +124,13 @@ export function Home() {
                   to={feature.link}
                   className="block group h-full p-8 bg-card rounded-3xl border border-border hover:border-primary/30 transition-all hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1"
                 >
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                  >
                     <feature.icon className="w-8 h-8 text-foreground" />
                   </div>
-                  <h3 className="font-display text-2xl text-foreground mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="font-body text-foreground/60 leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <h3 className="font-display text-2xl text-foreground mb-3">{feature.title}</h3>
+                  <p className="font-body text-foreground/60 leading-relaxed">{feature.description}</p>
                 </Link>
               </motion.div>
             ))}
@@ -153,9 +149,7 @@ export function Home() {
             className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-secondary p-16 text-center"
           >
             <div className="relative z-10">
-              <h2 className="font-display text-5xl md:text-6xl text-white mb-6">
-                Begin Your Natural Rhythm
-              </h2>
+              <h2 className="font-display text-5xl md:text-6xl text-white mb-6">Begin Your Natural Rhythm</h2>
               <p className="font-body text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands discovering the power of daily wellness routines
               </p>
