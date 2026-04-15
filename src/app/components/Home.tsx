@@ -19,7 +19,7 @@ export function Home() {
 
         <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-40">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl text-left"
