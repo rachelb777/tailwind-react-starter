@@ -46,7 +46,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap gap-4 justify-start mt-24 md:mt-28 "
+              className="flex flex-wrap gap-4 justify-start mt-32 md:mt-36 "
             >
               <Link
                 to="/morning"
