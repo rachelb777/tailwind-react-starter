@@ -179,7 +179,7 @@ export function Movement() {
                 className="p-6 bg-card rounded-2xl border border-border"
               >
                 <h3 className="font-display text-2xl text-foreground mb-3">{tip.title}</h3>
-                <p className="font-body text-foreground/60 leading-relaxed">{tip.description}</p>
+                <p className="font-body text-foreground/70 leading-relaxed">{tip.description}</p>
               </motion.div>
             ))}
           </div>
