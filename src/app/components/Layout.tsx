@@ -74,7 +74,7 @@ export function Layout() {
                 </div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </div>
-              <p className="text-muted-foreground leading-relaxed max-w-md">
+              <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-md">
                 A holistic wellness program helping you maintain health through natural daily routines. Build
                 sustainable habits, one rhythm at a time.
               </p>
