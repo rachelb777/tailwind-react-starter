@@ -37,7 +37,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-body text-lg md:text-xl lg:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-32 md:mb-48 leading-relaxed max-w-2xl text-left"
+              className="font-body text-lg md:text-xl lg:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-16 md:mb-24 leading-relaxed max-w-2xl text-left"
             >
               A free community resource for holistic wellness
             </motion.p>
