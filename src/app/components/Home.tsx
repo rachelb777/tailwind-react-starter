@@ -7,7 +7,7 @@ export function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative w-full h-[85vh] flex items-start justify-start  overflow-hidden">
+      <section className="relative w-full min-h-[70vh] md:min-h-[85vh] flex items-start justify-start  overflow-hidden">
         {/* Full-width Background Image */}
         <div className="absolute inset-0">
           <img
@@ -17,7 +17,7 @@ export function Home() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-24">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-16 md:pt-24 lg:pt-32">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-display text-6xl md:text-7xl lg:text-8xl text-slate-900 mb-6 leading-[1.1] tracking-tight text-left"
+              className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-slate-900 mb-6 leading-[1.1] tracking-tight text-left"
             >
               Reclaim Your <br /> Natural Rhythms
             </motion.h1>
@@ -37,7 +37,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-body text-xl md:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-0 leading-relaxed max-w-2xl text-left"
+              className="font-body text-lg md:text-xl lg:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-0 leading-relaxed max-w-2xl text-left"
             >
               A free community resource for holistic wellness
             </motion.p>
