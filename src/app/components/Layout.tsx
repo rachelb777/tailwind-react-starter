@@ -23,9 +23,7 @@ export function Layout() {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <span className="text-white font-display text-xl">N</span>
               </div>
-              <span className="font-display text-2xl text-foreground tracking-tight">
-                NaturalRhythms
-              </span>
+              <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
             </Link>
 
             {/* Navigation Links */}
@@ -74,34 +72,56 @@ export function Layout() {
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                   <span className="text-white font-display text-xl">N</span>
                 </div>
-                <span className="font-display text-2xl text-foreground tracking-tight">
-                  NaturalRhythms
-                </span>
+                <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-md">
-                A holistic wellness program helping you maintain health through natural daily routines.
-                Build sustainable habits, one rhythm at a time.
+                A holistic wellness program helping you maintain health through natural daily routines. Build
+                sustainable habits, one rhythm at a time.
               </p>
             </div>
             <div>
               <h4 className="font-display text-lg mb-4">Resources</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li><Link to="/morning" className="hover:text-foreground transition-colors">Morning Practices</Link></li>
-                <li><Link to="/movement" className="hover:text-foreground transition-colors">Movement Guide</Link></li>
-                <li><Link to="/profile" className="hover:text-foreground transition-colors">Your Profile</Link></li>
+                <li>
+                  <Link to="/morning" className="hover:text-foreground transition-colors">
+                    Morning Practices
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/movement" className="hover:text-foreground transition-colors">
+                    Movement Guide
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/profile" className="hover:text-foreground transition-colors">
+                    Your Profile
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-display text-lg mb-4">Community</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">Join Live Sessions</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Connect & Bloom</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Support</a></li>
+                <li>
+                  <a href="#" className="hover:text-foreground transition-colors">
+                    Join Live Sessions
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-foreground transition-colors">
+                    Connect & Bloom
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-foreground transition-colors">
+                    Support
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-sm">
-            © 2026 NaturalRhythms. All rights reserved.
+            © 2026 Solara. All rights reserved.
           </div>
         </div>
       </footer>

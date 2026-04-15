@@ -2,47 +2,47 @@
 
 :root {
   --font-size: 16px;
-  --font-display: 'Cormorant Garamond', serif;
-  --font-body: 'Karla', sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Karla", sans-serif;
 
-  /* NaturalRhythms Wellness Palette */
-  --background: #FDFCFA;
-  --foreground: #2D3319;
-  --card: #FFFFFF;
-  --card-foreground: #2D3319;
-  --popover: #FFFFFF;
-  --popover-foreground: #2D3319;
-  --primary: #8FA585;
-  --primary-foreground: #FDFCFA;
-  --secondary: #A8C5D9;
-  --secondary-foreground: #2D3319;
-  --muted: #E8E5DF;
-  --muted-foreground: #6B7158;
-  --accent: #D4A574;
-  --accent-foreground: #2D3319;
-  --destructive: #C85A54;
-  --destructive-foreground: #FFFFFF;
+  /* Solara Wellness Palette */
+  --background: #fdfcfa;
+  --foreground: #2d3319;
+  --card: #ffffff;
+  --card-foreground: #2d3319;
+  --popover: #ffffff;
+  --popover-foreground: #2d3319;
+  --primary: #8fa585;
+  --primary-foreground: #fdfcfa;
+  --secondary: #a8c5d9;
+  --secondary-foreground: #2d3319;
+  --muted: #e8e5df;
+  --muted-foreground: #6b7158;
+  --accent: #d4a574;
+  --accent-foreground: #2d3319;
+  --destructive: #c85a54;
+  --destructive-foreground: #ffffff;
   --border: rgba(143, 165, 133, 0.2);
   --input: transparent;
-  --input-background: #F5F3ED;
-  --switch-background: #C4C0B3;
+  --input-background: #f5f3ed;
+  --switch-background: #c4c0b3;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #8FA585;
-  --chart-1: #D4A574;
-  --chart-2: #A8C5D9;
-  --chart-3: #8FA585;
-  --chart-4: #C4915C;
-  --chart-5: #7BA7C1;
+  --ring: #8fa585;
+  --chart-1: #d4a574;
+  --chart-2: #a8c5d9;
+  --chart-3: #8fa585;
+  --chart-4: #c4915c;
+  --chart-5: #7ba7c1;
   --radius: 1rem;
-  --sidebar: #F5F3ED;
-  --sidebar-foreground: #2D3319;
-  --sidebar-primary: #8FA585;
-  --sidebar-primary-foreground: #FDFCFA;
-  --sidebar-accent: #E8E5DF;
-  --sidebar-accent-foreground: #2D3319;
+  --sidebar: #f5f3ed;
+  --sidebar-foreground: #2d3319;
+  --sidebar-primary: #8fa585;
+  --sidebar-primary-foreground: #fdfcfa;
+  --sidebar-accent: #e8e5df;
+  --sidebar-accent-foreground: #2d3319;
   --sidebar-border: rgba(143, 165, 133, 0.2);
-  --sidebar-ring: #8FA585;
+  --sidebar-ring: #8fa585;
 }
 
 .dark {
@@ -133,7 +133,12 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
   }
 
