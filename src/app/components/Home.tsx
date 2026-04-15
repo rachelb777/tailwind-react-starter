@@ -28,7 +28,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-display text-3xl md:text-5xl lg:text-7xl xl:text-7xl text-slate-900 mb-6 leading-[1.1] tracking-tight text-left"
+              className="font-display text-3xl md:text-5xl lg:text-7xl xl:text-7xl text-slate-900 mb-0 leading-[1.1] tracking-tight text-left"
             >
               Reclaim Your <br /> Natural Balance
             </motion.h1>
@@ -37,7 +37,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-body text-lg md:text-xl lg:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-8 leading-relaxed max-w-2xl text-left"
+              className="font-body text-lg md:text-xl lg:text-2xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-0 leading-relaxed max-w-2xl text-left"
             >
               A free community resource for holistic wellness
             </motion.p>
