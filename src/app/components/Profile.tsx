@@ -205,7 +205,7 @@ export function Profile() {
                   <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">Connect & Bloom</h2>
                 </div>
 
-                <p className="font-body text-foreground/60 mb-6 leading-relaxed">
+                <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 mb-6 leading-relaxed">
                   See what your community is practicing right now and draw inspiration from their dedication
                 </p>
 
