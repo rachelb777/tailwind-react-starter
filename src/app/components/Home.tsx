@@ -7,7 +7,7 @@ export function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative w-full h-[85vh] flex items-start justify-start  overflow-hidden">
+      <section className="relative w-full min-h-[85vh] flex items-start justify-start  overflow-hidden">
         {/* Full-width Background Image */}
         <div className="absolute inset-0">
           <img
