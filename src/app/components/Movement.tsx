@@ -152,7 +152,7 @@ export function Movement() {
             className="text-center mb-12"
           >
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">Movement Integration</h2>
-            <p className="font-body text-lg text-foreground/60">Enhance your practice with these suggestions</p>
+            <p className="font-body text-sm md:text-base lg:text-lg">Enhance your practice with these suggestions</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
