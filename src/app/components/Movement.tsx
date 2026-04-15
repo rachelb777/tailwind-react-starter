@@ -7,8 +7,14 @@ export function Movement() {
       id: "rebounding",
       title: "Rebounding",
       icon: Activity,
-      description: "Low-impact exercise using a mini trampoline that stimulates lymphatic drainage, improves circulation, and provides cardiovascular benefits without stressing your joints.",
-      benefits: ["Boosts lymphatic system", "Improves balance and coordination", "Low-impact cardio", "Increases bone density"],
+      description:
+        "Low-impact exercise using a mini trampoline that stimulates lymphatic drainage, improves circulation, and provides cardiovascular benefits without stressing your joints.",
+      benefits: [
+        "Boosts lymphatic system",
+        "Improves balance and coordination",
+        "Low-impact cardio",
+        "Increases bone density",
+      ],
       duration: "15-30 minutes",
       bestTime: "Mid-morning or afternoon",
       color: "from-secondary to-secondary/70",
@@ -17,7 +23,8 @@ export function Movement() {
       id: "earthing",
       title: "Earthing",
       icon: Footprints,
-      description: "Also known as grounding, this practice involves direct skin contact with the earth's surface to absorb beneficial electrons and reconnect with nature's healing energy.",
+      description:
+        "Also known as grounding, this practice involves direct skin contact with the earth's surface to absorb beneficial electrons and reconnect with nature's healing energy.",
       benefits: ["Reduces inflammation", "Improves sleep quality", "Decreases stress", "Balances body's energy"],
       duration: "20-40 minutes",
       bestTime: "Anytime outdoors",
@@ -42,11 +49,9 @@ export function Movement() {
             className="text-center mb-16"
           >
             <div className="inline-block mb-6 px-6 py-2 bg-secondary/10 rounded-full border border-secondary/20">
-              <span className="text-secondary font-body text-sm tracking-wide">
-                Movement Practices
-              </span>
+              <span className="text-secondary font-body text-sm tracking-wide">Movement Practices</span>
             </div>
-            <h1 className="font-display text-6xl md:text-7xl text-foreground mb-6 leading-tight">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Move with <span className="text-secondary italic">Purpose</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
@@ -82,7 +87,9 @@ export function Movement() {
                       </motion.button>
                     </div>
                     <div className="absolute top-4 left-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${practice.color} flex items-center justify-center shadow-lg`}>
+                      <div
+                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${practice.color} flex items-center justify-center shadow-lg`}
+                      >
                         <practice.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
@@ -95,18 +102,14 @@ export function Movement() {
                   <div className="p-8">
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h2 className="font-display text-4xl text-foreground mb-2">
+                        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-2">
                           {practice.title}
                         </h2>
-                        <p className="text-sm text-foreground/50 font-body">
-                          Best time: {practice.bestTime}
-                        </p>
+                        <p className="text-sm text-foreground/50 font-body">Best time: {practice.bestTime}</p>
                       </div>
                     </div>
 
-                    <p className="font-body text-foreground/70 leading-relaxed mb-6">
-                      {practice.description}
-                    </p>
+                    <p className="font-body text-foreground/70 leading-relaxed mb-6">{practice.description}</p>
 
                     {/* Benefits */}
                     <div className="mb-6">
@@ -148,12 +151,8 @@ export function Movement() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="font-display text-4xl text-foreground mb-4">
-              Movement Integration
-            </h2>
-            <p className="font-body text-lg text-foreground/60">
-              Enhance your practice with these suggestions
-            </p>
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">Movement Integration</h2>
+            <p className="font-body text-lg text-foreground/60">Enhance your practice with these suggestions</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -179,12 +178,8 @@ export function Movement() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="p-6 bg-card rounded-2xl border border-border"
               >
-                <h3 className="font-display text-2xl text-foreground mb-3">
-                  {tip.title}
-                </h3>
-                <p className="font-body text-foreground/60 leading-relaxed">
-                  {tip.description}
-                </p>
+                <h3 className="font-display text-2xl text-foreground mb-3">{tip.title}</h3>
+                <p className="font-body text-foreground/60 leading-relaxed">{tip.description}</p>
               </motion.div>
             ))}
           </div>
