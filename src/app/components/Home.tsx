@@ -22,7 +22,7 @@ export function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl text-left"
+            className="max-w-4xl text-left space-y-8"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-start mt-12 md:mt-16"
+              className="flex flex-col sm:flex-row gap-4 justify-start"
             >
               <Link
                 to="/morning"
