@@ -30,7 +30,7 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-slate-900 mb-6 leading-[1.1] tracking-tight text-left"
             >
-              Reclaim Your <br /> Natural Rhythms
+              Reclaim Your <br /> Solara
             </motion.h1>
 
             <motion.p
@@ -149,7 +149,7 @@ export function Home() {
             className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-secondary p-16 text-center"
           >
             <div className="relative z-10">
-              <h2 className="font-display text-5xl md:text-6xl text-white mb-6">Begin Your Natural Rhythm</h2>
+              <h2 className="font-display text-5xl md:text-6xl text-white mb-6">Regain Your Natural Rhythm</h2>
               <p className="font-body text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands discovering the power of daily wellness routines
               </p>
