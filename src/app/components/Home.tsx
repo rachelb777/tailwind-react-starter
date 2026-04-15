@@ -30,7 +30,7 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-slate-900 mb-6 leading-[1.1] tracking-tight text-left"
             >
-              Reclaim Your <br /> Natural Rhythm
+              Reclaim Your <br /> Natural Balance
             </motion.h1>
 
             <motion.p
