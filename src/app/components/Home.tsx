@@ -154,7 +154,7 @@ export function Home() {
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6">
                 Regain Your Natural Balance
               </h2>
-              <p className="font-body text-md md:text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              <p className="font-body text-sm md:text-base lg:text-lg font-medium text-foreground/80 text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands discovering the power of daily wellness routines
               </p>
               <Link
