@@ -210,7 +210,7 @@ export function Morning() {
           </div>
         </div>
       </section>
-      <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} />
+      <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} activity={activeActivity} />
     </div>
   );
 }
