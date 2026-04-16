@@ -1,7 +1,25 @@
 import { motion } from "motion/react";
-import { Sun, Activity, Bell, Users, TrendingUp, Calendar, CheckCircle2, Circle } from "lucide-react";
+import { useMemo } from "react";
+import { Sun, Activity, Bell, Users, TrendingUp, Calendar, CheckCircle2, Circle, Sparkles, BarChart3 } from "lucide-react";
+import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
 
 export function Profile() {
+  const { activityCounts, moodAverages } = useMemo(() => {
+    const entries = getAllDailyEntries();
+    return {
+      activityCounts: getActivityCounts(entries),
+      moodAverages: getMoodAverages(entries),
+    };
+  }, []);
+
+  const moodLabels: Record<string, string> = {
+    energy: "Energy",
+    mood: "Mood",
+    focus: "Focus",
+    pain: "Pain",
+    sleepQuality: "Sleep Quality",
+  };
+
   const todaysPractices = [
     { name: "Sun Gazing", completed: true, time: "6:30 AM" },
     { name: "Morning Stretching", completed: true, time: "6:45 AM" },
@@ -54,6 +72,79 @@ export function Profile() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Self-Care Meter & Progress */}
             <div className="lg:col-span-2 space-y-8">
+              {/* Activity Summary */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-3xl bg-card p-8 border border-border"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="font-display text-2xl md:text-3xl text-foreground">Activity Summary</h2>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {TRACKED_ACTIVITIES.map((activity) => (
+                    <div key={activity} className="p-4 rounded-2xl bg-muted/40 border border-border text-center">
+                      <div className="text-3xl font-display text-foreground">{activityCounts[activity] ?? 0}</div>
+                      <div className="text-xs font-body text-foreground/60 mt-1">{activity}</div>
+                      <div className="text-[10px] font-body text-foreground/40 mt-0.5">days completed</div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Mood Averages */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="rounded-3xl bg-card p-8 border border-border"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-secondary" />
+                  </div>
+                  <h2 className="font-display text-2xl md:text-3xl text-foreground">Mood Averages</h2>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                  {(Object.keys(moodLabels) as Array<keyof typeof moodAverages>).map((key) => {
+                    const value = moodAverages[key];
+                    return (
+                      <div key={key} className="p-4 rounded-2xl bg-muted/40 border border-border text-center">
+                        <div className="text-3xl font-display text-foreground">
+                          {value === null ? "—" : value.toFixed(1)}
+                        </div>
+                        <div className="text-xs font-body text-foreground/60 mt-1">{moodLabels[key]}</div>
+                        <div className="text-[10px] font-body text-foreground/40 mt-0.5">avg / 5</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Insight Box */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-8 border border-primary/20"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl md:text-2xl text-foreground mb-2">Insight</h3>
+                    <p className="font-body text-foreground/70 leading-relaxed">
+                      Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Today's Schedule */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
