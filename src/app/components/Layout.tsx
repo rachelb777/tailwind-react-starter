@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { User } from "lucide-react";
+import { User, Sun } from "lucide-react";
 
 export function Layout() {
   const location = useLocation();
@@ -21,7 +21,7 @@ export function Layout() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-white font-display text-xl">N</span>
+                <Sun className="w-5 h-5 text-white" />
               </div>
               <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
             </Link>
@@ -70,7 +70,7 @@ export function Layout() {
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <span className="text-white font-display text-xl">N</span>
+                  <Sun className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </div>
