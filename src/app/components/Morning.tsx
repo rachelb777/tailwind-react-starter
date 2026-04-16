@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Play, Sun, Wind } from "lucide-react";
+import { Play, Sun, Wind, Check } from "lucide-react";
 import { FeelingModal } from "./FeelingModal";
+import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry";
 
 export function Morning() {
   const [feelingOpen, setFeelingOpen] = useState(false);
+  const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({
+    "Sun Gazing": isActivityCompleted("Sun Gazing"),
+    "Morning Stretching": isActivityCompleted("Morning Stretching"),
+  }));
+  const handleToggle = (title: string) => {
+    const next = toggleCompletedActivity(title);
+    setCompleted((p) => ({ ...p, [title]: next }));
+  };
   const practices = [
     {
       id: "sun-gazing",
