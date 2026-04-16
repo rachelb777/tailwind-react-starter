@@ -1,13 +1,16 @@
+export type MoodScores = {
+  energy?: number | null;
+  mood?: number | null;
+  focus?: number | null;
+  pain?: number | null;
+  sleepQuality?: number | null;
+};
+
 export type DailyEntry = {
   date: string;
   completedActivities?: string[];
-  moodScores?: {
-    energy?: number | null;
-    mood?: number | null;
-    focus?: number | null;
-    pain?: number | null;
-    sleepQuality?: number | null;
-  };
+  moodScores?: MoodScores;
+  moodByActivity?: Record<string, MoodScores>;
 };
 
 export const TRACKED_ACTIVITIES = [
