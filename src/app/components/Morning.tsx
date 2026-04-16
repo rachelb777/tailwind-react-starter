@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Bell, Play, Sun, Wind } from "lucide-react";
+import { Play, Sun, Wind } from "lucide-react";
 
 export function Morning() {
   const practices = [
