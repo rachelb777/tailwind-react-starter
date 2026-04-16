@@ -34,7 +34,7 @@ export function Layout() {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className="relative px-6 py-2.5 font-body text-[15px] text-foreground/70 hover:text-foreground transition-colors"
+                    className="relative px-4 py-2 font-body text-[15px] tracking-wide text-foreground/60 hover:text-foreground transition-colors"
                   >
                     {item.label}
                     {isActive && (
