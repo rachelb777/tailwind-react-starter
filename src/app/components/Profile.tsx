@@ -1,6 +1,17 @@
 import { motion } from "motion/react";
 import { useMemo } from "react";
-import { Sun, Activity, Bell, Users, TrendingUp, Calendar, CheckCircle2, Circle, Sparkles, BarChart3 } from "lucide-react";
+import {
+  Sun,
+  Activity,
+  Bell,
+  Users,
+  TrendingUp,
+  Calendar,
+  CheckCircle2,
+  Circle,
+  Sparkles,
+  BarChart3,
+} from "lucide-react";
 import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
 
 export function Profile() {
@@ -61,7 +72,7 @@ export function Profile() {
               Welcome Back
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl">
-              Track your wellness journey and connect with your community
+              Your daily wellness snapshot and community connection
             </p>
           </motion.div>
         </div>
@@ -139,7 +150,8 @@ export function Profile() {
                   <div>
                     <h3 className="font-display text-xl md:text-2xl text-foreground mb-2">Insight</h3>
                     <p className="font-body text-foreground/70 leading-relaxed">
-                      Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
+                      Sun Gazing shows a positive association with improved mood and energy levels based on completed
+                      days.
                     </p>
                   </div>
                 </div>
