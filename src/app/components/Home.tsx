@@ -150,22 +150,6 @@ export function Home() {
             transition={{ duration: 0.6 }}
             className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-secondary p-16 text-center"
           >
-            <div className="relative z-10">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6">
-                Regain Your Natural Balance
-              </h2>
-              <p className="font-body text-sm md:text-base lg:text-lg font-medium text-white/95 mb-8 max-w-2xl mx-auto">
-                Join thousands discovering the power of daily wellness routines
-              </p>
-              <Link
-                to="/morning"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-full font-body text-lg hover:bg-white/95 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl"
-              >
-                Start Today
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
