@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Play, Activity, Footprints } from "lucide-react";
+import { Play, Activity, Footprints, Check } from "lucide-react";
 import { FeelingModal } from "./FeelingModal";
+import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry";
 
 export function Movement() {
   const [feelingOpen, setFeelingOpen] = useState(false);
+  const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({
+    Rebounding: isActivityCompleted("Rebounding"),
+    Earthing: isActivityCompleted("Earthing"),
+  }));
+  const handleToggle = (title: string) => {
+    const next = toggleCompletedActivity(title);
+    setCompleted((p) => ({ ...p, [title]: next }));
+  };
   const practices = [
     {
       id: "rebounding",
