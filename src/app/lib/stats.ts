@@ -60,14 +60,17 @@ export function getMoodAverages(entries: DailyEntry[]) {
     counts[k] = 0;
   });
   entries.forEach((e) => {
-    const ms = e.moodScores;
-    if (!ms) return;
-    keys.forEach((k) => {
-      const v = ms[k];
-      if (typeof v === "number") {
-        sums[k] += v;
-        counts[k] += 1;
-      }
+    const sources: MoodScores[] = [];
+    if (e.moodScores) sources.push(e.moodScores);
+    if (e.moodByActivity) sources.push(...Object.values(e.moodByActivity));
+    sources.forEach((ms) => {
+      keys.forEach((k) => {
+        const v = ms[k];
+        if (typeof v === "number") {
+          sums[k] += v;
+          counts[k] += 1;
+        }
+      });
     });
   });
   const averages: Record<string, number | null> = {};
