@@ -15,7 +15,7 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 bg-background/70 backdrop-blur-xl border-b border-border/30">
+      <header className="sticky top-0 z-50 bg-background/70 backdrop-blur-xl">
         <nav className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
@@ -34,7 +34,7 @@ export function Layout() {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className="relative px-4 py-2 font-body text-[15px] tracking-wide text-foreground/60 hover:text-foreground transition-colors"
+                    className="relative px-4 py-2 font-body text-[15px] tracking-wide text-foreground/60 hover:text-foreground transition-all duration-200 ease-out"
                   >
                     {item.label}
                     {isActive && (
@@ -49,7 +49,7 @@ export function Layout() {
               })}
 
               {/* Member Login Button */}
-              <button className="ml-4 px-6 py-2.5 bg-primary/80 text-primary-foreground rounded-full shadow-sm font-body text-[15px] hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2">
+              className="ml-4 px-6 py-2.5 bg-primary/80 text-primary-foreground rounded-full font-body text-[15px] transition-all duration-200 ease-out hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
                 <User className="w-4 h-4" />
                 Member Login
               </button>
