@@ -36,9 +36,6 @@ export function Profile() {
 
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-block mb-6 px-6 py-2 bg-primary/10 rounded-full border border-primary/20">
-              <span className="text-primary font-body text-sm tracking-wide">Your Dashboard</span>
-            </div>
             <h1
               className="font-display text-3xl md:text-5xl lg:text-6xl
  text-foreground mb-4 leading-tight"
