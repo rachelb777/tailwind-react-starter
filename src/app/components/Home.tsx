@@ -67,7 +67,7 @@ export function Home() {
       </section>
 
       {/* Features Overview */}
-      <section className="py-24 bg-muted/30">
+      <section className="pt-24 pb-0 bg-muted/30">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,9 +102,9 @@ export function Home() {
               },
               {
                 icon: Calendar,
-                title: "Wellness Insights",
+                title: "Wellness Report",
                 description: "Explore your wellness report and discover which practices benefit you most.",
-                link: "/profile",
+                link: "/morning",
                 color: "from-secondary/20 to-secondary/5",
               },
               {
