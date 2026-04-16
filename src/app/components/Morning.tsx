@@ -12,7 +12,6 @@ import {
 export function Morning() {
   const [feelingOpen, setFeelingOpen] = useState(false);
   const [activePractice, setActivePractice] = useState("");
-  const [journalText, setJournalText] = useState("");
   const practices = [
     {
       id: "sun-gazing",
@@ -203,8 +202,6 @@ export function Morning() {
             <div className="absolute top-0 bottom-0 left-[72px] w-px bg-red-300/40 pointer-events-none" />
             <textarea
               autoFocus
-              value={journalText}
-              onChange={(e) => setJournalText(e.target.value)}
               placeholder="How are you feeling today..."
               className="relative w-full h-[260px] bg-transparent resize-none font-body text-sm text-foreground/80 leading-[32px] pl-[52px] pr-2 pt-0 outline-none placeholder:text-foreground/30"
             />
