@@ -13,8 +13,37 @@ export function FeelingModal({ open, onOpenChange }: { open: boolean; onOpenChan
   const setValue = (scale: (typeof SCALES)[number], val: number) =>
     setRatings((prev) => ({ ...prev, [scale]: val }));
 
+  const handleOpenChange = (o: boolean) => {
+    if (!o) {
+      // Save mood scores into today's daily entry on close
+      const today = new Date().toISOString().slice(0, 10);
+      const key = `dailyEntry:${today}`;
+      const existing = (() => {
+        try {
+          return JSON.parse(localStorage.getItem(key) || "{}");
+        } catch {
+          return {};
+        }
+      })();
+      const moodScores = {
+        energy: ratings["Energy Level"],
+        mood: ratings["Mood"],
+        focus: ratings["Focus"],
+        pain: ratings["Pain"],
+        sleepQuality: ratings["Sleep Quality"],
+      };
+      const entry = {
+        date: today,
+        completedActivities: existing.completedActivities ?? [],
+        moodScores,
+      };
+      localStorage.setItem(key, JSON.stringify(entry));
+    }
+    onOpenChange(o);
+  };
+
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">How are you feeling?</DialogTitle>
