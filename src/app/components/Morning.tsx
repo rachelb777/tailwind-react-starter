@@ -6,6 +6,11 @@ import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry"
 
 export function Morning() {
   const [feelingOpen, setFeelingOpen] = useState(false);
+  const [activeActivity, setActiveActivity] = useState<string | undefined>(undefined);
+  const openFeeling = (title: string) => {
+    setActiveActivity(title);
+    setFeelingOpen(true);
+  };
   const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({
     "Sun Gazing": isActivityCompleted("Sun Gazing"),
     "Morning Stretching": isActivityCompleted("Morning Stretching"),
