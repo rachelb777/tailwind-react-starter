@@ -191,20 +191,23 @@ export function Morning() {
       </section>
 
       <Dialog open={feelingOpen} onOpenChange={setFeelingOpen}>
-        <DialogContent className="sm:max-w-md p-0 overflow-hidden">
-          <div className="relative bg-amber-50/80 dark:bg-amber-950/20 min-h-[320px] p-6 pt-10">
-            {/* Notebook lines */}
-            <div className="absolute inset-0 pointer-events-none" style={{
-              backgroundImage: 'repeating-linear-gradient(transparent, transparent 31px, hsl(var(--border) / 0.3) 31px, hsl(var(--border) / 0.3) 32px)',
-              backgroundPosition: '0 42px',
-            }} />
-            {/* Red margin line */}
-            <div className="absolute top-0 bottom-0 left-[72px] w-px bg-red-300/40 pointer-events-none" />
-            <textarea
-              autoFocus
-              placeholder="How are you feeling today..."
-              className="relative w-full h-[260px] bg-transparent resize-none font-body text-sm text-foreground/80 leading-[32px] pl-[52px] pr-2 pt-0 outline-none placeholder:text-foreground/30"
-            />
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="font-display text-xl">How are you feeling?</DialogTitle>
+            <DialogDescription className="font-body text-foreground/60">
+              Before starting <span className="font-semibold">{activePractice}</span>, take a moment to check in with yourself.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid grid-cols-2 gap-3 pt-2">
+            {["Energized ⚡", "Calm 🌿", "Tired 😴", "Anxious 😰"].map((mood) => (
+              <button
+                key={mood}
+                onClick={() => setFeelingOpen(false)}
+                className="px-4 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+              >
+                {mood}
+              </button>
+            ))}
           </div>
         </DialogContent>
       </Dialog>
