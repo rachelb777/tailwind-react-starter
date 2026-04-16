@@ -104,9 +104,9 @@ export function Profile() {
 
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Self-Care Meter & Progress */}
-            <div className="lg:col-span-2 space-y-8">
+          <div className="space-y-8">
+            {/* Main Content */}
+            <div className="space-y-8">
               {/* Activity Summary */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
