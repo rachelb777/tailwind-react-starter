@@ -10,6 +10,8 @@ import {
 } from "./ui/dialog";
 
 export function Morning() {
+  const [feelingOpen, setFeelingOpen] = useState(false);
+  const [activePractice, setActivePractice] = useState("");
   const practices = [
     {
       id: "sun-gazing",
