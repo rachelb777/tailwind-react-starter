@@ -1,52 +1,74 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 const SCALES = ["Energy Level", "Mood", "Focus", "Pain", "Sleep Quality"] as const;
 
 type Ratings = Record<(typeof SCALES)[number], number | null>;
 
-export function FeelingModal({ open, onOpenChange }: { open: boolean; onOpenChange: (o: boolean) => void }) {
-  const [ratings, setRatings] = useState<Ratings>(() =>
-    SCALES.reduce((acc, k) => ({ ...acc, [k]: null }), {} as Ratings),
-  );
+const emptyRatings = (): Ratings =>
+  SCALES.reduce((acc, k) => ({ ...acc, [k]: null }), {} as Ratings);
+
+export function FeelingModal({
+  open,
+  onOpenChange,
+  activity,
+}: {
+  open: boolean;
+  onOpenChange: (o: boolean) => void;
+  activity?: string;
+}) {
+  const [ratings, setRatings] = useState<Ratings>(emptyRatings);
+
+  // Reset ratings whenever the modal opens for a (possibly new) activity
+  useEffect(() => {
+    if (open) setRatings(emptyRatings());
+  }, [open, activity]);
 
   const setValue = (scale: (typeof SCALES)[number], val: number) =>
     setRatings((prev) => ({ ...prev, [scale]: val }));
 
-  const handleOpenChange = (o: boolean) => {
-    if (!o) {
-      // Save mood scores into today's daily entry on close
-      const today = new Date().toISOString().slice(0, 10);
-      const key = `dailyEntry:${today}`;
-      const existing = (() => {
-        try {
-          return JSON.parse(localStorage.getItem(key) || "{}");
-        } catch {
-          return {};
-        }
-      })();
-      const moodScores = {
-        energy: ratings["Energy Level"],
-        mood: ratings["Mood"],
-        focus: ratings["Focus"],
-        pain: ratings["Pain"],
-        sleepQuality: ratings["Sleep Quality"],
-      };
-      const entry = {
-        date: today,
-        completedActivities: existing.completedActivities ?? [],
-        moodScores,
-      };
-      localStorage.setItem(key, JSON.stringify(entry));
+  const handleSave = () => {
+    if (!activity) {
+      onOpenChange(false);
+      return;
     }
-    onOpenChange(o);
+    const today = new Date().toISOString().slice(0, 10);
+    const key = `dailyEntry:${today}`;
+    const existing = (() => {
+      try {
+        return JSON.parse(localStorage.getItem(key) || "{}");
+      } catch {
+        return {};
+      }
+    })();
+    const moodScores = {
+      energy: ratings["Energy Level"],
+      mood: ratings["Mood"],
+      focus: ratings["Focus"],
+      pain: ratings["Pain"],
+      sleepQuality: ratings["Sleep Quality"],
+    };
+    const entry = {
+      date: today,
+      completedActivities: existing.completedActivities ?? [],
+      // Per-activity mood scores keyed by activity name
+      moodByActivity: {
+        ...(existing.moodByActivity ?? {}),
+        [activity]: moodScores,
+      },
+    };
+    localStorage.setItem(key, JSON.stringify(entry));
+    onOpenChange(false);
   };
 
   return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-display text-2xl">How are you feeling?</DialogTitle>
+          <DialogTitle className="font-display text-2xl">
+            How are you feeling?
+            {activity ? <span className="block text-base text-foreground/60 mt-1">{activity}</span> : null}
+          </DialogTitle>
           <DialogDescription className="font-body">
             Rate each area from low to high to check in with yourself.
           </DialogDescription>
@@ -83,6 +105,16 @@ export function FeelingModal({ open, onOpenChange }: { open: boolean; onOpenChan
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-6 flex justify-end">
+          <button
+            type="button"
+            onClick={handleSave}
+            className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-body text-sm hover:bg-primary/90 transition-colors"
+          >
+            Save
+          </button>
         </div>
       </DialogContent>
     </Dialog>
