@@ -89,7 +89,7 @@ export function Layout() {
                 </li>
                 <li>
                   <Link to="/profile" className="hover:text-foreground transition-colors duration-200">
-                    Your Profile
+                    Wellness Dashboard
                   </Link>
                 </li>
               </ul>
