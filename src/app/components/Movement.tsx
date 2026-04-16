@@ -150,7 +150,7 @@ export function Movement() {
                     Completed
                   </label>
                   <button
-                    onClick={() => setFeelingOpen(true)}
+                    onClick={() => openFeeling(practice.title)}
                     className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
                   >
                     How are you feeling?
