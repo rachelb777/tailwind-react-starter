@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { User, Sun } from "lucide-react";
+import { User } from "lucide-react";
 
 export function Layout() {
   const location = useLocation();
@@ -17,17 +17,17 @@ export function Layout() {
       {/* Navigation Header */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
         <nav className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Sun className="w-5 h-5 text-white" />
+                <span className="text-white font-display text-xl">N</span>
               </div>
               <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
             </Link>
 
             {/* Navigation Links */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-6">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
@@ -70,7 +70,7 @@ export function Layout() {
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Sun className="w-5 h-5 text-white" />
+                  <span className="text-white font-display text-xl">N</span>
                 </div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </div>
