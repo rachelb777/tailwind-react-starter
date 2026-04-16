@@ -139,23 +139,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-24">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-secondary p-16 text-center"
-          >
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }
