@@ -33,8 +33,8 @@ export function Profile() {
 
   const todaysPractices = [
     { name: "Sun Gazing", completed: true, time: "6:30 AM" },
-    { name: "Morning Stretching", completed: true, time: "6:45 AM" },
-    { name: "Rebounding", completed: false, time: "2:00 PM" },
+    { name: "Morning Stretching", completed: false, time: "6:45 AM" },
+    { name: "Rebounding", completed: true, time: "2:00 PM" },
     { name: "Earthing", completed: false, time: "5:30 PM" },
   ];
 
