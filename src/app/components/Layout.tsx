@@ -40,7 +40,7 @@ export function Layout() {
                     {isActive && (
                       <motion.div
                         layoutId="activeNav"
-                        className="absolute inset-0 bg-primary/10 rounded-full -z-10"
+                        className="absolute inset-0 bg-muted rounded-lg -z-10"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
