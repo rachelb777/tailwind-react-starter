@@ -104,9 +104,9 @@ export function Profile() {
 
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Self-Care Meter & Progress */}
-            <div className="lg:col-span-2 space-y-8">
+          <div className="space-y-8">
+            {/* Main Content */}
+            <div className="space-y-8">
               {/* Activity Summary */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -215,76 +215,76 @@ export function Profile() {
                 </div>
               </motion.div>
             </div>
-
-            {/* Right Column - Connect & Bloom */}
-            <div className="space-y-8">
-              <motion.div
-                id="connect-and-bloom"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="rounded-3xl bg-card p-8 border border-border sticky top-24 scroll-mt-28"
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
-                    <Users className="w-5 h-5 text-secondary" />
-                  </div>
-                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">Connect & Bloom</h2>
-                </div>
-
-                <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 mb-6 leading-relaxed">
-                  See what your community is practicing right now and draw inspiration from their dedication
-                </p>
-
-                <div className="space-y-4 mb-6">
-                  {communityMembers.map((member, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                      className="flex items-center gap-3 p-3 rounded-xl hover:bg-muted/50 transition-colors"
-                    >
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-sm font-body">{member.avatar}</span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-body text-foreground text-sm truncate">{member.name}</div>
-                        <div className="text-xs text-foreground/50 truncate">{member.activity}</div>
-                      </div>
-                      <div className="text-xs text-foreground/40 whitespace-nowrap">{member.time}</div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full px-6 py-3 bg-secondary text-secondary-foreground rounded-2xl font-body hover:bg-secondary/90 transition-colors flex items-center justify-center gap-2"
-                >
-                  <Users className="w-4 h-4" />
-                  Join Live Session
-                </motion.button>
-
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="text-center mb-4">
-                    <div className="text-3xl font-display text-foreground">247</div>
-                    <div className="text-sm font-body text-foreground/60">Active Members Today</div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 text-center">
-                    <div className="p-3 bg-muted/50 rounded-xl">
-                      <div className="text-xl font-display text-foreground">89</div>
-                      <div className="text-xs font-body text-foreground/60">Practicing Now</div>
-                    </div>
-                    <div className="p-3 bg-muted/50 rounded-xl">
-                      <div className="text-xl font-display text-foreground">32</div>
-                      <div className="text-xs font-body text-foreground/60">Live Sessions</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </div>
+
+          {/* Connect & Bloom - Full Width */}
+          <motion.div
+            id="connect-and-bloom"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="py-24 mt-16 scroll-mt-28"
+          >
+            <div className="flex items-center gap-3 mb-4 justify-center">
+              <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
+                <Users className="w-5 h-5 text-secondary" />
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">Connect & Bloom</h2>
+            </div>
+
+            <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 mb-12 leading-relaxed text-center max-w-2xl mx-auto">
+              See what your community is practicing right now and draw inspiration from their dedication
+            </p>
+
+            {/* Members horizontal row */}
+            <div className="flex flex-wrap items-start justify-between gap-x-8 gap-y-6 mb-16">
+              {communityMembers.map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  className="flex items-center gap-3 flex-1 min-w-[200px]"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-body">{member.avatar}</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-body text-foreground text-sm truncate">{member.name}</div>
+                    <div className="text-xs text-foreground/50 truncate">{member.activity}</div>
+                  </div>
+                  <div className="text-xs text-foreground/40 whitespace-nowrap">{member.time}</div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Open stats */}
+            <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8 mb-12">
+              <div className="text-center flex-1 min-w-[120px]">
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>247</div>
+                <div className="text-sm font-body text-foreground/60 mt-3">Active Members Today</div>
+              </div>
+              <div className="text-center flex-1 min-w-[120px]">
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>89</div>
+                <div className="text-sm font-body text-foreground/60 mt-3">Practicing Now</div>
+              </div>
+              <div className="text-center flex-1 min-w-[120px]">
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>32</div>
+                <div className="text-sm font-body text-foreground/60 mt-3">Live Sessions</div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-3 bg-secondary text-secondary-foreground rounded-2xl font-body hover:bg-secondary/90 transition-colors flex items-center justify-center gap-2"
+              >
+                <Users className="w-4 h-4" />
+                Join Live Session
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
