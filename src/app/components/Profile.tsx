@@ -153,6 +153,10 @@ export function Profile() {
                       Sun Gazing shows a positive association with improved mood and energy levels based on completed
                       days.
                     </p>
+                    <p className="font-body text-foreground/70 leading-relaxed mt-3">
+                      Rebounding shows a positive association with increased focus and reduced pain levels based on
+                      recent activity.
+                    </p>
                   </div>
                 </div>
               </motion.div>
