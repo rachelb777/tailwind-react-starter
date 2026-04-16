@@ -112,20 +112,22 @@ export function Profile() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="rounded-3xl bg-card p-8 border border-border"
+                className="py-4"
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-primary" />
-                  </div>
-                  <h2 className="font-display text-2xl md:text-3xl text-foreground">Activity Summary</h2>
+                <div className="flex items-center gap-2 mb-8">
+                  <BarChart3 className="w-4 h-4 text-primary" />
+                  <h2 className="font-body text-sm uppercase tracking-wider text-foreground/60 font-normal">
+                    Activity Summary
+                  </h2>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
                   {TRACKED_ACTIVITIES.map((activity) => (
-                    <div key={activity} className="p-4 rounded-2xl bg-muted/40 border border-border text-center">
-                      <div className="text-3xl font-display text-foreground">{activityCounts[activity] ?? 0}</div>
-                      <div className="text-xs font-body text-foreground/60 mt-1">{activity}</div>
-                      <div className="text-[10px] font-body text-foreground/40 mt-0.5">days completed</div>
+                    <div key={activity} className="text-center flex-1 min-w-[120px]">
+                      <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                        {activityCounts[activity] ?? 0}
+                      </div>
+                      <div className="text-sm font-body text-foreground/60 mt-3">{activity}</div>
+                      <div className="text-xs font-body text-foreground/40 mt-1">days completed</div>
                     </div>
                   ))}
                 </div>
