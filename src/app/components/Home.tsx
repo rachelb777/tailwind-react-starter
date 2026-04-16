@@ -102,8 +102,8 @@ export function Home() {
               },
               {
                 icon: Calendar,
-                title: "Set Reminders",
-                description: "Build consistency with personalized reminders for each practice throughout your day",
+                title: "Wellness Insights",
+                description: "Explore your wellness report and discover which practices benefit you most.",
                 link: "/morning",
                 color: "from-secondary/20 to-secondary/5",
               },
