@@ -127,7 +127,7 @@ export function Morning() {
                       className="w-full px-6 py-4 bg-primary text-primary-foreground rounded-2xl font-body text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-primary/20"
                     >
                       <Bell className="w-5 h-5" />
-                      See Community Activity {practice.title}
+                      Get inspired— visit Community {practice.title}
                     </motion.button>
                   </div>
                 </div>
