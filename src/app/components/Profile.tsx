@@ -1,7 +1,25 @@
 import { motion } from "motion/react";
-import { Sun, Activity, Bell, Users, TrendingUp, Calendar, CheckCircle2, Circle } from "lucide-react";
+import { useMemo } from "react";
+import { Sun, Activity, Bell, Users, TrendingUp, Calendar, CheckCircle2, Circle, Sparkles, BarChart3 } from "lucide-react";
+import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
 
 export function Profile() {
+  const { activityCounts, moodAverages } = useMemo(() => {
+    const entries = getAllDailyEntries();
+    return {
+      activityCounts: getActivityCounts(entries),
+      moodAverages: getMoodAverages(entries),
+    };
+  }, []);
+
+  const moodLabels: Record<string, string> = {
+    energy: "Energy",
+    mood: "Mood",
+    focus: "Focus",
+    pain: "Pain",
+    sleepQuality: "Sleep Quality",
+  };
+
   const todaysPractices = [
     { name: "Sun Gazing", completed: true, time: "6:30 AM" },
     { name: "Morning Stretching", completed: true, time: "6:45 AM" },
