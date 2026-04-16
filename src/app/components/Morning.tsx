@@ -189,6 +189,28 @@ export function Morning() {
           </div>
         </div>
       </section>
+
+      <Dialog open={feelingOpen} onOpenChange={setFeelingOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="font-display text-xl">How are you feeling?</DialogTitle>
+            <DialogDescription className="font-body text-foreground/60">
+              Before starting <span className="font-semibold">{activePractice}</span>, take a moment to check in with yourself.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid grid-cols-2 gap-3 pt-2">
+            {["Energized ⚡", "Calm 🌿", "Tired 😴", "Anxious 😰"].map((mood) => (
+              <button
+                key={mood}
+                onClick={() => setFeelingOpen(false)}
+                className="px-4 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+              >
+                {mood}
+              </button>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
