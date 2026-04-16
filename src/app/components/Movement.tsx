@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { motion } from "motion/react";
-import { Bell, Play, Activity, Footprints } from "lucide-react";
+import { Play, Activity, Footprints } from "lucide-react";
+import { FeelingModal } from "./FeelingModal";
 
 export function Movement() {
+  const [feelingOpen, setFeelingOpen] = useState(false);
   const practices = [
     {
       id: "rebounding",
@@ -58,85 +61,83 @@ export function Movement() {
         </div>
       </section>
 
-      {/* Practices Grid */}
+      {/* Practices Section */}
       <section className="pb-24">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 lg:gap-20 items-start">
             {practices.map((practice, index) => (
               <motion.div
                 key={practice.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group"
+                className={`flex flex-col items-center text-center ${index === 1 ? "md:mt-32" : ""}`}
               >
-                <div className="relative overflow-hidden rounded-3xl bg-card border border-border hover:border-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/5">
-                  {/* Video Placeholder Section */}
-                  <div className="relative aspect-video bg-gradient-to-br from-muted to-muted/50 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${practice.color} opacity-20`} />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:bg-white transition-colors"
-                      >
-                        <Play className="w-8 h-8 text-foreground ml-1" fill="currentColor" />
-                      </motion.button>
-                    </div>
-                    <div className="absolute top-4 left-4">
-                      <div
-                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${practice.color} flex items-center justify-center shadow-lg`}
-                      >
-                        <practice.icon className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full">
-                      <span className="text-sm font-body text-foreground">{practice.duration}</span>
-                    </div>
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="p-8">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-2">
-                          {practice.title}
-                        </h2>
-                        <p className="text-sm text-foreground/50 font-body">Best time: {practice.bestTime}</p>
-                      </div>
-                    </div>
-
-                    <p className="font-body text-foreground/70 leading-relaxed mb-6">{practice.description}</p>
-
-                    {/* Benefits */}
-                    <div className="mb-6">
-                      <h3 className="font-display text-lg text-foreground mb-3">Benefits</h3>
-                      <ul className="grid grid-cols-2 gap-2">
-                        {practice.benefits.map((benefit, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm font-body text-foreground/60">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Set Reminder Button */}
+                {/* Circle with gradient */}
+                <div
+                  className={`relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full flex items-center justify-center mb-8 ${
+                    practice.id === "rebounding"
+                      ? "bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300"
+                      : "bg-gradient-to-br from-green-100 via-green-200 to-green-300"
+                  }`}
+                >
+                  <div className="flex flex-col items-center gap-2">
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full px-6 py-4 bg-primary text-primary-foreground rounded-2xl font-body text-base hover:bg-primary/90 transition-colors flex items-center justify-center gap-3 shadow-lg shadow-primary/20"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`w-14 h-14 rounded-full flex items-center justify-center ${
+                        practice.id === "rebounding" ? "bg-white/80" : "bg-white/70"
+                      }`}
                     >
-                      <Bell className="w-5 h-5" />
-                      Set Reminder for {practice.title}
+                      <Play
+                        className={`w-6 h-6 ml-0.5 ${
+                          practice.id === "rebounding" ? "text-sky-700" : "text-green-800"
+                        }`}
+                        fill="currentColor"
+                      />
                     </motion.button>
+                    <span
+                      className={`text-sm font-body ${
+                        practice.id === "rebounding" ? "text-sky-800/70" : "text-green-800/70"
+                      }`}
+                    >
+                      {practice.duration}
+                    </span>
                   </div>
+                </div>
+
+                {/* Title & subtitle */}
+                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">
+                  {practice.title}
+                </h2>
+                <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
+
+                {/* Short description */}
+                <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
+                  {practice.description}
+                </p>
+
+                {/* Buttons */}
+                <div className="flex flex-col gap-3 w-full max-w-xs">
+                  <button
+                    onClick={() => setFeelingOpen(true)}
+                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+                  >
+                    How are you feeling?
+                  </button>
+                  <button
+                    onClick={() => (window.location.href = "/profile#connect-and-bloom")}
+                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors underline underline-offset-2"
+                  >
+                    Visit community
+                  </button>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+      <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} />
 
       {/* Integration Tips */}
       <section className="py-16 bg-muted/30">
