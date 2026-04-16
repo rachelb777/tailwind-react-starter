@@ -78,6 +78,30 @@ export function Profile() {
         </div>
       </section>
 
+      {/* Featured Insight */}
+      <section className="px-8 lg:px-16 py-[60px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <div className="flex justify-center mb-6">
+            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+              <Sparkles className="w-6 h-6 text-primary" />
+            </div>
+          </div>
+          <h3 className="font-display text-xl md:text-2xl text-foreground mb-4">Insight</h3>
+          <p className="font-body italic text-foreground/70 leading-relaxed" style={{ fontSize: "20px" }}>
+            Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
+          </p>
+          <p className="font-body italic text-foreground/70 leading-relaxed mt-4" style={{ fontSize: "20px" }}>
+            Rebounding shows a positive association with increased focus and reduced pain levels based on recent
+            activity.
+          </p>
+        </motion.div>
+      </section>
+
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -133,31 +157,6 @@ export function Profile() {
                       </div>
                     );
                   })}
-                </div>
-              </motion.div>
-
-              {/* Insight Box */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-8 border border-primary/20"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-xl md:text-2xl text-foreground mb-2">Insight</h3>
-                    <p className="font-body text-foreground/70 leading-relaxed">
-                      Sun Gazing shows a positive association with improved mood and energy levels based on completed
-                      days.
-                    </p>
-                    <p className="font-body text-foreground/70 leading-relaxed mt-3">
-                      Rebounding shows a positive association with increased focus and reduced pain levels based on
-                      recent activity.
-                    </p>
-                  </div>
                 </div>
               </motion.div>
 
