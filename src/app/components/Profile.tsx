@@ -104,9 +104,60 @@ export function Profile() {
 
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Left Sidebar - Today's Practice */}
+            <aside className="lg:col-span-3">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="py-4"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Calendar className="w-4 h-4 text-accent" />
+                  <h2 className="font-body text-sm uppercase tracking-wider text-foreground/60 font-normal">
+                    Today's Practice
+                  </h2>
+                </div>
+                <div className="text-xs font-body text-foreground/50 mb-6">2 of 4 completed</div>
+
+                <div className="space-y-1">
+                  {todaysPractices.map((practice, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                      className={`flex items-center gap-3 py-3 pl-4 border-l-2 transition-all ${
+                        practice.completed
+                          ? "border-primary"
+                          : "border-transparent hover:border-foreground/20"
+                      }`}
+                    >
+                      {practice.completed ? (
+                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                      ) : (
+                        <Circle className="w-4 h-4 text-foreground/30 flex-shrink-0" />
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <div
+                          className={`font-body text-sm ${practice.completed ? "text-foreground/60 line-through" : "text-foreground"}`}
+                        >
+                          {practice.name}
+                        </div>
+                        <div className="flex items-center gap-1 text-xs font-body text-foreground/40 mt-0.5">
+                          <Bell className="w-3 h-3" />
+                          {practice.time}
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </aside>
+
             {/* Main Content */}
-            <div className="space-y-8">
+            <div className="lg:col-span-9 space-y-8">
               {/* Activity Summary */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -159,59 +210,6 @@ export function Profile() {
                       </div>
                     );
                   })}
-                </div>
-              </motion.div>
-
-              {/* Today's Schedule */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="rounded-3xl bg-card p-8 border border-border"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
-                      <Calendar className="w-5 h-5 text-accent" />
-                    </div>
-                    <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">Today's Practice</h2>
-                  </div>
-                  <div className="px-4 py-2 bg-muted rounded-full">
-                    <span className="text-sm font-body text-foreground">2 of 4 completed</span>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  {todaysPractices.map((practice, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className={`flex items-center gap-4 p-4 rounded-2xl border transition-all ${
-                        practice.completed
-                          ? "bg-primary/5 border-primary/20"
-                          : "bg-muted/30 border-border hover:border-primary/30"
-                      }`}
-                    >
-                      {practice.completed ? (
-                        <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
-                      ) : (
-                        <Circle className="w-6 h-6 text-foreground/30 flex-shrink-0" />
-                      )}
-                      <div className="flex-1">
-                        <div
-                          className={`font-body ${practice.completed ? "text-foreground/60 line-through" : "text-foreground"}`}
-                        >
-                          {practice.name}
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm font-body text-foreground/50">
-                        <Bell className="w-4 h-4" />
-                        {practice.time}
-                      </div>
-                    </motion.div>
-                  ))}
                 </div>
               </motion.div>
             </div>
