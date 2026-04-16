@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { User, Sun } from "lucide-react";
+import { Sun } from "lucide-react";
 
 export function Layout() {
   const location = useLocation();
@@ -48,11 +48,6 @@ export function Layout() {
                 );
               })}
 
-              {/* Member Login Button */}
-              <button className="ml-4 px-6 py-2.5 bg-primary text-primary-foreground rounded-full font-body text-[15px] hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Member Login
-              </button>
             </div>
           </div>
         </nav>
