@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Play, Sun, Wind } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "./ui/dialog";
 
 export function Morning() {
   const practices = [
