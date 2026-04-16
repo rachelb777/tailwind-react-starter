@@ -167,7 +167,7 @@ export function Movement() {
           </div>
         </div>
       </section>
-      <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} />
+      <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} activity={activeActivity} />
 
       {/* Integration Tips */}
       <section className="py-16 bg-muted/30">
