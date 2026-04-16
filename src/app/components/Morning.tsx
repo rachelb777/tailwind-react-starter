@@ -127,7 +127,9 @@ export function Morning() {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
-                  <button className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors">
+                  <button
+                    onClick={() => { setActivePractice(practice.title); setFeelingOpen(true); }}
+                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors">
                     How are you feeling?
                   </button>
                   <button
