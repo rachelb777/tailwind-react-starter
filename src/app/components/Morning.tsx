@@ -46,9 +46,6 @@ export function Morning() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-block mb-6 px-6 py-2 bg-accent/10 rounded-full border border-accent/20">
-              <span className="text-accent font-body text-sm tracking-wide">Morning Practices</span>
-            </div>
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Greet the Day with <span className="text-accent italic">Intention</span>
             </h1>
