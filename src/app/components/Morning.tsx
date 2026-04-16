@@ -126,6 +126,22 @@ export function Morning() {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
+                  <label className="flex items-center justify-center gap-2 font-body text-sm text-foreground cursor-pointer select-none">
+                    <button
+                      type="button"
+                      role="checkbox"
+                      aria-checked={!!completed[practice.title]}
+                      onClick={() => handleToggle(practice.title)}
+                      className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${
+                        completed[practice.title]
+                          ? "bg-primary border-primary text-primary-foreground"
+                          : "bg-background border-border"
+                      }`}
+                    >
+                      {completed[practice.title] && <Check className="w-3.5 h-3.5" />}
+                    </button>
+                    Completed
+                  </label>
                   <button
                     onClick={() => setFeelingOpen(true)}
                     className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
