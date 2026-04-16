@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Play, Sun, Wind } from "lucide-react";
+import { FeelingModal } from "./FeelingModal";
 
 export function Morning() {
+  const [feelingOpen, setFeelingOpen] = useState(false);
   const practices = [
     {
       id: "sun-gazing",
@@ -117,7 +120,10 @@ export function Morning() {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
-                  <button className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors">
+                  <button
+                    onClick={() => setFeelingOpen(true)}
+                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+                  >
                     How are you feeling?
                   </button>
                   <button
@@ -177,6 +183,7 @@ export function Morning() {
           </div>
         </div>
       </section>
+      <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} />
     </div>
   );
 }
