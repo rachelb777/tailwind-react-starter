@@ -261,7 +261,7 @@ export function Profile() {
                 <div className="text-sm font-body text-foreground/60 mt-3">Active Members Today</div>
               </div>
               <div className="text-center flex-1 min-w-[120px]">
-                <div className="font-display text-foreground leading-none" style={{ fontSize: "36px" }}>
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "40px" }}>
                   89
                 </div>
                 <div className="text-sm font-body text-foreground/60 mt-3">Practicing Now</div>
