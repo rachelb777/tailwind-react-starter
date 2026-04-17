@@ -71,9 +71,7 @@ export function Profile() {
             >
               Welcome Back
             </h1>
-            <p className="font-body text-xl text-foreground/60 max-w-2xl">
-              Today’s wellness snapshot and community insights
-            </p>
+            <p className="font-body text-2xl text-foreground/70 max-w-2xl">Your wellness flow and community insights</p>
           </motion.div>
         </div>
       </section>
