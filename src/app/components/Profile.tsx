@@ -111,7 +111,7 @@ export function Profile() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="p-6 pt-32 rounded-2xl border border-border/40"
+                className="p-6 rounded-2xl border border-border/40 mt-32"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-4 h-4 text-accent" />
