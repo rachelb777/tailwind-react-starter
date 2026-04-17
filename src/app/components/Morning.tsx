@@ -83,7 +83,7 @@ export function Morning() {
               >
                 {/* Circle with gradient */}
                 <div
-                  className={`relative ${practice.id === "sun-gazing" ? "w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full   ${
+                  className={`relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full flex items-center justify-center mb-8 ${
                     practice.id === "sun-gazing"
                       ? "bg-gradient-to-br from-amber-200 via-amber-300 to-amber-400"
                       : "bg-gradient-to-br from-green-100 via-green-200 to-green-300"
@@ -94,7 +94,9 @@ export function Morning() {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className={`w-14 h-14 rounded-full flex items-center justify-center ${
-                        practice.id === "sun-gazing" ? "bg-white/80" : "bg-white/70"
+                        practice.id === "sun-gazing"
+                          ? "bg-white/80"
+                          : "bg-white/70"
                       }`}
                     >
                       <Play
@@ -115,7 +117,9 @@ export function Morning() {
                 </div>
 
                 {/* Title & subtitle */}
-                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
+                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">
+                  {practice.title}
+                </h2>
                 <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
 
                 {/* Short description */}
