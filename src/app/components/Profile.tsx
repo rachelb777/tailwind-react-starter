@@ -115,7 +115,7 @@ export function Profile() {
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-4 h-4 text-accent" />
-                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
+                  <h2 className="font-display text-xl text-foreground font-medium"">
                     Today's Practice
                   </h2>
                 </div>
@@ -191,7 +191,7 @@ export function Profile() {
               >
                 <div className="flex items-center gap-2 mb-8">
                   <TrendingUp className="w-4 h-4 text-secondary" />
-                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
+                  <h2 className="font-display text-xl text-foreground font-medium">
                     Mood Averages
                   </h2>
                 </div>
