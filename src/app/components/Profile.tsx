@@ -111,7 +111,7 @@ export function Profile() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="py-4"
+                className="py-4 pt-32"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-4 h-4 text-accent" />
@@ -129,9 +129,7 @@ export function Profile() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                       className={`flex items-center gap-3 py-3 pl-4 border-l-2 transition-all ${
-                        practice.completed
-                          ? "border-primary"
-                          : "border-transparent hover:border-foreground/20"
+                        practice.completed ? "border-primary" : "border-transparent hover:border-foreground/20"
                       }`}
                     >
                       {practice.completed ? (
@@ -259,15 +257,21 @@ export function Profile() {
             {/* Open stats */}
             <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8 mb-12">
               <div className="text-center flex-1 min-w-[120px]">
-                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>247</div>
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                  247
+                </div>
                 <div className="text-sm font-body text-foreground/60 mt-3">Active Members Today</div>
               </div>
               <div className="text-center flex-1 min-w-[120px]">
-                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>89</div>
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                  89
+                </div>
                 <div className="text-sm font-body text-foreground/60 mt-3">Practicing Now</div>
               </div>
               <div className="text-center flex-1 min-w-[120px]">
-                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>32</div>
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                  32
+                </div>
                 <div className="text-sm font-body text-foreground/60 mt-3">Live Sessions</div>
               </div>
             </div>
