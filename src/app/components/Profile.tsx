@@ -255,7 +255,7 @@ export function Profile() {
             {/* Open stats */}
             <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8 mb-12">
               <div className="text-center flex-1 min-w-[120px]">
-                <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "46px" }}>
                   247
                 </div>
                 <div className="text-sm font-body text-foreground/60 mt-3">Active Members Today</div>
