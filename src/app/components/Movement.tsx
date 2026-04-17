@@ -89,7 +89,7 @@ export function Movement() {
               >
                 {/* Circle with gradient */}
                 <div
-                  className={`relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full flex items-center justify-center mb-8 ${
+                  className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full flex items-center justify-center mb-8 ${
                     practice.id === "rebounding"
                       ? "bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300"
                       : "bg-gradient-to-br from-green-100 via-green-200 to-green-300"
@@ -104,9 +104,7 @@ export function Movement() {
                       }`}
                     >
                       <Play
-                        className={`w-6 h-6 ml-0.5 ${
-                          practice.id === "rebounding" ? "text-sky-700" : "text-green-800"
-                        }`}
+                        className={`w-6 h-6 ml-0.5 ${practice.id === "rebounding" ? "text-sky-700" : "text-green-800"}`}
                         fill="currentColor"
                       />
                     </motion.button>
@@ -121,9 +119,7 @@ export function Movement() {
                 </div>
 
                 {/* Title & subtitle */}
-                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">
-                  {practice.title}
-                </h2>
+                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
                 <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
 
                 {/* Short description */}
