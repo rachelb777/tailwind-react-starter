@@ -172,7 +172,7 @@ export function Profile() {
                 <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
                   {TRACKED_ACTIVITIES.map((activity) => (
                     <div key={activity} className="text-center flex-1 min-w-[120px]">
-                      <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                      <div className="font-display text-foreground leading-none" style={{ fontSize: "36px" }}>
                         {activityCounts[activity] ?? 0}
                       </div>
                       <div className="text-sm font-body text-foreground/60 mt-3">{activity}</div>
@@ -200,7 +200,7 @@ export function Profile() {
                     const value = moodAverages[key];
                     return (
                       <div key={key} className="text-center flex-1 min-w-[100px]">
-                        <div className="font-display text-foreground leading-none" style={{ fontSize: "52px" }}>
+                        <div className="font-display text-foreground leading-none" style={{ fontSize: "36px" }}>
                           {value === null ? "—" : value.toFixed(1)}
                         </div>
                         <div className="text-sm font-body text-foreground/60 mt-3">{moodLabels[key]}</div>
