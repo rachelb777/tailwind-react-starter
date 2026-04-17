@@ -115,7 +115,7 @@ export function Profile() {
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-4 h-4 text-accent" />
-                  <h2 className="font-body text-sm uppercase tracking-wider text-foreground/60 font-normal">
+                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                     Today's Practice
                   </h2>
                 </div>
@@ -165,7 +165,7 @@ export function Profile() {
               >
                 <div className="flex items-center gap-2 mb-8">
                   <BarChart3 className="w-4 h-4 text-primary" />
-                  <h2 className="font-body text-sm uppercase tracking-wider text-foreground/60 font-normal">
+                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                     Activity Summary
                   </h2>
                 </div>
@@ -191,7 +191,7 @@ export function Profile() {
               >
                 <div className="flex items-center gap-2 mb-8">
                   <TrendingUp className="w-4 h-4 text-secondary" />
-                  <h2 className="font-body text-sm uppercase tracking-wider text-foreground/60 font-normal">
+                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                     Mood Averages
                   </h2>
                 </div>
