@@ -85,58 +85,74 @@ export function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Sun,
-                title: "Morning Practices",
-                description: "Start your day with sun gazing and gentle stretching to align with natural light cycles",
-                link: "/morning",
-                color: "from-amber-200/40 to-amber-100/20",
-              },
-              {
-                icon: Heart,
-                title: "Movement",
-                description: "Rejuvenate with rebounding and earthing practices that connect you to the earth",
-                link: "/movement",
-                color: "from-primary/20 to-primary/5",
-              },
-              {
-                icon: Calendar,
-                title: "Wellness Report",
-                description: "Explore your wellness report and discover which practices benefit you most.",
-                link: "/morning",
-                color: "from-secondary/20 to-secondary/5",
-              },
-              {
-                icon: Users,
-                title: "Community",
-                description: "Join live sessions and connect with others to stay motivated",
-                link: "/profile",
-                color: "from-accent/20 to-accent/5",
-              },
-            ].map((feature, index) => (
+          <div className="py-20 flex justify-center">
+            <div className="relative w-full max-w-[640px] h-[520px] mx-auto">
+              {/* Largest circle — upper left */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
+                className="absolute left-0 top-0"
               >
                 <Link
-                  to={feature.link}
-                  className="block group h-full p-8 bg-card rounded-3xl border border-border hover:border-primary/30 transition-all hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1"
+                  to="/morning"
+                  className="group flex items-center justify-center w-[340px] h-[340px] rounded-full bg-gradient-to-br from-amber-200/50 to-amber-100/30 transition-transform duration-300 hover:scale-105 mix-blend-multiply"
                 >
-                  <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
-                  >
-                    <feature.icon className="w-8 h-8 text-foreground" />
+                  <div className="text-center px-8">
+                    <Sun className="w-10 h-10 text-foreground mx-auto mb-3" />
+                    <h3 className="font-display text-2xl text-foreground mb-2">Morning Practices</h3>
+                    <p className="font-body text-sm text-foreground/70 leading-snug">
+                      Sun gazing and gentle stretching to align with natural light cycles
+                    </p>
                   </div>
-                  <h3 className="font-display text-2xl text-foreground mb-3">{feature.title}</h3>
-                  <p className="font-body text-foreground/60 leading-relaxed">{feature.description}</p>
                 </Link>
               </motion.div>
-            ))}
+
+              {/* Medium circle — above and slightly right of the smaller one */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="absolute right-0 top-[80px]"
+              >
+                <Link
+                  to="/profile"
+                  className="group flex items-center justify-center w-[260px] h-[260px] rounded-full bg-gradient-to-br from-secondary/30 to-secondary/10 transition-transform duration-300 hover:scale-105 mix-blend-multiply"
+                >
+                  <div className="text-center px-6">
+                    <Calendar className="w-9 h-9 text-foreground mx-auto mb-3" />
+                    <h3 className="font-display text-xl text-foreground mb-2">Wellness Report</h3>
+                    <p className="font-body text-sm text-foreground/70 leading-snug">
+                      Discover which practices benefit you most
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
+
+              {/* Smaller circle — lower right overlapping the largest */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="absolute left-[200px] bottom-0"
+              >
+                <Link
+                  to="/movement"
+                  className="group flex items-center justify-center w-[300px] h-[300px] rounded-full bg-gradient-to-br from-primary/30 to-primary/10 transition-transform duration-300 hover:scale-105 mix-blend-multiply"
+                >
+                  <div className="text-center px-7">
+                    <Heart className="w-10 h-10 text-foreground mx-auto mb-3" />
+                    <h3 className="font-display text-2xl text-foreground mb-2">Movement</h3>
+                    <p className="font-body text-sm text-foreground/70 leading-snug">
+                      Rebounding and earthing to connect you to the earth
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
