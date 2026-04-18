@@ -136,7 +136,7 @@ export function Layout() {
                       <text x="46" y="17" fontFamily="Helvetica, Arial, sans-serif" fontSize="7">
                         Download on the
                       </text>
-                      <text x="46" y="30" fontFamily="Helvetica, Arial, sans-serif" fontSize="13" fontWeight="600">
+                      <text x="46" y="30" fontFamily="Helvetica, Arial, sans-serif" fontSize="12" fontWeight="600">
                         App Store
                       </text>
                     </g>
@@ -144,7 +144,7 @@ export function Layout() {
                 </a>
                 <a
                   href="#"
-                  aria-label="Get it on Google Play"
+                  aria-label=" Download on Google Play"
                   className="inline-block transition-transform duration-200 hover:scale-105"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" width="130" height="auto">
@@ -172,10 +172,10 @@ export function Layout() {
                       x="46"
                       y="17"
                       fontFamily="Helvetica, Arial, sans-serif"
-                      fontSize="6"
+                      fontSize="7"
                       fill="hsl(var(--foreground))"
                     >
-                      Download on the
+                      Download on
                     </text>
                     <text
                       x="46"
