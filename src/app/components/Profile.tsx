@@ -223,7 +223,7 @@ export function Profile() {
               <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
                 <Users className="w-5 h-5 text-secondary" />
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">Connect & Bloom</h2>
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">The Solara Circle</h2>
             </div>
 
             <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 mb-12 leading-relaxed text-center max-w-2xl mx-auto">
