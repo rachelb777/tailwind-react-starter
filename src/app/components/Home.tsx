@@ -91,28 +91,28 @@ export function Home() {
                 title: "Morning Practices",
                 description: "Start your day with sun gazing and gentle stretching to align with natural light cycles",
                 link: "/morning",
-                color: "from-accent/20 to-accent/5",
+                color: "from-amber-100 to-amber-50",
               },
               {
                 icon: Heart,
                 title: "Movement",
                 description: "Rejuvenate with rebounding and earthing practices that connect you to the earth",
                 link: "/movement",
-                color: "from-primary/20 to-primary/5",
+                color: "from-amber-100 to-amber-50",
               },
               {
                 icon: Calendar,
                 title: "Wellness Report",
                 description: "Explore your wellness report and discover which practices benefit you most.",
                 link: "/morning",
-                color: "from-secondary/20 to-secondary/5",
+                color: "from-amber-100 to-amber-50",
               },
               {
                 icon: Users,
                 title: "Community",
                 description: "Join live sessions and connect with others to stay motivated",
                 link: "/profile",
-                color: "from-accent/20 to-accent/5",
+                color: "from-amber-100 to-amber-50",
               },
             ].map((feature, index) => (
               <motion.div
