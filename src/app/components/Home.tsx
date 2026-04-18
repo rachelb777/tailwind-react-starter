@@ -83,7 +83,8 @@ export function Home() {
             </p>
           </motion.div>
 
-          <div className="relative flex items-center justify-center" style={{ height: "500px" }}>
+          <div className="relative flex items-center justify-center" style={{ height: "600px" }}>
+            {/* Morning Practices — circle upper left, text to its left */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -94,34 +95,36 @@ export function Home() {
             >
               <Link
                 to="/morning"
-                className="block w-full h-full rounded-full bg-amber-200/40 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
-              >
-                <div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
-                  <p className="font-body text-sm text-foreground/60">
-                    Start your day with sun gazing and gentle stretching
-                  </p>
-                </div>
-              </Link>
+                className="block w-full h-full rounded-full bg-amber-200/40 hover:scale-105 transition-transform duration-300"
+              />
             </motion.div>
+            <div className="absolute text-right" style={{ width: "180px", left: "calc(50% - 480px)", top: "80px" }}>
+              <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
+              <p className="font-body text-sm text-foreground/60">
+                Start your day with sun gazing and gentle stretching
+              </p>
+            </div>
+
+            {/* Movement — circle center, text underneath */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="absolute"
-              style={{ width: "220px", height: "220px", left: "calc(50% - 90px)", bottom: "90px" }}
+              style={{ width: "220px", height: "220px", left: "calc(50% - 90px)", top: "140px" }}
             >
               <Link
                 to="/movement"
-                className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
-              >
-                <div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
-                  <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
-                </div>
-              </Link>
+                className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300"
+              />
             </motion.div>
+            <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 90px)", top: "375px" }}>
+              <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
+              <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
+            </div>
+
+            {/* Your Wellness Circle — upper right, text to its right */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -132,14 +135,13 @@ export function Home() {
             >
               <Link
                 to="/profile"
-                className="block w-full h-full rounded-full bg-accent/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
-              >
-                <div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Your Wellness Circle</h3>
-                  <p className="font-body text-sm text-foreground/60">Track progress and grow with community</p>
-                </div>
-              </Link>
+                className="block w-full h-full rounded-full bg-accent/20 hover:scale-105 transition-transform duration-300"
+              />
             </motion.div>
+            <div className="absolute text-left" style={{ width: "180px", right: "calc(50% - 530px)", top: "140px" }}>
+              <h3 className="font-display text-xl text-foreground mb-2">Your Wellness Circle</h3>
+              <p className="font-body text-sm text-foreground/60">Track progress and grow with community</p>
+            </div>
           </div>
         </div>
       </section>
