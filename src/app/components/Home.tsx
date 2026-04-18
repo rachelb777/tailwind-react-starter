@@ -99,13 +99,7 @@ export function Home() {
                 link: "/movement",
                 color: "from-primary/20 to-primary/5",
               },
-              {
-                icon: Calendar,
-                title: "Wellness Report",
-                description: "Explore your wellness report and discover which practices benefit you most.",
-                link: "/morning",
-                color: "from-secondary/20 to-secondary/5",
-              },
+
               {
                 icon: Users,
                 title: "Community",
