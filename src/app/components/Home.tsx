@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sun, Heart, Users, Calendar } from "lucide-react";
 import heroImage from "../../imports/jesse-uli-7f7C-8u_VIo-unsplash.jpg";
 import sunSaluteImage from "@/assets/sun-salute.jpg";
+import movementImage from "@/assets/movement-grounding.jpg";
 
 export function Home() {
   return (
@@ -125,8 +126,16 @@ export function Home() {
             >
               <Link
                 to="/movement"
-                className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300"
-              />
+                className="block w-full h-full rounded-full hover:scale-105 transition-transform duration-300"
+                style={{ overflow: "hidden" }}
+              >
+                <img
+                  src={movementImage}
+                  alt="Movement and grounding practice"
+                  className="w-full h-full"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </Link>
             </motion.div>
             <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 130px)", top: "580px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
