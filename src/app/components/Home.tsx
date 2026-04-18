@@ -104,7 +104,7 @@ export function Home() {
                 icon: Calendar,
                 title: "Wellness Report",
                 description: "Explore your wellness report and discover which practices benefit you most.",
-                link: "/morning",
+                link: "/profile",
                 color: "from-secondary/20 to-secondary/5",
               },
               {
