@@ -92,7 +92,7 @@ export function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="absolute"
-              style={{ width: "280px", height: "280px", left: "calc(50% - 280px)", top: "20px" }}
+              style={{ width: "280px", height: "280px", left: "calc(50% - 380px)", top: "20px" }}
             >
               <Link
                 to="/morning"
