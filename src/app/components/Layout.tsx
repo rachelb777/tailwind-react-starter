@@ -170,7 +170,7 @@ export function Layout() {
                     </g>
                     <text
                       x="46"
-                      y="15"
+                      y="17"
                       fontFamily="Helvetica, Arial, sans-serif"
                       fontSize="6"
                       fill="hsl(var(--foreground))"
@@ -179,7 +179,7 @@ export function Layout() {
                     </text>
                     <text
                       x="46"
-                      y="28"
+                      y="30"
                       fontFamily="Helvetica, Arial, sans-serif"
                       fontSize="12"
                       fontWeight="600"
