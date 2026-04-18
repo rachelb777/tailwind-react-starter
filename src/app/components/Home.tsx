@@ -83,25 +83,57 @@ export function Home() {
             </p>
           </motion.div>
 
-          <div className="relative flex items-center justify-center" style={{height: "500px"}}>
-            <motion.div initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} transition={{duration:0.6}} className="absolute" style={{width:"280px", height:"280px", left:"calc(50% - 280px)", top:"20px"}}>
-              <Link to="/morning" className="block w-full h-full rounded-full bg-amber-200/40 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8">
+          <div className="relative flex items-center justify-center" style={{ height: "500px" }}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="absolute"
+              style={{ width: "280px", height: "280px", left: "calc(50% - 280px)", top: "20px" }}
+            >
+              <Link
+                to="/morning"
+                className="block w-full h-full rounded-full bg-amber-200/40 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
+              >
                 <div>
                   <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
-                  <p className="font-body text-sm text-foreground/60">Start your day with sun gazing and gentle stretching</p>
+                  <p className="font-body text-sm text-foreground/60">
+                    Start your day with sun gazing and gentle stretching
+                  </p>
                 </div>
               </Link>
             </motion.div>
-            <motion.div initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} transition={{duration:0.6, delay:0.2}} className="absolute" style={{width:"220px", height:"220px", right:"calc(50% - 260px)", bottom:"20px"}}>
-              <Link to="/movement" className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute"
+              style={{ width: "220px", height: "220px", left: "calc(50% - 60px)", bottom: "20px" }}
+            >
+              <Link
+                to="/movement"
+                className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
+              >
                 <div>
                   <h3 className="font-display text-xl text-foreground mb-2">Movement</h3>
                   <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
                 </div>
               </Link>
             </motion.div>
-            <motion.div initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} transition={{duration:0.6, delay:0.1}} className="absolute" style={{width:"250px", height:"250px", right:"calc(50% - 320px)", top:"80px"}}>
-              <Link to="/profile" className="block w-full h-full rounded-full bg-accent/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="absolute"
+              style={{ width: "250px", height: "250px", right: "calc(50% - 320px)", top: "80px" }}
+            >
+              <Link
+                to="/profile"
+                className="block w-full h-full rounded-full bg-accent/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
+              >
                 <div>
                   <h3 className="font-display text-xl text-foreground mb-2">Your Wellness Circle</h3>
                   <p className="font-body text-sm text-foreground/60">Track progress and grow with community</p>
