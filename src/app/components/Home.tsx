@@ -110,7 +110,7 @@ export function Home() {
               {
                 icon: Users,
                 title: "Community",
-                description: "Join live sessions and connect with others practicing the same routines for motivation",
+                description: "Join live sessions and connect with others to stay motivated",
                 link: "/profile",
                 color: "from-accent/20 to-accent/5",
               },
