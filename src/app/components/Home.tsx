@@ -121,7 +121,7 @@ export function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="absolute"
-              style={{ width: "220px", height: "220px", left: "calc(50% - 110px)", top: "340px" }}
+              style={{ width: "220px", height: "220px", left: "calc(50% - 140px)", top: "340px" }}
             >
               <Link
                 to="/movement"
