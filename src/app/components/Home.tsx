@@ -140,7 +140,7 @@ export function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="absolute"
-              style={{ width: "250px", height: "250px", right: "calc(50% - 400px)", top: "80px" }}
+              style={{ width: "250px", height: "250px", right: "calc(50% - 330px)", top: "80px" }}
             >
               <Link
                 to="/profile"
