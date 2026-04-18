@@ -107,7 +107,7 @@ export function Home() {
                 />
               </Link>
             </motion.div>
-            <div className="absolute text-right" style={{ width: "180px", left: "calc(50% - 480px)", top: "80px" }}>
+            <div className="absolute text-right" style={{ width: "180px", left: "calc(50% - 440px)", top: "110px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
               <p className="font-body text-sm text-foreground/60">
                 Start your day with sun gazing and gentle stretching
