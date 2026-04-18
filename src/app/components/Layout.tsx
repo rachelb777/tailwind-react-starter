@@ -175,7 +175,7 @@ export function Layout() {
                       fontSize="6"
                       fill="hsl(var(--foreground))"
                     >
-                      GET IT ON
+                      Download on the
                     </text>
                     <text
                       x="46"
