@@ -133,7 +133,7 @@ export function Home() {
                   src={movementImage}
                   alt="Movement and grounding practice"
                   className="w-full h-full"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  style={{ objectFit: "cover", objectPosition: "40% center" }}
                 />
               </Link>
             </motion.div>
