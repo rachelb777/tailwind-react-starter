@@ -117,7 +117,7 @@ export function Home() {
                 className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300 flex items-center justify-center text-center p-8"
               >
                 <div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Movement</h3>
+                  <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
                   <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
                 </div>
               </Link>
