@@ -80,7 +80,8 @@ export function Home() {
               Your Wellness Journey
             </h2>
             <p className="font-body text-sm md:text-base lg:text-lg font-medium text-foreground/80 max-w-2xl mx-auto">
-              Explore practices designed to harmonize your daily routine
+              Explore daily practices, log how you feel, and watch your personalized wellness picture emerge — alongside
+              a community doing the same
             </p>
           </motion.div>
 
@@ -104,7 +105,7 @@ export function Home() {
                 icon: Calendar,
                 title: "Wellness Report",
                 description: "Explore your wellness report and discover which practices benefit you most.",
-                link: "/profile",
+                link: "/morning",
                 color: "from-secondary/20 to-secondary/5",
               },
               {
