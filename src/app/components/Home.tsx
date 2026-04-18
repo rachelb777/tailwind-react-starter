@@ -91,7 +91,7 @@ export function Home() {
                 title: "Morning Practices",
                 description: "Start your day with sun gazing and gentle stretching to align with natural light cycles",
                 link: "/morning",
-                color: "from-accent/20 to-accent/5",
+                color: "from-amber-100 to-amber-50",
               },
               {
                 icon: Heart,
