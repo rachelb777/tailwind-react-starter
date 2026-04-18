@@ -128,7 +128,7 @@ export function Home() {
                 className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
-            <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 130px)", top: "5600px" }}>
+            <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 130px)", top: "560px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
               <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
             </div>
