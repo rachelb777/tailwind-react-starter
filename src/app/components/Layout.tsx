@@ -47,7 +47,6 @@ export function Layout() {
                   </Link>
                 );
               })}
-
             </div>
           </div>
         </nav>
@@ -95,7 +94,7 @@ export function Layout() {
               </ul>
             </div>
             <div className="space-y-6">
-              <h4 className="font-display font-display text-xl md:text-2xl text-foreground mb-4">Community</h4>
+              <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Community</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors duration-200">
