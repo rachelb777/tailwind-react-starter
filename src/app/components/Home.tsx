@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sun, Heart, Users, Calendar } from "lucide-react";
 import heroImage from "../../imports/jesse-uli-7f7C-8u_VIo-unsplash.jpg";
+import sunSaluteImage from "@/assets/sun-salute.jpg";
 
 export function Home() {
   return (
@@ -95,8 +96,16 @@ export function Home() {
             >
               <Link
                 to="/morning"
-                className="block w-full h-full rounded-full bg-amber-200/40 hover:scale-105 transition-transform duration-300"
-              />
+                className="block w-full h-full rounded-full hover:scale-105 transition-transform duration-300"
+                style={{ overflow: "hidden" }}
+              >
+                <img
+                  src={sunSaluteImage}
+                  alt="Morning sun salute practice"
+                  className="w-full h-full"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </Link>
             </motion.div>
             <div className="absolute text-right" style={{ width: "180px", left: "calc(50% - 480px)", top: "80px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
