@@ -180,7 +180,8 @@ export function Morning() {
             {[
               {
                 title: "Start Small",
-                description: "Begin with just 5 minutes and gradually increase duration as it becomes a habit",
+                description:
+                  "Begin with just 5 minutes and gradually increase duration as it becomes an enjoyable habit",
               },
               {
                 title: "Stay Consistent",
