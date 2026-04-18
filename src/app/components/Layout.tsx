@@ -113,6 +113,7 @@ export function Layout() {
                 </li>
               </ul>
             </div>
+
             <div className="space-y-6">
               <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Get the app</h4>
               <div className="flex flex-row flex-wrap items-center gap-3">
@@ -121,14 +122,32 @@ export function Layout() {
                   aria-label="Download on the App Store"
                   className="inline-block transition-transform duration-200 hover:scale-105"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 135 40"
-                    width="130"
-                    height="auto"
-                    role="img"
-                    aria-label="Get it on Google Play"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" width="130" height="auto">
+                    <rect
+                      width="135"
+                      height="40"
+                      rx="6"
+                      fill="transparent"
+                      stroke="hsl(var(--border))"
+                      strokeWidth="1.5"
+                    />
+                    <g fill="hsl(var(--foreground))">
+                      <path d="M27.7 20.3c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.6.9-.7 0-1.9-.9-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2-.1 1.7-.8 3.1-.8s1.9.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.9zm-2.3-7.2c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3z" />
+                      <text x="46" y="17" fontFamily="Helvetica, Arial, sans-serif" fontSize="7">
+                        Download on the
+                      </text>
+                      <text x="46" y="30" fontFamily="Helvetica, Arial, sans-serif" fontSize="13" fontWeight="600">
+                        App Store
+                      </text>
+                    </g>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  aria-label="Get it on Google Play"
+                  className="inline-block transition-transform duration-200 hover:scale-105"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" width="130" height="auto">
                     <rect
                       width="135"
                       height="40"
