@@ -121,14 +121,14 @@ export function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="absolute"
-              style={{ width: "220px", height: "220px", left: "calc(50% - 80px)", top: "220px" }}
+              style={{ width: "220px", height: "220px", left: "calc(50% - 110px)", top: "220px" }}
             >
               <Link
                 to="/movement"
                 className="block w-full h-full rounded-full bg-primary/20 hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
-            <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 120px)", top: "375px" }}>
+            <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 90px)", top: "375px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
               <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
             </div>
