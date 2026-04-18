@@ -147,8 +147,8 @@ export function Home() {
                 className="block w-full h-full rounded-full bg-accent/20 hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
-            <div className="absolute text-left" style={{ right: "calc(50% - 540px)", top: "140px" }}>
-              <h3 className="font-display text-xl text-foreground mb-2 whitespace-nowrap">Your Wellness Circle</h3>
+            <div className="absolute text-left" style={{ width: "180px", right: "calc(50% - 540px)", top: "140px" }}>
+              <h3 className="font-display text-xl text-foreground mb-2">Your Wellness Circle</h3>
               <p className="font-body text-sm text-foreground/60">Track progress and grow with community</p>
             </div>
           </div>
