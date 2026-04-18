@@ -104,7 +104,7 @@ export function Layout() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors duration-200">
-                    Connect & Bloom
+                    The Solara Circle
                   </a>
                 </li>
                 <li>
