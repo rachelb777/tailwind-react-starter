@@ -110,7 +110,7 @@ export function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="absolute"
-              style={{ width: "220px", height: "220px", left: "calc(50% - 85px)", bottom: "110px" }}
+              style={{ width: "220px", height: "220px", left: "calc(50% - 85px)", bottom: "100px" }}
             >
               <Link
                 to="/movement"
