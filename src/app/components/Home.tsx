@@ -109,9 +109,8 @@ export function Home() {
               },
               {
                 icon: Users,
-                title: "The Solara Circle",
-                description:
-                  "Stay motivated by joining live sessions and connecting with others practicing the same routines",
+                title: "Community",
+                description: "Join live sessions and connect with others practicing the same routines for motivation",
                 link: "/profile",
                 color: "from-accent/20 to-accent/5",
               },
