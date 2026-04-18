@@ -114,8 +114,7 @@ export function Layout() {
               </ul>
             </div>
 
-            <div className="space-y-6">
-              <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Get the app</h4>
+            <div className="space-y-0">
               <div className="flex flex-row flex-wrap items-center gap-3">
                 <a
                   href="#"
