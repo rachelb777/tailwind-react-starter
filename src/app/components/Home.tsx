@@ -84,7 +84,7 @@ export function Home() {
             </p>
           </motion.div>
 
-          <div className="relative flex items-center justify-center" style={{ height: "600px" }}>
+          <div className="relative flex items-center justify-center" style={{ height: "680px" }}>
             {/* Morning Practices — circle upper left, text to its left */}
             <motion.div
               initial={{ opacity: 0 }}
