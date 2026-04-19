@@ -107,7 +107,6 @@ export function Profile() {
                 className="p-6 rounded-2xl border border-border/40 mt-32"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <Calendar className="w-4 h-4 text-accent" />
                   <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                     Today's Practice
                   </h2>
