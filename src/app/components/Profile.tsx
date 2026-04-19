@@ -157,11 +157,11 @@ export function Profile() {
                 className="py-4"
               >
                 <div className="flex items-center gap-2 mb-8">
-                  <BarChart3 className="w-4 h-4 text-primary" />
                   <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                     Activity Summary
                   </h2>
                 </div>
+
                 <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
                   {TRACKED_ACTIVITIES.map((activity) => (
                     <div key={activity} className="text-center flex-1 min-w-[120px]">
