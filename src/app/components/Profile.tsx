@@ -136,7 +136,6 @@ export function Profile() {
                           {practice.name}
                         </div>
                         <div className="flex items-center gap-1 text-xs font-body text-foreground/40 mt-0.5">
-                          <Bell className="w-3 h-3" />
                           {practice.time}
                         </div>
                       </div>
