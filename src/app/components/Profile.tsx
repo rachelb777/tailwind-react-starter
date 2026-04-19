@@ -183,7 +183,6 @@ export function Profile() {
                 className="py-4"
               >
                 <div className="flex items-center gap-2 mb-8">
-                  <TrendingUp className="w-4 h-4 text-secondary" />
                   <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                     Mood Averages
                   </h2>
