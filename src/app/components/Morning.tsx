@@ -146,7 +146,7 @@ export function Morning() {
                   </button>
                   <button
                     onClick={() => (window.location.href = "/profile#connect-and-bloom")}
-                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors underline underline-offset-2"
+                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
                   >
                     Visit community
                   </button>
