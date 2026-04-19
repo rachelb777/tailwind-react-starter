@@ -161,7 +161,7 @@ export function Home() {
                   src={wellnessImage}
                   alt="Your wellness circle community"
                   className="w-full h-full"
-                  style={{ objectFit: "contain", objectPosition: "center" }}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </Link>
             </motion.div>
