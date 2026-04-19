@@ -89,23 +89,19 @@ export function Movement() {
               >
                 {/* Circle card */}
                 <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden mb-8">
-                  {practice.id === "earthing" ? (
-                    <img
-                      src={earthingImage}
-                      alt="Barefoot earthing in nature"
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <iframe
-                      src="https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
-                      width="100%"
-                      height="100%"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      title="Rebounding"
-                    />
-                  )}
+                  <iframe
+                    src={
+                      practice.id === "earthing"
+                        ? "https://www.youtube.com/embed/sqB1EbJWKXU?autoplay=0&controls=1"
+                        : "https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
+                    }
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title={practice.title}
+                  />
                 </div>
 
                 {/* Title & subtitle */}
