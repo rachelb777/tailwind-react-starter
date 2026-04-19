@@ -99,18 +99,17 @@ export function Movement() {
                   </div>
                 ) : (
                   <div
-                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full flex items-center justify-center mb-8 bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300`}
+                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full overflow-hidden mb-8`}
                   >
-                    <div className="flex flex-col items-center gap-2">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="w-14 h-14 rounded-full flex items-center justify-center bg-white/80"
-                      >
-                        <Play className="w-6 h-6 ml-0.5 text-sky-700" fill="currentColor" />
-                      </motion.button>
-                      <span className="text-sm font-body text-sky-800/70">{practice.duration}</span>
-                    </div>
+                    <iframe
+                      src="https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="Rebounding"
+                    />
                   </div>
                 )}
 
