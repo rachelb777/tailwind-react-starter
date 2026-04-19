@@ -155,51 +155,6 @@ export function Movement() {
         </div>
       </section>
       <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} activity={activeActivity} />
-
-      {/* Integration Tips */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">Movement Integration</h2>
-            <p className="font-body text-sm md:text-base lg:text-lg">Enhance your practice with these suggestions</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Combine Practices",
-                description: "Try rebounding followed by earthing for a complete mind-body-earth connection",
-              },
-              {
-                title: "Track Progress",
-                description: "Notice how your energy, mood, and physical sensations evolve with regular practice",
-              },
-              {
-                title: "Outdoor Focus",
-                description: "When possible, take rebounding outside and practice earthing on natural surfaces",
-              },
-            ].map((tip, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-card rounded-2xl border border-border"
-              >
-                <h3 className="font-display text-2xl text-foreground mb-3">{tip.title}</h3>
-                <p className="font-body text-foreground/70 leading-relaxed">{tip.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
