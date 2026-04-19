@@ -213,7 +213,9 @@ export function Profile() {
             className="py-24 mt-16 scroll-mt-28"
           >
             <div className="flex items-center gap-3 mb-4 justify-center">
-              
+              <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center"></div>
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">The Solara Circle</h2>
+            </div>
 
             <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 mb-12 leading-relaxed text-center max-w-2xl mx-auto">
               See what your community is practicing right now and draw inspiration from their dedication
