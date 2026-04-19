@@ -85,17 +85,21 @@ export function Movement() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col items-center text-center ${index === 1 ? "md:mt-32" : ""}`}
+                className={`flex flex-col items-center text-center ${practice.id === "earthing" ? "md:mt-32" : ""}`}
               >
-                {/* Circle with gradient */}
-                {practice.id === "earthing" ? (
-                  <div className="relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden mb-8">
-                    <img src={earthingImage} alt="Barefoot earthing in nature" className="w-full h-full object-cover" />
-                  </div>
-                ) : (
-                  <div
-                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96"} rounded-full overflow-hidden mb-8`}
-                  >
+                {/* Video / Image card */}
+                <div
+                  className={`relative w-full ${
+                    practice.id === "rebounding" ? "max-w-lg" : "max-w-md"
+                  } aspect-video rounded-2xl overflow-hidden mb-8`}
+                >
+                  {practice.id === "earthing" ? (
+                    <img
+                      src={earthingImage}
+                      alt="Barefoot earthing in nature"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
                     <iframe
                       src="https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
                       width="100%"
@@ -105,8 +109,8 @@ export function Movement() {
                       allowFullScreen
                       title="Rebounding"
                     />
-                  </div>
-                )}
+                  )}
+                </div>
 
                 {/* Title & subtitle */}
                 <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
