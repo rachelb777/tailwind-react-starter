@@ -91,7 +91,7 @@ export function Morning() {
                 >
                   {practice.id === "sun-gazing" ? (
                     <iframe
-                      src="https://www.youtube.com/embed/G6PxpBt7L78?start=280&autoplay=0"
+                      src="https://www.youtube.com/embed/G6PxpBt7L78?start=280&autoplay=0&controls=1"
                       width="100%"
                       height="100%"
                       frameBorder="0"
