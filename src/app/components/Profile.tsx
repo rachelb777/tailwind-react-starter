@@ -1,17 +1,7 @@
 import { motion } from "motion/react";
 import { useMemo } from "react";
-import {
-  Sun,
-  Activity,
-  Bell,
-  Users,
-  TrendingUp,
-  Calendar,
-  CheckCircle2,
-  Circle,
-  Sparkles,
-  BarChart3,
-} from "lucide-react";
+import { CheckCircle2, Circle } from "lucide-react";
+
 import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
 
 export function Profile() {
