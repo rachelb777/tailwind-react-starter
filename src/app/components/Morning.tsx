@@ -115,13 +115,11 @@ export function Morning() {
                 </div>
 
                 {/* Title & subtitle */}
-                <div className="text-center w-full">
-                  <h2 className="font-display text-xl md:text-2xl text-foreground mb-1 text-center">{practice.title}</h2>
-                  <p className="text-sm text-foreground/50 font-body mb-4 text-center">{practice.bestTime}</p>
-                </div>
+                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
+                <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
 
                 {/* Short description */}
-                <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm text-center">
+                <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
                   {practice.id === "sun-gazing"
                     ? "Connect with the sun's energy, regulate your circadian rhythm."
                     : "Gentle stretching awakens your body and prepares you for the day."}
