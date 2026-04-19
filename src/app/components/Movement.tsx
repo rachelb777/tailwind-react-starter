@@ -91,15 +91,11 @@ export function Movement() {
                 {/* Circle with gradient */}
                 {practice.id === "earthing" ? (
                   <div className="relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden mb-8">
-                    <img
-                      src={earthingImage}
-                      alt="Barefoot earthing in nature"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={earthingImage} alt="Barefoot earthing in nature" className="w-full h-full object-cover" />
                   </div>
                 ) : (
                   <div
-                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full overflow-hidden mb-8`}
+                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96"} rounded-full overflow-hidden mb-8`}
                   >
                     <iframe
                       src="https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
