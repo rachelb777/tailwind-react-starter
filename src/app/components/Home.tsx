@@ -112,7 +112,7 @@ export function Home() {
             <div className="absolute text-left" style={{ width: "180px", left: "calc(50% - 560px)", top: "80px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
               <p className="font-body text-sm text-foreground/60">
-                Start your day with sun gazing and gentle stretching
+                Start your day with sun gazing and gentle stretching to align with natural light cycles
               </p>
             </div>
 
@@ -140,7 +140,9 @@ export function Home() {
             </motion.div>
             <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 130px)", top: "580px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
-              <p className="font-body text-sm text-foreground/60">Rebounding and earthing practices</p>
+              <p className="font-body text-sm text-foreground/60">
+                Rebounding and earthing practices that connect you to the earth
+              </p>
             </div>
 
             {/* Your Wellness Circle — upper right, text to its right */}
