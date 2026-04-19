@@ -94,9 +94,8 @@ export function Movement() {
                     <img src={earthingImage} alt="Barefoot earthing in nature" className="w-full h-full object-cover" />
                   </div>
                 ) : (
-                  <div
-                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96"} rounded-full overflow-hidden mb-8`}
-                  >
+                  <div className="relative w-full max-w-lg aspect-video rounded-2xl overflow-hidden mb-8">
+
                     <iframe
                       src="https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
                       width="100%"
