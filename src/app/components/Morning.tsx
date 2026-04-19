@@ -27,8 +27,7 @@ export function Morning() {
       description:
         "Connect with the sun's energy during the first hour after sunrise. This ancient practice helps regulate your circadian rhythm, boost vitamin D production, and enhance mental clarity.",
       benefits: ["Regulates sleep-wake cycle", "Improves mood and energy", "Supports eye health", "Enhances focus"],
-      duration: "5-15 minutes",
-      bestTime: "Within 1 hour of sunrise",
+
       color: "from-accent to-accent/70",
     },
     {
@@ -80,9 +79,7 @@ export function Morning() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`flex flex-col text-center ${
-                  practice.id === "sun-gazing"
-                    ? "items-start text-left"
-                    : "items-end text-right md:mt-32"
+                  practice.id === "sun-gazing" ? "items-start text-left" : "items-end text-right md:mt-32"
                 }`}
               >
                 {/* Video card */}
