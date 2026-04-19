@@ -257,7 +257,7 @@ export function Profile() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-3 bg-secondary text-secondary-foreground rounded-2xl font-body hover:bg-secondary/90 transition-colors"
+                className="w-full max-w-xs px-6 py-3 rounded-xl font-body text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 Join Live Session
               </motion.button>
