@@ -83,35 +83,33 @@ export function Morning() {
               >
                 {/* Circle with gradient */}
                 <div
-                  className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full flex items-center justify-center mb-8 ${
+                  className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full overflow-hidden flex items-center justify-center mb-8 ${
                     practice.id === "sun-gazing"
                       ? "bg-gradient-to-br from-amber-200 via-amber-300 to-amber-400"
                       : "bg-gradient-to-br from-green-100 via-green-200 to-green-300"
                   }`}
                 >
-                  <div className="flex flex-col items-center gap-2">
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`w-14 h-14 rounded-full flex items-center justify-center ${
-                        practice.id === "sun-gazing" ? "bg-white/80" : "bg-white/70"
-                      }`}
-                    >
-                      <Play
-                        className={`w-6 h-6 ml-0.5 ${
-                          practice.id === "sun-gazing" ? "text-amber-700" : "text-green-800"
-                        }`}
-                        fill="currentColor"
-                      />
-                    </motion.button>
-                    <span
-                      className={`text-sm font-body ${
-                        practice.id === "sun-gazing" ? "text-amber-800/70" : "text-green-800/70"
-                      }`}
-                    >
-                      {practice.duration}
-                    </span>
-                  </div>
+                  {practice.id === "sun-gazing" ? (
+                    <iframe
+                      src="https://www.youtube.com/embed/G6PxpBt7L78?start=280&autoplay=0"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      title="Sun Gazing"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center gap-2">
+                      <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="w-14 h-14 rounded-full flex items-center justify-center bg-white/70"
+                      >
+                        <Play className="w-6 h-6 ml-0.5 text-green-800" fill="currentColor" />
+                      </motion.button>
+                      <span className="text-sm font-body text-green-800/70">{practice.duration}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Title & subtitle */}
