@@ -156,52 +156,7 @@ export function Morning() {
           </div>
         </div>
       </section>
-      {/* Quick Tips Section */}
-      {/* Quick Tips Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">Morning Routine Tips</h2>
-            <p className="font-body text-sm md:text-base lg:text-lg">Make the most of your morning practices</p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Start Small",
-                description:
-                  "Begin with just 5 minutes and gradually increase duration as it becomes an enjoyable habit",
-              },
-              {
-                title: "Stay Consistent",
-                description: "Practice at the same time each day to anchor the routine into your natural rhythm",
-              },
-              {
-                title: "Listen to Your Body",
-                description: "Adjust practices based on how you feel - some days call for gentleness, others for vigor",
-              },
-            ].map((tip, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-card rounded-2xl border border-border"
-              >
-                <h3 className="font-display text-2xl text-foreground mb-3">{tip.title}</h3>
-                <p className="font-body text-foreground/60 leading-relaxed">{tip.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       <FeelingModal open={feelingOpen} onOpenChange={setFeelingOpen} activity={activeActivity} />
     </div>
   );
