@@ -213,9 +213,7 @@ export function Profile() {
             className="py-24 mt-16 scroll-mt-28"
           >
             <div className="flex items-center gap-3 mb-4 justify-center">
-              <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
-                <Users className="w-5 h-5 text-secondary" />
-              </div>
+              <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center"></div>
               <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">The Solara Circle</h2>
             </div>
 
