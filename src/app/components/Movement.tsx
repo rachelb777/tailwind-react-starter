@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Play, Activity, Footprints, Check } from "lucide-react";
 import { FeelingModal } from "./FeelingModal";
 import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry";
+import earthingImage from "@/assets/earthing-barefoot.jpg";
 
 export function Movement() {
   const [feelingOpen, setFeelingOpen] = useState(false);
@@ -88,35 +89,30 @@ export function Movement() {
                 className={`flex flex-col items-center text-center ${index === 1 ? "md:mt-32" : ""}`}
               >
                 {/* Circle with gradient */}
-                <div
-                  className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full flex items-center justify-center mb-8 ${
-                    practice.id === "rebounding"
-                      ? "bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300"
-                      : "bg-gradient-to-br from-green-100 via-green-200 to-green-300"
-                  }`}
-                >
-                  <div className="flex flex-col items-center gap-2">
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`w-14 h-14 rounded-full flex items-center justify-center ${
-                        practice.id === "rebounding" ? "bg-white/80" : "bg-white/70"
-                      }`}
-                    >
-                      <Play
-                        className={`w-6 h-6 ml-0.5 ${practice.id === "rebounding" ? "text-sky-700" : "text-green-800"}`}
-                        fill="currentColor"
-                      />
-                    </motion.button>
-                    <span
-                      className={`text-sm font-body ${
-                        practice.id === "rebounding" ? "text-sky-800/70" : "text-green-800/70"
-                      }`}
-                    >
-                      {practice.duration}
-                    </span>
+                {practice.id === "earthing" ? (
+                  <div className="relative w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden mb-8">
+                    <img
+                      src={earthingImage}
+                      alt="Barefoot earthing in nature"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </div>
+                ) : (
+                  <div
+                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full flex items-center justify-center mb-8 bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300`}
+                  >
+                    <div className="flex flex-col items-center gap-2">
+                      <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="w-14 h-14 rounded-full flex items-center justify-center bg-white/80"
+                      >
+                        <Play className="w-6 h-6 ml-0.5 text-sky-700" fill="currentColor" />
+                      </motion.button>
+                      <span className="text-sm font-body text-sky-800/70">{practice.duration}</span>
+                    </div>
+                  </div>
+                )}
 
                 {/* Title & subtitle */}
                 <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
