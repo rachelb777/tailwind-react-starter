@@ -199,7 +199,7 @@ export function Profile() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="py-24 mt-16 scroll-mt-28"
+            className="py-8 mt-8 scroll-mt-28"
           >
             <div className="flex items-center gap-3 mb-4 justify-center">
               <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">The Solara Circle</h2>
