@@ -99,16 +99,15 @@ export function Morning() {
                       title="Sun Gazing"
                     />
                   ) : (
-                    <div className="flex flex-col items-center gap-2">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="w-14 h-14 rounded-full flex items-center justify-center bg-white/70"
-                      >
-                        <Play className="w-6 h-6 ml-0.5 text-green-800" fill="currentColor" />
-                      </motion.button>
-                      <span className="text-sm font-body text-green-800/70">{practice.duration}</span>
-                    </div>
+                    <iframe
+                      src="https://www.youtube.com/embed/1Ujia2-a3Oc?autoplay=0&controls=1"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="Morning Stretching"
+                    />
                   )}
                 </div>
 
