@@ -93,7 +93,7 @@ export function Movement() {
                   </div>
                 ) : (
                   <div
-                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-68 h-68 md:w-76 md:h-76 lg:w-88 lg:h-88"} rounded-full overflow-hidden mb-8`}
+                    className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80"} rounded-full overflow-hidden mb-8`}
                   >
                     <iframe
                       src="https://www.youtube.com/embed/dL4U-IFPQ7U?autoplay=0&controls=1"
