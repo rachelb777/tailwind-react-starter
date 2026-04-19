@@ -79,15 +79,17 @@ export function Morning() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col items-center text-center ${index === 1 ? "md:mt-32" : ""}`}
+                className={`flex flex-col text-center ${
+                  practice.id === "sun-gazing"
+                    ? "items-start text-left"
+                    : "items-end text-right md:mt-32"
+                }`}
               >
-                {/* Circle with gradient */}
+                {/* Video card */}
                 <div
-                  className={`relative ${practice.id === "sun-gazing" ? "w-60 h-60 md:w-68 md:h-68 lg:w-80 lg:h-80" : "w-52 h-52 md:w-60 md:h-60 lg:w-72 lg:h-72"} rounded-full overflow-hidden flex items-center justify-center mb-8 ${
-                    practice.id === "sun-gazing"
-                      ? "bg-gradient-to-br from-amber-200 via-amber-300 to-amber-400"
-                      : "bg-gradient-to-br from-green-100 via-green-200 to-green-300"
-                  }`}
+                  className={`relative w-full ${
+                    practice.id === "sun-gazing" ? "max-w-lg" : "max-w-md"
+                  } aspect-video rounded-2xl overflow-hidden mb-8`}
                 >
                   {practice.id === "sun-gazing" ? (
                     <iframe
@@ -96,6 +98,7 @@ export function Morning() {
                       height="100%"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                       title="Sun Gazing"
                     />
                   ) : (
