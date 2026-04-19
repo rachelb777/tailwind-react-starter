@@ -33,8 +33,7 @@ export function Movement() {
         "Low-impact cardio",
         "Increases bone density",
       ],
-      duration: "15-30 minutes",
-      bestTime: "Mid-morning or afternoon",
+
       color: "from-secondary to-secondary/70",
     },
     {
