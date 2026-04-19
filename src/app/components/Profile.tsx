@@ -84,11 +84,6 @@ export function Profile() {
           transition={{ duration: 0.6, delay: 0.05 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="flex justify-center mb-6">
-            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-primary" />
-            </div>
-          </div>
           <h3 className="font-display text-xl md:text-2xl text-foreground mb-4">Insight</h3>
           <p className="font-body italic text-foreground/70 leading-relaxed" style={{ fontSize: "20px" }}>
             Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
@@ -267,7 +262,7 @@ export function Profile() {
                 <div className="text-sm font-body text-foreground/60 mt-3">Practicing Now</div>
               </div>
               <div className="text-center flex-1 min-w-[120px]">
-                <div className="font-display text-foreground leading-none" style={{ fontSize: "36px" }}>
+                <div className="font-display text-foreground leading-none" style={{ fontSize: "46px" }}>
                   32
                 </div>
                 <div className="text-sm font-body text-foreground/60 mt-3">Live Sessions</div>
