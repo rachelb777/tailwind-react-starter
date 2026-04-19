@@ -4,6 +4,7 @@ import { ArrowRight, Sun, Heart, Users, Calendar } from "lucide-react";
 import heroImage from "../../imports/jesse-uli-7f7C-8u_VIo-unsplash.jpg";
 import sunSaluteImage from "@/assets/sun-salute.jpg";
 import movementImage from "@/assets/movement-grounding.jpg";
+import wellnessImage from "@/assets/wellness-circle.jpg";
 
 export function Home() {
   return (
@@ -153,8 +154,16 @@ export function Home() {
             >
               <Link
                 to="/profile"
-                className="block w-full h-full rounded-full bg-accent/20 hover:scale-105 transition-transform duration-300"
-              />
+                className="block w-full h-full rounded-full hover:scale-105 transition-transform duration-300"
+                style={{ overflow: "hidden" }}
+              >
+                <img
+                  src={wellnessImage}
+                  alt="Your wellness circle community"
+                  className="w-full h-full"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </Link>
             </motion.div>
             <div className="absolute text-left" style={{ width: "180px", right: "calc(50% - 540px)", top: "140px" }}>
               <h3 className="font-display text-xl text-foreground mb-2">Your Wellness Circle</h3>
