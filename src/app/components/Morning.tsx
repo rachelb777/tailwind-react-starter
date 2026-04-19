@@ -37,7 +37,8 @@ export function Morning() {
       description:
         "Gentle stretching awakens your body, increases blood flow, and prepares you for the day ahead. Focus on slow, mindful movements that honor your body's natural rhythms.",
       benefits: ["Increases flexibility", "Reduces muscle tension", "Improves circulation", "Enhances body awareness"],
-
+      duration: "10-20 minutes",
+      bestTime: "After sun gazing",
       color: "from-primary to-primary/70",
     },
   ];
