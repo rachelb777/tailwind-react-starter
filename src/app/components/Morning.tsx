@@ -37,8 +37,7 @@ export function Morning() {
       description:
         "Gentle stretching awakens your body, increases blood flow, and prepares you for the day ahead. Focus on slow, mindful movements that honor your body's natural rhythms.",
       benefits: ["Increases flexibility", "Reduces muscle tension", "Improves circulation", "Enhances body awareness"],
-      duration: "10-20 minutes",
-      bestTime: "After sun gazing",
+
       color: "from-primary to-primary/70",
     },
   ];
@@ -79,7 +78,7 @@ export function Morning() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`flex flex-col text-center ${
-                  practice.id === "sun-gazing" ? "items-start text-left" : "items-end text-right md:mt-32"
+                  practice.id === "sun-gazing" ? "items-start" "text-center" : "items-end text-right md:mt-32"
                 }`}
               >
                 {/* Video card */}
@@ -112,11 +111,11 @@ export function Morning() {
                 </div>
 
                 {/* Title & subtitle */}
-                <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
+                <h2 className="font-display text-xl md:text-2xl text-center text-foreground mb-1">{practice.title}</h2>
                 <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
 
                 {/* Short description */}
-                <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
+                <p className="font-body text-center text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
                   {practice.id === "sun-gazing"
                     ? "Connect with the sun's energy, regulate your circadian rhythm."
                     : "Gentle stretching awakens your body and prepares you for the day."}
