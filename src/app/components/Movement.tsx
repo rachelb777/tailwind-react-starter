@@ -147,13 +147,13 @@ export function Movement() {
                   </label>
                   <button
                     onClick={() => openFeeling(practice.title)}
-                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+                    className="w-full px-6 py-3 rounded-xl font-body text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   >
                     How are you feeling?
                   </button>
                   <button
                     onClick={() => (window.location.href = "/profile#connect-and-bloom")}
-                    className="w-full px-6 py-3 rounded-xl border border-border font-body text-sm text-foreground hover:bg-muted/50 transition-colors underline underline-offset-2"
+                    className="w-full px-6 py-3 rounded-xl border border-accent font-body text-sm text-accent hover:bg-accent/10 transition-colors"
                   >
                     Visit community
                   </button>
