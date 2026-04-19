@@ -87,12 +87,8 @@ export function Movement() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`flex flex-col items-center text-center ${practice.id === "earthing" ? "md:mt-32" : ""}`}
               >
-                {/* Video / Image card */}
-                <div
-                  className={`relative w-full ${
-                    practice.id === "rebounding" ? "max-w-lg" : "max-w-md"
-                  } aspect-video rounded-2xl overflow-hidden mb-8`}
-                >
+                {/* Circle card */}
+                <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden mb-8">
                   {practice.id === "earthing" ? (
                     <img
                       src={earthingImage}
