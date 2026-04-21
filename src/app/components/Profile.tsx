@@ -29,6 +29,58 @@ export function Profile() {
     };
   }, []);
 
+  const masonryRef = useRef<HTMLDivElement | null>(null);
+
+  const galleryImages = [
+    { src: goldenhillSun, alt: "Sunset over golden hills", width2: true },
+    { src: stretchBraid, alt: "Woman stretching outdoors" },
+    { src: greendressFeet, alt: "Barefoot walking in forest stream" },
+    { src: communityWarrior, alt: "Two friends in warrior pose", width2: true },
+    { src: suryaNamaskar, alt: "Sun salutation at the sea shore" },
+    { src: handfootStretch, alt: "Yoga balance pose at sunset" },
+    { src: mountainSun, alt: "Mountain sunrise over fjord" },
+    { src: communityFeet, alt: "Friends practicing yoga together", width2: true },
+    { src: fieldWoman, alt: "Woman in field at golden hour" },
+    { src: girlTrampoline, alt: "Girl jumping on trampoline" },
+  ];
+
+  useEffect(() => {
+    if (!masonryRef.current) return;
+    let msnry: any;
+    const init = () => {
+      if (window.Masonry && masonryRef.current) {
+        msnry = new window.Masonry(masonryRef.current, {
+          itemSelector: ".grid-item",
+          columnWidth: ".grid-sizer",
+          percentPosition: true,
+          gutter: 12,
+        });
+      }
+    };
+    // wait for images to load for accurate layout
+    const imgs = masonryRef.current.querySelectorAll("img");
+    let loaded = 0;
+    const total = imgs.length;
+    const onLoad = () => {
+      loaded += 1;
+      if (loaded >= total) {
+        if (msnry) msnry.layout();
+        else init();
+      }
+    };
+    if (window.Masonry) init();
+    imgs.forEach((img) => {
+      if (img.complete) onLoad();
+      else {
+        img.addEventListener("load", onLoad);
+        img.addEventListener("error", onLoad);
+      }
+    });
+    return () => {
+      if (msnry && msnry.destroy) msnry.destroy();
+    };
+  }, []);
+
   const moodLabels: Record<string, string> = {
     energy: "Energy",
     mood: "Mood",
