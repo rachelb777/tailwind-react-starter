@@ -277,6 +277,24 @@ export function Profile() {
               See what your community is practicing right now and draw inspiration from their dedication
             </p>
 
+            {/* Masonry community gallery */}
+            <div ref={masonryRef} className="grid mb-16">
+              <div className="grid-sizer" />
+              {galleryImages.map((img, i) => (
+                <div
+                  key={i}
+                  className={`grid-item${img.width2 ? " grid-item--width2" : ""}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    className="w-full h-auto block rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+
             {/* Members horizontal row */}
             <div className="flex flex-wrap items-start justify-between gap-x-8 gap-y-6 mb-16">
               {communityMembers.map((member, index) => (
