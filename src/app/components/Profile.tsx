@@ -1,8 +1,24 @@
 import { motion } from "motion/react";
-import { useMemo } from "react";
+import { useMemo, useEffect, useRef } from "react";
 import { CheckCircle2, Circle } from "lucide-react";
 
 import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
+import goldenhillSun from "@/assets/community/goldenhill-sun.jpg";
+import greendressFeet from "@/assets/community/greendress-feet.jpg";
+import handfootStretch from "@/assets/community/handfoot-stretch.jpg";
+import mountainSun from "@/assets/community/mountain-sun.jpg";
+import stretchBraid from "@/assets/community/stretch-braid.jpg";
+import suryaNamaskar from "@/assets/community/surya-namaskar.jpg";
+import communityFeet from "@/assets/community/community-feet.jpg";
+import communityWarrior from "@/assets/community/community-warrior.jpg";
+import fieldWoman from "@/assets/community/field-woman.jpg";
+import girlTrampoline from "@/assets/community/girl-trampoline.jpg";
+
+declare global {
+  interface Window {
+    Masonry?: any;
+  }
+}
 
 export function Profile() {
   const { activityCounts, moodAverages } = useMemo(() => {
