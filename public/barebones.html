@@ -9,7 +9,7 @@
     <style>
       .grid-item { width: 200px; margin-bottom: 10px; }
       .grid-item img { width: 100%; display: block; }
-      .grid-item--width2 { width: 410px; }
+      .grid-item--width2 { width: 400px; }
     </style>
   </head>
   <body>
@@ -32,6 +32,7 @@
           // options
           itemSelector: '.grid-item',
           columnWidth: 200
+          gutter: 10
         });
         // layout Masonry after each image loads
         $grid.imagesLoaded().progress(function () {
