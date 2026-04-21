@@ -93,3 +93,44 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Masonry community gallery */
+.grid::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.grid-sizer,
+.grid-item {
+  width: calc(50% - 6px);
+}
+.grid-item--width2 {
+  width: calc(100% - 0px);
+}
+.grid-item {
+  float: left;
+  margin-bottom: 12px;
+}
+.grid-item img {
+  display: block;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+@media (min-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(33.333% - 8px);
+  }
+  .grid-item--width2 {
+    width: calc(66.666% - 4px);
+  }
+}
+@media (min-width: 1024px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(25% - 9px);
+  }
+  .grid-item--width2 {
+    width: calc(50% - 6px);
+  }
+}
