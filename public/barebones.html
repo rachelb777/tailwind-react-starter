@@ -27,18 +27,13 @@
       <div class="grid-item"><img src="/grid/greendress_feet.jpg" alt="" /></div>
     </div>
     <script>
-      $(function () {
-        var $grid = $('.grid').masonry({
-          // options
+      window.onload = function () {
+        $('.grid').masonry({
           itemSelector: '.grid-item',
           columnWidth: 200,
           gutter: 10
         });
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress(function () {
-          $grid.masonry('layout');
-        });
-      });
+      };
     </script>
   </body>
 </html>
