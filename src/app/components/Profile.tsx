@@ -1,24 +1,8 @@
 import { motion } from "motion/react";
-import { useMemo, useEffect, useRef } from "react";
+import { useMemo } from "react";
 import { CheckCircle2, Circle } from "lucide-react";
 
 import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
-import goldenhillSun from "@/assets/community/goldenhill-sun.jpg";
-import greendressFeet from "@/assets/community/greendress-feet.jpg";
-import handfootStretch from "@/assets/community/handfoot-stretch.jpg";
-import mountainSun from "@/assets/community/mountain-sun.jpg";
-import stretchBraid from "@/assets/community/stretch-braid.jpg";
-import suryaNamaskar from "@/assets/community/surya-namaskar.jpg";
-import communityFeet from "@/assets/community/community-feet.jpg";
-import communityWarrior from "@/assets/community/community-warrior.jpg";
-import fieldWoman from "@/assets/community/field-woman.jpg";
-import girlTrampoline from "@/assets/community/girl-trampoline.jpg";
-
-declare global {
-  interface Window {
-    Masonry?: any;
-  }
-}
 
 export function Profile() {
   const { activityCounts, moodAverages } = useMemo(() => {
@@ -26,58 +10,6 @@ export function Profile() {
     return {
       activityCounts: getActivityCounts(entries),
       moodAverages: getMoodAverages(entries),
-    };
-  }, []);
-
-  const masonryRef = useRef<HTMLDivElement | null>(null);
-
-  const galleryImages = [
-    { src: goldenhillSun, alt: "Sunset over golden hills", width2: true },
-    { src: stretchBraid, alt: "Woman stretching outdoors" },
-    { src: greendressFeet, alt: "Barefoot walking in forest stream" },
-    { src: communityWarrior, alt: "Two friends in warrior pose", width2: true },
-    { src: suryaNamaskar, alt: "Sun salutation at the sea shore" },
-    { src: handfootStretch, alt: "Yoga balance pose at sunset" },
-    { src: mountainSun, alt: "Mountain sunrise over fjord" },
-    { src: communityFeet, alt: "Friends practicing yoga together", width2: true },
-    { src: fieldWoman, alt: "Woman in field at golden hour" },
-    { src: girlTrampoline, alt: "Girl jumping on trampoline" },
-  ];
-
-  useEffect(() => {
-    if (!masonryRef.current) return;
-    let msnry: any;
-    const init = () => {
-      if (window.Masonry && masonryRef.current) {
-        msnry = new window.Masonry(masonryRef.current, {
-          itemSelector: ".grid-item",
-          columnWidth: ".grid-sizer",
-          percentPosition: true,
-          gutter: 12,
-        });
-      }
-    };
-    // wait for images to load for accurate layout
-    const imgs = masonryRef.current.querySelectorAll("img");
-    let loaded = 0;
-    const total = imgs.length;
-    const onLoad = () => {
-      loaded += 1;
-      if (loaded >= total) {
-        if (msnry) msnry.layout();
-        else init();
-      }
-    };
-    if (window.Masonry) init();
-    imgs.forEach((img) => {
-      if (img.complete) onLoad();
-      else {
-        img.addEventListener("load", onLoad);
-        img.addEventListener("error", onLoad);
-      }
-    });
-    return () => {
-      if (msnry && msnry.destroy) msnry.destroy();
     };
   }, []);
 
@@ -276,24 +208,6 @@ export function Profile() {
             <p className="font-body text-sm md:text-base lg:text-lg text-foreground/60 mb-12 leading-relaxed text-center max-w-2xl mx-auto">
               See what your community is practicing right now and draw inspiration from their dedication
             </p>
-
-            {/* Masonry community gallery */}
-            <div ref={masonryRef} className="grid mb-16">
-              <div className="grid-sizer" />
-              {galleryImages.map((img, i) => (
-                <div
-                  key={i}
-                  className={`grid-item${img.width2 ? " grid-item--width2" : ""}`}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    className="w-full h-auto block rounded-xl"
-                  />
-                </div>
-              ))}
-            </div>
 
             {/* Members horizontal row */}
             <div className="flex flex-wrap items-start justify-between gap-x-8 gap-y-6 mb-16">
