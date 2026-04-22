@@ -103,9 +103,9 @@ export function Layout() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors duration-200">
+                  <Link to="/solara-circle" className="hover:text-foreground transition-colors duration-200">
                     The Solara Circle
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors duration-200">
