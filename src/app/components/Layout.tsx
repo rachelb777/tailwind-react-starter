@@ -9,6 +9,7 @@ export function Layout() {
     { path: "/", label: "Home" },
     { path: "/morning", label: "Morning" },
     { path: "/movement", label: "Movement" },
+    { path: "/solara-circle", label: "The Solara Circle" },
     { path: "/profile", label: "Wellness Dashboard" },
   ];
 
@@ -102,9 +103,9 @@ export function Layout() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors duration-200">
+                  <Link to="/solara-circle" className="hover:text-foreground transition-colors duration-200">
                     The Solara Circle
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors duration-200">
