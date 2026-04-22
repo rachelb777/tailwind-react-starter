@@ -9,6 +9,7 @@ export function Layout() {
     { path: "/", label: "Home" },
     { path: "/morning", label: "Morning" },
     { path: "/movement", label: "Movement" },
+    { path: "/solara-circle", label: "The Solara Circle" },
     { path: "/profile", label: "Wellness Dashboard" },
   ];
 
