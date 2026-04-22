@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barebones Page</title>
+    <link rel="stylesheet" href="/lightbox2/css/lightbox.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <style>
@@ -15,16 +16,16 @@
   <body>
     <h1>Hello</h1>
     <div class="grid">
-      <div class="grid-item"><img src="/grid/handfoot_stretch.jpg" alt="" /></div>
-      <div class="grid-item grid-item--width2"><img src="/grid/mountain_sun.jpg" alt="" /></div>
-      <div class="grid-item"><img src="/grid/stretch_braid.jpg" alt="" /></div>
-      <div class="grid-item"><img src="/grid/surya_namaskar.jpg" alt="" /></div>
-      <div class="grid-item grid-item--width2"><img src="/grid/best_community.jpg" alt="" /></div>
-      <div class="grid-item"><img src="/grid/community_stretch.jpg" alt="" /></div>
-      <div class="grid-item"><img src="/grid/edit_behnam.jpg" alt="" /></div>
-      <div class="grid-item grid-item--width2"><img src="/grid/girl_trampoline.jpg" alt="" /></div>
-      <div class="grid-item"><img src="/grid/goldenhill_sun.jpg" alt="" /></div>
-      <div class="grid-item"><img src="/grid/greendress_feet.jpg" alt="" /></div>
+      <div class="grid-item"><a href="/grid/handfoot_stretch.jpg" data-lightbox="gallery"><img src="/grid/handfoot_stretch.jpg" alt="" /></a></div>
+      <div class="grid-item grid-item--width2"><a href="/grid/mountain_sun.jpg" data-lightbox="gallery"><img src="/grid/mountain_sun.jpg" alt="" /></a></div>
+      <div class="grid-item"><a href="/grid/stretch_braid.jpg" data-lightbox="gallery"><img src="/grid/stretch_braid.jpg" alt="" /></a></div>
+      <div class="grid-item"><a href="/grid/surya_namaskar.jpg" data-lightbox="gallery"><img src="/grid/surya_namaskar.jpg" alt="" /></a></div>
+      <div class="grid-item grid-item--width2"><a href="/grid/best_community.jpg" data-lightbox="gallery"><img src="/grid/best_community.jpg" alt="" /></a></div>
+      <div class="grid-item"><a href="/grid/community_stretch.jpg" data-lightbox="gallery"><img src="/grid/community_stretch.jpg" alt="" /></a></div>
+      <div class="grid-item"><a href="/grid/edit_behnam.jpg" data-lightbox="gallery"><img src="/grid/edit_behnam.jpg" alt="" /></a></div>
+      <div class="grid-item grid-item--width2"><a href="/grid/girl_trampoline.jpg" data-lightbox="gallery"><img src="/grid/girl_trampoline.jpg" alt="" /></a></div>
+      <div class="grid-item"><a href="/grid/goldenhill_sun.jpg" data-lightbox="gallery"><img src="/grid/goldenhill_sun.jpg" alt="" /></a></div>
+      <div class="grid-item"><a href="/grid/greendress_feet.jpg" data-lightbox="gallery"><img src="/grid/greendress_feet.jpg" alt="" /></a></div>
     </div>
     <script>
       window.onload = function () {
@@ -35,5 +36,6 @@
         });
       };
     </script>
+    <script src="/lightbox2/js/lightbox.min.js"></script>
   </body>
 </html>
