@@ -2,24 +2,11 @@ import { motion } from "motion/react";
 import { useMemo } from "react";
 import { CheckCircle2, Circle } from "lucide-react";
 
-import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
+import { getAllDailyEntries } from "../lib/stats";
+import { ActivityMoodGrid } from "./ActivityMoodGrid";
 
 export function Profile() {
-  const { activityCounts, moodAverages } = useMemo(() => {
-    const entries = getAllDailyEntries();
-    return {
-      activityCounts: getActivityCounts(entries),
-      moodAverages: getMoodAverages(entries),
-    };
-  }, []);
-
-  const moodLabels: Record<string, string> = {
-    energy: "Energy",
-    mood: "Mood",
-    focus: "Focus",
-    pain: "Pain",
-    sleepQuality: "Sleep Quality",
-  };
+  const entries = useMemo(() => getAllDailyEntries(), []);
 
   const todaysPractices = [
     { name: "Sun Gazing", completed: true, time: "6:30 AM" },
