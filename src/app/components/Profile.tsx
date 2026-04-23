@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { CheckCircle2, Circle } from "lucide-react";
 
 import { getAllDailyEntries } from "../lib/stats";
-import { ActivityMoodGrid } from "./ActivityMoodGrid";
+import { MoodTrackingGrid } from "./MoodTrackingGrid";
 
 export function Profile() {
   const entries = useMemo(() => getAllDailyEntries(), []);
@@ -124,7 +124,7 @@ export function Profile() {
 
             {/* Main Content */}
             <div className="lg:col-span-9 space-y-8">
-              <ActivityMoodGrid entries={entries} />
+              <MoodTrackingGrid entries={entries} />
             </div>
           </div>
 
