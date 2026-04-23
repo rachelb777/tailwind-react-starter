@@ -34,6 +34,14 @@
     --sidebar-accent-foreground: 75 31% 15%;
     --sidebar-border: 135 16% 58% / 0.2;
     --sidebar-ring: 135 16% 58%;
+
+    /* Warm grid surface tokens for tracking grids */
+    --grid-surface: 36 50% 95%;
+    --grid-surface-deep: 36 40% 90%;
+    --grid-cell-border: 36 25% 82%;
+    --grid-accent: 38 70% 60%;
+    --grid-accent-soft: 40 80% 90%;
+    --grid-accent-foreground: 30 45% 25%;
   }
 
   .dark {
