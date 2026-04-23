@@ -2,24 +2,11 @@ import { motion } from "motion/react";
 import { useMemo } from "react";
 import { CheckCircle2, Circle } from "lucide-react";
 
-import { getAllDailyEntries, getActivityCounts, getMoodAverages, TRACKED_ACTIVITIES } from "../lib/stats";
+import { getAllDailyEntries } from "../lib/stats";
+import { ActivityMoodGrid } from "./ActivityMoodGrid";
 
 export function Profile() {
-  const { activityCounts, moodAverages } = useMemo(() => {
-    const entries = getAllDailyEntries();
-    return {
-      activityCounts: getActivityCounts(entries),
-      moodAverages: getMoodAverages(entries),
-    };
-  }, []);
-
-  const moodLabels: Record<string, string> = {
-    energy: "Energy",
-    mood: "Mood",
-    focus: "Focus",
-    pain: "Pain",
-    sleepQuality: "Sleep Quality",
-  };
+  const entries = useMemo(() => getAllDailyEntries(), []);
 
   const todaysPractices = [
     { name: "Sun Gazing", completed: true, time: "6:30 AM" },
@@ -137,59 +124,7 @@ export function Profile() {
 
             {/* Main Content */}
             <div className="lg:col-span-9 space-y-8">
-              {/* Activity Summary */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="py-4"
-              >
-                <div className="flex items-center gap-2 mb-8">
-                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
-                    Activity Summary
-                  </h2>
-                </div>
-
-                <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
-                  {TRACKED_ACTIVITIES.map((activity) => (
-                    <div key={activity} className="text-center flex-1 min-w-[120px]">
-                      <div className="font-display text-foreground leading-none" style={{ fontSize: "36px" }}>
-                        {activityCounts[activity] ?? 0}
-                      </div>
-                      <div className="text-sm font-body text-foreground/60 mt-3">{activity}</div>
-                      <div className="text-xs font-body text-foreground/40 mt-1">days completed</div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Mood Averages */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 }}
-                className="py-4"
-              >
-                <div className="flex items-center gap-2 mb-8">
-                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
-                    Mood Averages
-                  </h2>
-                </div>
-                <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
-                  {(Object.keys(moodLabels) as Array<keyof typeof moodAverages>).map((key) => {
-                    const value = moodAverages[key];
-                    return (
-                      <div key={key} className="text-center flex-1 min-w-[100px]">
-                        <div className="font-display text-foreground leading-none" style={{ fontSize: "36px" }}>
-                          {value === null ? "—" : value.toFixed(1)}
-                        </div>
-                        <div className="text-sm font-body text-foreground/60 mt-3">{moodLabels[key]}</div>
-                        <div className="text-xs font-body text-foreground/40 mt-1">avg / 5</div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </motion.div>
+              <ActivityMoodGrid entries={entries} />
             </div>
           </div>
 
