@@ -12,11 +12,65 @@
       .grid-item { width: 200px; margin-bottom: 10px; }
       .grid-item img { width: 100%; display: block; }
       .grid-item--width2 { width: 400px; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #2a241d; background: #faf6f0; }
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 24px;
+        box-sizing: border-box;
+        background: linear-gradient(180deg, #faf6f0 0%, #f3ebdd 100%);
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin: 0 0 32px;
+        line-height: 1.1;
+      }
+      .hero img.hero-image {
+        width: min(420px, 80%);
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 20px 60px -20px rgba(80, 60, 30, 0.35);
+        margin-bottom: 32px;
+        display: block;
+      }
+      .hero p {
+        max-width: 640px;
+        font-size: clamp(1rem, 1.6vw, 1.15rem);
+        line-height: 1.7;
+        color: #5a4f42;
+        margin: 0 auto;
+      }
+      .gallery-section { padding: 40px 24px; }
+      .gallery-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0 0 32px;
+      }
     </style>
   </head>
   <body>
-    <h1>The Solara Circle</h1>
-    <div class="grid">
+    <section class="hero">
+      <h1>The Solara Circle</h1>
+      <img
+        class="hero-image"
+        src="/hero/group_stretch.jpg"
+        alt="Group of people practicing yoga together in a sunlit meadow at sunrise"
+      />
+      <p>
+        The Solara Circle is your community for inspiration and connection. See what your community is
+        practicing right now, share your own journey, and draw strength from a supportive Solara community
+        that shows up for each other every day.
+      </p>
+    </section>
+    <section class="gallery-section">
+      <div class="grid">
       <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
         <a
           href="/large/handfoot_stretch_wesley-tingey--nZynZmR3Ls-unsplash-3.jpg"
@@ -109,7 +163,8 @@
             alt="woman in green dress walking in green jungle with barefeet in stream"
         /></a>
       </div>
-    </div>
+      </div>
+    </section>
     <script>
       window.onload = function () {
         $('.grid').masonry({
