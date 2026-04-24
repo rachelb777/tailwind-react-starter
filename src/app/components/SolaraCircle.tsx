@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
 
 declare global {
   interface Window {
@@ -148,19 +149,32 @@ export function SolaraCircle() {
       {/* Hero */}
       <section className="relative w-full bg-gradient-to-b from-background to-muted/40 pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16 text-center flex flex-col items-center">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-foreground mb-8 leading-[1.1] tracking-tight">
-            The Solara Circle
-          </h1>
-          <img
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight"
+          >
+            The Solara <span className="text-accent italic">Circle</span>
+          </motion.h1>
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             src="/hero/group_stretch.jpg"
             alt="Group of people practicing yoga together in a sunlit meadow at sunrise"
             className="w-full max-w-md h-auto rounded-2xl shadow-xl mb-8"
           />
-          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed"
+          >
             The Solara Circle is your community for inspiration and connection. See what your community is practicing
             right now, share your own journey, and draw strength from a supportive Solara community that shows up for
             each other every day.
-          </p>
+          </motion.p>
         </div>
       </section>
 
