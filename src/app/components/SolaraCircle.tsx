@@ -99,6 +99,7 @@ export function SolaraCircle() {
           itemSelector: ".grid-item",
           columnWidth: 200,
           gutter: 10,
+          percentPosition: false,
         });
         // Re-layout after each image loads to avoid overlaps
         $grid.find("img").each(function (this: HTMLImageElement) {
@@ -156,9 +157,9 @@ export function SolaraCircle() {
             className="w-full max-w-md h-auto rounded-2xl shadow-xl mb-8"
           />
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            The Solara Circle is your community for inspiration and connection. See what your community is
-            practicing right now, share your own journey, and draw strength from a supportive Solara community
-            that shows up for each other every day.
+            The Solara Circle is your community for inspiration and connection. See what your community is practicing
+            right now, share your own journey, and draw strength from a supportive Solara community that shows up for
+            each other every day.
           </p>
         </div>
       </section>
