@@ -93,6 +93,41 @@ const galleryItems = [
     alt: "woman in green dress walking in green jungle with barefeet in stream",
     wide: false,
   },
+  {
+    large: "/large/barefoot_nature.jpg",
+    thumb: "/grid/barefoot_nature.jpg",
+    title: "Woman walking barefooted in nature",
+    alt: "Woman Wearing Sports Bra and Legging Walking Barefooted on stone steps in nature",
+    wide: false,
+  },
+  {
+    large: "/large/woman_rock_water.jpg",
+    thumb: "/grid/woman_rock_water.jpg",
+    title: "A woman sitting on a rock in the water",
+    alt: "A woman touching her feet sitting on rock in shallow water",
+    wide: false,
+  },
+  {
+    large: "/large/high_rebounding.jpg",
+    thumb: "/grid/high_rebounding.jpg",
+    title: "High rebounding women!",
+    alt: "group of women on mini trampolines jumping in air at same time outdoors",
+    wide: true,
+  },
+  {
+    large: "/large/yogic_stretch.jpg",
+    thumb: "/grid/yogic_stretch.jpg",
+    title: "A woman doing a yoga pose",
+    alt: "A woman sitting on floor arching back into yoga pose with foot behind her touching back of her head",
+    wide: true,
+  },
+  {
+    large: "/large/man_watching_sun.jpg",
+    thumb: "/grid/man_watching_sun.jpg",
+    title: "Man watching sunrise",
+    alt: "Profile of man wearing hat watching sunrise",
+    wide: false,
+  },
 ];
 
 type FeedPost = {
