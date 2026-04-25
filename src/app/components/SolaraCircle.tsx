@@ -160,7 +160,10 @@ const feedPosts: FeedPost[] = [
 
 function FeedCard({ post }: { post: FeedPost }) {
   return (
-    <article className="rounded-2xl bg-card/60 shadow-[0_2px_16px_-4px_hsl(75_20%_15%/0.08)] p-8 md:p-10 transition-shadow hover:shadow-[0_6px_24px_-4px_hsl(75_20%_15%/0.12)]">
+    <article
+      className="bg-card/60 shadow-[0_2px_16px_-4px_hsl(75_20%_15%/0.08)] transition-shadow hover:shadow-[0_6px_24px_-4px_hsl(75_20%_15%/0.12)] flex flex-col items-center justify-center text-center mx-auto w-full max-w-[360px] aspect-[3/4] px-10 md:px-14 py-12"
+      style={{ borderRadius: "50%" }}
+    >
       <div
         className="flex items-center justify-center w-12 h-12 rounded-full font-display text-lg mb-4"
         style={{ backgroundColor: post.avatarBg, color: post.avatarFg }}
@@ -174,7 +177,7 @@ function FeedCard({ post }: { post: FeedPost }) {
       <p className="font-body text-sm text-foreground/55 mt-1 mb-4">
         {post.practice} · {post.day}
       </p>
-      <p className="font-body text-base text-foreground/80 leading-relaxed">
+      <p className="font-body text-sm text-foreground/80 leading-relaxed line-clamp-6">
         {post.text}
       </p>
     </article>
@@ -183,8 +186,11 @@ function FeedCard({ post }: { post: FeedPost }) {
 
 function FeaturedFeedCard({ post }: { post: FeedPost }) {
   return (
-    <article className="rounded-2xl shadow-[0_2px_20px_-4px_hsl(28_55%_30%/0.12)] p-8 md:p-10 bg-[hsl(36_55%_92%)] transition-shadow hover:shadow-[0_6px_28px_-4px_hsl(28_55%_30%/0.18)]">
-      <div className="flex items-center gap-4 mb-5">
+    <article
+      className="shadow-[0_2px_20px_-4px_hsl(28_55%_30%/0.12)] bg-[hsl(36_55%_92%)] transition-shadow hover:shadow-[0_6px_28px_-4px_hsl(28_55%_30%/0.18)] flex flex-col items-center justify-center text-center mx-auto w-full aspect-[5/2] px-16 md:px-32 py-10"
+      style={{ borderRadius: "50%" }}
+    >
+      <div className="flex items-center gap-4 mb-4 justify-center">
         <div
           className="flex items-center justify-center w-14 h-14 rounded-full font-display text-xl shrink-0"
           style={{ backgroundColor: post.avatarBg, color: post.avatarFg }}
@@ -192,7 +198,7 @@ function FeaturedFeedCard({ post }: { post: FeedPost }) {
         >
           {post.initial}
         </div>
-        <div>
+        <div className="text-left">
           <h4 className="font-body font-semibold text-foreground text-lg leading-tight">
             {post.name}
           </h4>
@@ -201,7 +207,7 @@ function FeaturedFeedCard({ post }: { post: FeedPost }) {
           </p>
         </div>
       </div>
-      <p className="font-body text-base text-foreground/80 leading-relaxed">
+      <p className="font-body text-base text-foreground/80 leading-relaxed max-w-2xl">
         {post.text}
       </p>
     </article>
