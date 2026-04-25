@@ -93,6 +93,41 @@ const galleryItems = [
     alt: "woman in green dress walking in green jungle with barefeet in stream",
     wide: false,
   },
+  {
+    large: "/large/barefoot_pexels-pnw-prod-8981012 - Copy.jpg",
+    thumb: "/grid/barefoot_pexels-pnw-prod-8981012 - Copy.jpg",
+    title: "Woman walking barefooted in nature",
+    alt: "Woman Wearing Sports Bra and Legging Walking Barefooted on stone steps in nature",
+    wide: false,
+  },
+  {
+    large: "/large/earth_water_anna-sha-UGRwBB2F9Cs-unsplash.jpg",
+    thumb: "/grid/earth_water_anna-sha-UGRwBB2F9Cs-unsplash.jpg",
+    title: "A woman sitting on a rock in the water",
+    alt: "A woman touching her feet sitting on rock in shallow water",
+    wide: false,
+  },
+  {
+    large: "/large/memento-media-scc_usjFFNE-unsplash.jpg",
+    thumb: "/grid/memento-media-scc_usjFFNE-unsplash.jpg",
+    title: "High rebounding women!",
+    alt: "group of women on mini trampolines jumping in air at same time outdoors",
+    wide: true,
+  },
+  {
+    large: "/large/yogicstretch_carl-barcelo-nqUHQkuVj3c-unsplash.jpg",
+    thumb: "/grid/yogicstretch_carl-barcelo-nqUHQkuVj3c-unsplash.jpg",
+    title: "A woman doing a yoga pose",
+    alt: "A woman sitting on floor arching back into yoga pose with foot behind her touching back of her head",
+    wide: true,
+  },
+  {
+    large: "/large/man_watching_sun_chanbora-chhun-MQ9eMYU_F4I-unsplash.jpg",
+    thumb: "/grid/man_watching_sun_chanbora-chhun-MQ9eMYU_F4I-unsplash.jpg",
+    title: "Man watching sunrise",
+    alt: "Profile of man wearing hat watching sunrise",
+    wide: false,
+  },
 ];
 
 type FeedPost = {
