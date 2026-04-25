@@ -158,10 +158,10 @@ const feedPosts: FeedPost[] = [
   },
 ];
 
-function FeedCard({ post }: { post: FeedPost }) {
+function FeedCard({ post, tall = false }: { post: FeedPost; tall?: boolean }) {
   return (
     <article
-      className="bg-card/60 shadow-[0_2px_16px_-4px_hsl(75_20%_15%/0.08)] transition-shadow hover:shadow-[0_6px_24px_-4px_hsl(75_20%_15%/0.12)] flex flex-col items-center justify-center text-center mx-auto w-full max-w-[360px] aspect-[3/4] px-10 md:px-14 py-12"
+      className={`bg-card/60 shadow-[0_2px_16px_-4px_hsl(75_20%_15%/0.08)] transition-shadow hover:shadow-[0_6px_24px_-4px_hsl(75_20%_15%/0.12)] flex flex-col items-center justify-center text-center mx-auto w-full max-w-[360px] ${tall ? "aspect-[2/3]" : "aspect-[3/4]"} px-8 md:px-10 py-12`}
       style={{ borderRadius: "50%" }}
     >
       <div
@@ -177,7 +177,7 @@ function FeedCard({ post }: { post: FeedPost }) {
       <p className="font-body text-sm text-foreground/55 mt-1 mb-4">
         {post.practice} · {post.day}
       </p>
-      <p className="font-body text-sm text-foreground/80 leading-relaxed line-clamp-6">
+      <p className={`font-body text-sm text-foreground/80 leading-relaxed ${tall ? "line-clamp-[10]" : "line-clamp-6"}`}>
         {post.text}
       </p>
     </article>
@@ -316,17 +316,19 @@ export function SolaraCircle() {
         </h3>
 
         <div className="flex flex-col gap-8 md:gap-10">
-          {/* Row 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            <FeedCard post={feedPosts[0]} />
-            <FeedCard post={feedPosts[1]} />
+          {/* Row 1 - Maya centered */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-[360px]">
+              <FeedCard post={feedPosts[0]} />
+            </div>
           </div>
-          {/* Row 2 - Featured */}
+          {/* Row 2 - Featured Tom */}
           <FeaturedFeedCard post={feedPosts[2]} />
-          {/* Row 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            <FeedCard post={feedPosts[3]} />
-            <FeedCard post={feedPosts[4]} />
+          {/* Row 3 - Daniel, Priya, Lena */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <FeedCard post={feedPosts[1]} tall />
+            <FeedCard post={feedPosts[3]} tall />
+            <FeedCard post={feedPosts[4]} tall />
           </div>
         </div>
       </section>
