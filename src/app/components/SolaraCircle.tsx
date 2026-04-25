@@ -141,7 +141,7 @@ const feedPosts: FeedPost[] = [
     initial: "P",
     practice: "Rebounding",
     day: "Day 2 of 14",
-    text: "Just started yesterday and I already feel ridiculous jumping on a mini trampoline in my living room. But I did it. My cat was not impressed. Going to try to stick with it and see what happens. One weird thing — I actually sat down and finished some work emails right after without getting distracted, which almost never happens. Probably a coincidence this early. We'll see.",
+    text: "Day two and I already feel ridiculous jumping on a mini trampoline. But I did it. Oddly, I sat down and knocked out my emails right after without getting distracted. Probably a coincidence. We'll see.",
     // soft coral
     avatarBg: "hsl(8 65% 70%)",
     avatarFg: "hsl(40 33% 99%)",
@@ -171,13 +171,13 @@ function FeedCard({ post, tall = false }: { post: FeedPost; tall?: boolean }) {
       >
         {post.initial}
       </div>
-      <h4 className="font-body font-semibold text-foreground text-lg leading-tight">
-        {post.name}
-      </h4>
+      <h4 className="font-body font-semibold text-foreground text-lg leading-tight">{post.name}</h4>
       <p className="font-body text-sm text-foreground/55 mt-1 mb-4">
         {post.practice} · {post.day}
       </p>
-      <p className={`font-body text-sm text-foreground/80 leading-relaxed ${tall ? "line-clamp-[10]" : "line-clamp-6"}`}>
+      <p
+        className={`font-body text-sm text-foreground/80 leading-relaxed ${tall ? "line-clamp-[10]" : "line-clamp-6"}`}
+      >
         {post.text}
       </p>
     </article>
@@ -199,17 +199,13 @@ function FeaturedFeedCard({ post }: { post: FeedPost }) {
           {post.initial}
         </div>
         <div className="text-left">
-          <h4 className="font-body font-semibold text-foreground text-lg leading-tight">
-            {post.name}
-          </h4>
+          <h4 className="font-body font-semibold text-foreground text-lg leading-tight">{post.name}</h4>
           <p className="font-body text-sm text-foreground/55 mt-0.5">
             {post.practice} · {post.day}
           </p>
         </div>
       </div>
-      <p className="font-body text-base text-foreground/80 leading-relaxed max-w-2xl">
-        {post.text}
-      </p>
+      <p className="font-body text-base text-foreground/80 leading-relaxed max-w-2xl">{post.text}</p>
     </article>
   );
 }
@@ -350,9 +346,7 @@ export function SolaraCircle() {
       <Dialog open={shareOpen} onOpenChange={setShareOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle className="font-display text-2xl text-foreground">
-              Welcome to the Circle
-            </DialogTitle>
+            <DialogTitle className="font-display text-2xl text-foreground">Welcome to the Circle</DialogTitle>
             <DialogDescription className="font-body text-base text-foreground/70 pt-2">
               Thank you for being part of the Circle. Photo sharing coming soon!
             </DialogDescription>
