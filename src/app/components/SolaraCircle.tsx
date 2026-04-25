@@ -1,5 +1,16 @@
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
 
 declare global {
   interface Window {
@@ -84,8 +95,122 @@ const galleryItems = [
   },
 ];
 
+type FeedPost = {
+  name: string;
+  initial: string;
+  practice: string;
+  day: string;
+  text: string;
+  avatarBg: string;
+  avatarFg: string;
+};
+
+const feedPosts: FeedPost[] = [
+  {
+    name: "Maya R.",
+    initial: "M",
+    practice: "Sun Gazing",
+    day: "Day 11 of 14",
+    text: "Honestly wasn't sure about this one at first. But looking at my check-ins from the past week, my mood scores are consistently higher on the days I actually go outside for it. I've been skipping some mornings and I can kind of see that in the numbers now. Trying to be more consistent this last stretch.",
+    // terracotta
+    avatarBg: "hsl(14 55% 60%)",
+    avatarFg: "hsl(40 33% 99%)",
+  },
+  {
+    name: "Daniel K.",
+    initial: "D",
+    practice: "Earthing",
+    day: "Day 6 of 14",
+    text: "My focus has been lower than I expected — I thought getting outside barefoot would clear my head. But my pain levels are actually down, which surprised me. I'm going to keep going and see if the focus catches up. Curious what my insight will say at the end.",
+    // sage green
+    avatarBg: "hsl(110 22% 50%)",
+    avatarFg: "hsl(40 33% 99%)",
+  },
+  {
+    name: "Tom W.",
+    initial: "T",
+    practice: "Morning Stretches",
+    day: "Day 14 of 14",
+    text: "Last day. I almost quit around day 8 — my lower back was actually more sore than when I started and I was ready to switch to something else. Glad I didn't. By day 11 something shifted. Looking forward to seeing what my insight says.",
+    // dusty gold
+    avatarBg: "hsl(42 55% 55%)",
+    avatarFg: "hsl(40 33% 99%)",
+  },
+  {
+    name: "Priya S.",
+    initial: "P",
+    practice: "Rebounding",
+    day: "Day 2 of 14",
+    text: "Just started yesterday and I already feel ridiculous jumping on a mini trampoline in my living room. But I did it. My cat was not impressed. Going to try to stick with it and see what happens. One weird thing — I actually sat down and finished some work emails right after without getting distracted, which almost never happens. Probably a coincidence this early. We'll see.",
+    // soft coral
+    avatarBg: "hsl(8 65% 70%)",
+    avatarFg: "hsl(40 33% 99%)",
+  },
+  {
+    name: "Lena C.",
+    initial: "L",
+    practice: "Earthing",
+    day: "Day 14 of 14",
+    text: "Finished. Two weeks of standing barefoot in my backyard every morning, which my neighbors definitely noticed. I went in skeptical and I'm coming out... still a little skeptical honestly, but my mood scores were higher than I expected and my pain was down most days. Make of that what you will.",
+    // muted lavender
+    avatarBg: "hsl(265 25% 65%)",
+    avatarFg: "hsl(40 33% 99%)",
+  },
+];
+
+function FeedCard({ post }: { post: FeedPost }) {
+  return (
+    <article className="rounded-2xl bg-card/60 shadow-[0_2px_16px_-4px_hsl(75_20%_15%/0.08)] p-8 md:p-10 transition-shadow hover:shadow-[0_6px_24px_-4px_hsl(75_20%_15%/0.12)]">
+      <div
+        className="flex items-center justify-center w-12 h-12 rounded-full font-display text-lg mb-4"
+        style={{ backgroundColor: post.avatarBg, color: post.avatarFg }}
+        aria-hidden="true"
+      >
+        {post.initial}
+      </div>
+      <h4 className="font-body font-semibold text-foreground text-lg leading-tight">
+        {post.name}
+      </h4>
+      <p className="font-body text-sm text-foreground/55 mt-1 mb-4">
+        {post.practice} · {post.day}
+      </p>
+      <p className="font-body text-base text-foreground/80 leading-relaxed">
+        {post.text}
+      </p>
+    </article>
+  );
+}
+
+function FeaturedFeedCard({ post }: { post: FeedPost }) {
+  return (
+    <article className="rounded-2xl shadow-[0_2px_20px_-4px_hsl(28_55%_30%/0.12)] p-8 md:p-10 bg-[hsl(36_55%_92%)] transition-shadow hover:shadow-[0_6px_28px_-4px_hsl(28_55%_30%/0.18)]">
+      <div className="flex items-center gap-4 mb-5">
+        <div
+          className="flex items-center justify-center w-14 h-14 rounded-full font-display text-xl shrink-0"
+          style={{ backgroundColor: post.avatarBg, color: post.avatarFg }}
+          aria-hidden="true"
+        >
+          {post.initial}
+        </div>
+        <div>
+          <h4 className="font-body font-semibold text-foreground text-lg leading-tight">
+            {post.name}
+          </h4>
+          <p className="font-body text-sm text-foreground/55 mt-0.5">
+            {post.practice} · {post.day}
+          </p>
+        </div>
+      </div>
+      <p className="font-body text-base text-foreground/80 leading-relaxed">
+        {post.text}
+      </p>
+    </article>
+  );
+}
+
 export function SolaraCircle() {
   const gridRef = useRef<HTMLDivElement | null>(null);
+  const [shareOpen, setShareOpen] = useState(false);
 
   useEffect(() => {
     let masonryInstance: any = null;
@@ -177,6 +302,60 @@ export function SolaraCircle() {
           </motion.p>
         </div>
       </section>
+
+      {/* Community Feed */}
+      <section className="max-w-[1200px] mx-auto px-8 lg:px-16 pt-16 md:pt-24 pb-8">
+        <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground text-center mb-12 md:mb-16">
+          What the community is <span className="text-accent italic">discovering</span>
+        </h3>
+
+        <div className="flex flex-col gap-8 md:gap-10">
+          {/* Row 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+            <FeedCard post={feedPosts[0]} />
+            <FeedCard post={feedPosts[1]} />
+          </div>
+          {/* Row 2 - Featured */}
+          <FeaturedFeedCard post={feedPosts[2]} />
+          {/* Row 3 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+            <FeedCard post={feedPosts[3]} />
+            <FeedCard post={feedPosts[4]} />
+          </div>
+        </div>
+      </section>
+
+      {/* Bridge */}
+      <section className="max-w-[1200px] mx-auto px-8 lg:px-16 py-20 md:py-28 text-center">
+        <p className="font-display italic text-xl md:text-2xl text-foreground/70 mb-6">
+          These are their moments. Add yours.
+        </p>
+        <Button
+          size="lg"
+          onClick={() => setShareOpen(true)}
+          className="bg-accent text-accent-foreground hover:bg-accent/90"
+        >
+          Share Your Practice
+        </Button>
+      </section>
+
+      <Dialog open={shareOpen} onOpenChange={setShareOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl text-foreground">
+              Welcome to the Circle
+            </DialogTitle>
+            <DialogDescription className="font-body text-base text-foreground/70 pt-2">
+              Thank you for being part of the Circle. Photo sharing coming soon!
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button variant="outline">Close</Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       {/* Masonry gallery */}
       <section className="solara-gallery max-w-[1200px] mx-auto px-8 lg:px-16 py-16 md:py-24">
