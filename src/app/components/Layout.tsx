@@ -73,6 +73,9 @@ export function Layout() {
                 A holistic wellness program helping you maintain health through natural daily routines. Build
                 sustainable habits, one rhythm at a time.
               </p>
+              <div className="mt-8 text-muted-foreground text-xs md:text-sm">
+                © 2026 Solara. All rights reserved.
+              </div>
             </div>
             <div className="space-y-6">
               <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Resources</h4>
@@ -191,9 +194,6 @@ export function Layout() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-xs md:text-sm text-muted-foreground ">
-            © 2026 Solara. All rights reserved.
           </div>
         </div>
       </footer>
