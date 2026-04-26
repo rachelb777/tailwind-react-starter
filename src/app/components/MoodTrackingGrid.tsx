@@ -11,7 +11,6 @@ const MOOD_ROWS: Array<{ key: keyof MoodScores; label: string }> = [
   { key: "focus", label: "Focus" },
   { key: "energy", label: "Energy" },
   { key: "mood", label: "Mood" },
-  { key: "sleepQuality", label: "Sleep Quality" },
   { key: "pain", label: "Pain" },
 ];
 

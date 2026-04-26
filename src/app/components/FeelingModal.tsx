@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
-const SCALES = ["Energy Level", "Mood", "Focus", "Pain", "Sleep Quality"] as const;
+const SCALES = ["Energy Level", "Mood", "Focus", "Pain"] as const;
 
 type Ratings = Record<(typeof SCALES)[number], number | null>;
 
@@ -46,7 +46,6 @@ export function FeelingModal({
       mood: ratings["Mood"],
       focus: ratings["Focus"],
       pain: ratings["Pain"],
-      sleepQuality: ratings["Sleep Quality"],
     };
     const entry = {
       date: today,
