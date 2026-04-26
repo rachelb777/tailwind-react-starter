@@ -136,15 +136,18 @@ export function Movement() {
                   >
                     How are you feeling?
                   </button>
-                  <button
-                    onClick={() => (window.location.href = "/profile#connect-and-bloom")}
-                    className="w-full px-6 py-3 rounded-xl border border-accent font-body text-sm text-accent hover:bg-accent/10 transition-colors"
-                  >
-                    Visit community
-                  </button>
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="flex justify-center mt-20">
+            <button
+              onClick={() => (window.location.href = "/profile")}
+              className="px-8 py-3 rounded-xl border border-accent font-body text-sm text-accent hover:bg-accent/10 transition-colors"
+            >
+              See My Progress
+            </button>
           </div>
         </div>
       </section>
