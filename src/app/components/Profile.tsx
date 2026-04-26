@@ -41,38 +41,37 @@ const REBOUNDING_INSIGHT =
 const EARTHING_INSIGHT =
   "Earthing shows a positive association with reduced pain and improved mood based on your completed days.";
 
-const SESSION_KEY = "sunGazingSessionFills";
+// Live entries for Sun Gazing days 12-14 are stored under this localStorage
+// key so they persist while the user navigates between pages. A sessionStorage
+// "alive" flag lets us detect a fresh page refresh and clear them.
+const SUN_LIVE_KEY = "sunGazingLiveEntries";
+const SESSION_ALIVE_KEY = "sunGazingSessionAlive";
 
-type SessionFills = {
-  // ordered list of saved mood entries from FeelingModal during this session
-  // each entry maps a mood key to a number; we fill day 12 then 13 then 14
-  saves: Array<Partial<Record<MoodKey, number>>>;
-};
+type LiveEntry = Partial<Record<MoodKey, number | null>>;
 
-function readSessionFills(): SessionFills {
+function readLiveEntries(): LiveEntry[] {
   try {
-    const raw = sessionStorage.getItem(SESSION_KEY);
-    if (!raw) return { saves: [] };
+    const raw = localStorage.getItem(SUN_LIVE_KEY);
+    if (!raw) return [];
     const parsed = JSON.parse(raw);
-    if (parsed && Array.isArray(parsed.saves)) return parsed as SessionFills;
+    if (Array.isArray(parsed)) return parsed.slice(0, 3);
   } catch {
     /* ignore */
   }
-  return { saves: [] };
+  return [];
 }
 
-function buildSunGazingValues(fills: SessionFills): GridValues {
+function buildSunGazingValues(entries: LiveEntry[]): GridValues {
   const result: GridValues = {
     energy: [...SUN_GAZING_BASE.energy],
     mood: [...SUN_GAZING_BASE.mood],
     focus: [...SUN_GAZING_BASE.focus],
     pain: [...SUN_GAZING_BASE.pain],
   };
-  // Days 12,13,14 → indices 11,12,13
-  fills.saves.slice(0, 3).forEach((save, i) => {
-    const dayIdx = 11 + i;
+  entries.slice(0, 3).forEach((entry, i) => {
+    const dayIdx = 11 + i; // Days 12, 13, 14 → indices 11, 12, 13
     (Object.keys(result) as MoodKey[]).forEach((k) => {
-      const v = save[k];
+      const v = entry[k];
       if (typeof v === "number") result[k][dayIdx] = v;
     });
   });
@@ -87,82 +86,35 @@ export function Profile() {
     { name: "Earthing", completed: false, time: "5:30 PM" },
   ];
 
-  // On every fresh page load, clear today's Sun Gazing mood entry from
-  // localStorage so days 12-14 start empty after refresh, and reset our
-  // session tracker.
-  const [sunGazingValues, setSunGazingValues] = useState<GridValues>(() =>
-    buildSunGazingValues({ saves: [] }),
-  );
+  // Detect a fresh page refresh: if the sessionStorage flag is missing, this
+  // is a new browser session OR a hard reload — either way, clear days 12-14.
+  // If the flag is present, we're navigating within the SPA and should keep
+  // any live entries already captured.
+  const [sunGazingValues, setSunGazingValues] = useState<GridValues>(() => {
+    if (typeof window === "undefined") return buildSunGazingValues([]);
+    const alive = sessionStorage.getItem(SESSION_ALIVE_KEY);
+    if (!alive) {
+      localStorage.removeItem(SUN_LIVE_KEY);
+      sessionStorage.setItem(SESSION_ALIVE_KEY, "1");
+      return buildSunGazingValues([]);
+    }
+    return buildSunGazingValues(readLiveEntries());
+  });
 
   useEffect(() => {
-    // Reset on mount: clear localStorage Sun Gazing entry + sessionStorage tracker
-    try {
-      const today = new Date().toISOString().slice(0, 10);
-      const key = `dailyEntry:${today}`;
-      const raw = localStorage.getItem(key);
-      if (raw) {
-        try {
-          const entry = JSON.parse(raw);
-          if (entry?.moodByActivity?.["Sun Gazing"]) {
-            delete entry.moodByActivity["Sun Gazing"];
-            localStorage.setItem(key, JSON.stringify(entry));
-          }
-        } catch {
-          /* ignore */
-        }
-      }
-    } catch {
-      /* ignore */
-    }
-    sessionStorage.removeItem(SESSION_KEY);
-    setSunGazingValues(buildSunGazingValues({ saves: [] }));
-
-    // Watch for new mood saves coming from the FeelingModal (Morning/Movement pages).
-    const checkForSunGazingSave = () => {
-      try {
-        const today = new Date().toISOString().slice(0, 10);
-        const key = `dailyEntry:${today}`;
-        const raw = localStorage.getItem(key);
-        if (!raw) return;
-        const entry = JSON.parse(raw);
-        const saved = entry?.moodByActivity?.["Sun Gazing"];
-        if (!saved) return;
-        const current = readSessionFills();
-        // Only register one save per modal submission. We dedupe by JSON.
-        const sig = JSON.stringify(saved);
-        const lastSig = current.saves.length
-          ? JSON.stringify(current.saves[current.saves.length - 1])
-          : null;
-        if (sig === lastSig) return;
-        if (current.saves.length >= 3) return;
-        const next: SessionFills = {
-          saves: [
-            ...current.saves,
-            {
-              energy: typeof saved.energy === "number" ? saved.energy : undefined,
-              mood: typeof saved.mood === "number" ? saved.mood : undefined,
-              focus: typeof saved.focus === "number" ? saved.focus : undefined,
-              pain: typeof saved.pain === "number" ? saved.pain : undefined,
-            },
-          ],
-        };
-        sessionStorage.setItem(SESSION_KEY, JSON.stringify(next));
-        // Remove from localStorage so refresh resets cleanly even without remount
-        delete entry.moodByActivity["Sun Gazing"];
-        localStorage.setItem(key, JSON.stringify(entry));
-        setSunGazingValues(buildSunGazingValues(next));
-      } catch {
-        /* ignore */
-      }
+    // Poll for new submissions made on Morning/Movement pages so the grid
+    // updates the moment the user returns to the dashboard or a save lands.
+    const sync = () => {
+      setSunGazingValues(buildSunGazingValues(readLiveEntries()));
     };
 
-    window.addEventListener("storage", checkForSunGazingSave);
-    window.addEventListener("focus", checkForSunGazingSave);
-    const interval = window.setInterval(checkForSunGazingSave, 1000);
+    window.addEventListener("storage", sync);
+    window.addEventListener("focus", sync);
+    const interval = window.setInterval(sync, 500);
 
     return () => {
-      window.removeEventListener("storage", checkForSunGazingSave);
-      window.removeEventListener("focus", checkForSunGazingSave);
+      window.removeEventListener("storage", sync);
+      window.removeEventListener("focus", sync);
       window.clearInterval(interval);
     };
   }, []);

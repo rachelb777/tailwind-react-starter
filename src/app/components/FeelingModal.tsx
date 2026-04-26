@@ -57,6 +57,28 @@ export function FeelingModal({
       },
     };
     localStorage.setItem(key, JSON.stringify(entry));
+
+    // Sun Gazing: also append this submission to the live Sun Gazing entries
+    // used by the Wellness Dashboard grid (days 12-14).
+    if (activity === "Sun Gazing") {
+      try {
+        const SUN_KEY = "sunGazingLiveEntries";
+        const raw = localStorage.getItem(SUN_KEY);
+        const list: Array<{
+          energy: number | null;
+          mood: number | null;
+          focus: number | null;
+          pain: number | null;
+        }> = raw ? JSON.parse(raw) : [];
+        if (Array.isArray(list) && list.length < 3) {
+          list.push(moodScores);
+          localStorage.setItem(SUN_KEY, JSON.stringify(list));
+        }
+      } catch {
+        /* ignore */
+      }
+    }
+
     onOpenChange(false);
   };
 
