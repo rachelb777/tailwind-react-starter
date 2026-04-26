@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import { Play, Sun, Wind, Check } from "lucide-react";
 import { FeelingModal } from "./FeelingModal";
 import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
+import { ChevronDown } from "lucide-react";
 
 export function Morning() {
   const [feelingOpen, setFeelingOpen] = useState(false);
@@ -63,7 +65,10 @@ export function Morning() {
               Greet the Day with <span className="text-accent italic">Intention</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-              Build a morning routine that aligns with nature's rhythms and sets a positive tone for your entire day
+              Start your day with sun gazing and gentle stretching to align with natural light cycles.
+            </p>
+            <p className="font-body text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed mt-4">
+              Watch the video, try the practice, check Completed, then tell us how you feel.
             </p>
           </motion.div>
         </div>
@@ -119,6 +124,42 @@ export function Morning() {
                     ? "Connect with the sun's energy, regulate your circadian rhythm."
                     : "Gentle stretching awakens your body and prepares you for the day."}
                 </p>
+
+                {/* Learn more collapsible */}
+                <Collapsible className="w-full max-w-md mb-8">
+                  <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm text-accent hover:text-accent/80 transition-colors">
+                    {practice.id === "sun-gazing"
+                      ? "Learn about Sun Gazing"
+                      : "Learn about Morning Stretching"}
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+                    <div className="mt-4 rounded-2xl bg-accent/5 px-6 py-6 text-left font-body text-sm text-foreground/70 leading-relaxed space-y-4">
+                      {practice.id === "sun-gazing" ? (
+                        <>
+                          <p>
+                            Morning light is the daily signal that starts your biological clock. When sunlight enters the eyes, it travels directly to the brain's circadian center — triggering hormones, activating metabolism, and synchronizing internal systems across the body. The angle and movement of the sun also provides deeper orientation signals, telling living systems the time of day, the season, and where we are on the planet.
+                          </p>
+                          <p>
+                            Some people extend this practice by briefly gazing toward the sun during the first few minutes after sunrise, when light intensity is at its lowest. Used this way, sun gazing reinforces circadian awareness and a felt sense of connection with the natural solar cycle.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Resets circadian rhythm · Stabilizes mood · Boosts morning energy · Supports hormonal balance
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <p>
+                            Gentle movement in the morning warms the muscles, increases circulation, and signals the nervous system that the day has begun. Focusing on the legs and hips — where tension accumulates overnight — creates a grounded, supported feeling that carries through the day.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Reduces muscle tension · Improves circulation · Increases flexibility · Enhances body awareness
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
