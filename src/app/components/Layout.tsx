@@ -63,12 +63,12 @@ export function Layout() {
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16 py-16">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
             <div className="col-span-2">
-              <div className="flex items-center gap-3 mb-4">
+              <Link to="/" className="flex items-center gap-3 mb-4 w-fit">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                   <Sun className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
-              </div>
+              </Link>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md">
               </p>
               <div className="mt-8 text-muted-foreground text-xs md:text-sm">
