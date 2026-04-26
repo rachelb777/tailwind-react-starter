@@ -315,7 +315,7 @@ export function SolaraCircle() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight"
+            className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-16 md:mb-20 leading-tight"
           >
             The Solara <span className="text-accent italic">Circle</span>
           </motion.h1>
