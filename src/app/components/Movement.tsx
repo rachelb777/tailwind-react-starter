@@ -43,6 +43,8 @@ export function Movement() {
       description:
         "Also known as grounding, this practice involves direct skin contact with the earth's surface to absorb beneficial electrons and reconnect with nature's healing energy.",
       benefits: ["Reduces inflammation", "Improves sleep quality", "Decreases stress", "Balances body's energy"],
+      duration: "20-40 minutes",
+      bestTime: "Anytime outdoors",
       color: "from-primary to-primary/70",
     },
   ];
