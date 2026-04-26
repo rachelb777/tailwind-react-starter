@@ -103,7 +103,7 @@ export function Home() {
           >
             {[
               "Choose one of four practices — sun gazing, morning stretches, rebounding, or earthing",
-              "Visit Your Daily Practice page each day to do your practice and record how you feel",
+              "Visit the Morning or Movement page each day to do your chosen practice and record how you feel.",
               "Check your Wellness Dashboard to see your daily scores building over time",
               "After 14 days, receive your personal Insight — a real correlation drawn from your own data",
               "Visit The Solara Circle to see what the community is discovering and share your own journey",
