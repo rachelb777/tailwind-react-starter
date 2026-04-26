@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { CheckCircle2, Circle } from "lucide-react";
 
 import { WellnessDashboardGrid, type GridValues, type MoodKey } from "./WellnessDashboardGrid";
 
@@ -79,13 +78,6 @@ function buildSunGazingValues(entries: LiveEntry[]): GridValues {
 }
 
 export function Profile() {
-  const todaysPractices = [
-    { name: "Sun Gazing", completed: true, time: "6:30 AM" },
-    { name: "Morning Stretching", completed: false, time: "6:45 AM" },
-    { name: "Rebounding", completed: true, time: "2:00 PM" },
-    { name: "Earthing", completed: false, time: "5:30 PM" },
-  ];
-
   // Detect a fresh page refresh: if the sessionStorage flag is missing, this
   // is a new browser session OR a hard reload — either way, clear days 12-14.
   // If the flag is present, we're navigating within the SPA and should keep
@@ -140,77 +132,11 @@ export function Profile() {
         </div>
       </section>
 
-      {/* Featured Insight */}
-      <section className="px-8 lg:px-16 py-[60px]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <h3 className="font-display text-xl md:text-2xl text-foreground mb-4">Insight</h3>
-          <p className="font-body italic text-foreground/70 leading-relaxed" style={{ fontSize: "20px" }}>
-            Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
-          </p>
-          <p className="font-body italic text-foreground/70 leading-relaxed mt-4" style={{ fontSize: "20px" }}>
-            Rebounding shows a positive association with increased focus and reduced pain levels based on recent
-            activity.
-          </p>
-        </motion.div>
-      </section>
-
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Left Sidebar - Today's Practice */}
-            <aside className="lg:col-span-3">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="p-6 rounded-2xl border border-border/40 mt-32"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
-                    Today's Practice
-                  </h2>
-                </div>
-                <div className="text-xs font-body text-foreground/50 mb-6">2 of 4 completed</div>
-
-                <div className="space-y-1">
-                  {todaysPractices.map((practice, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className={`flex items-center gap-3 py-3 pl-4 border-l-2 transition-all ${
-                        practice.completed ? "border-primary" : "border-transparent hover:border-foreground/20"
-                      }`}
-                    >
-                      {practice.completed ? (
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                      ) : (
-                        <Circle className="w-4 h-4 text-foreground/30 flex-shrink-0" />
-                      )}
-                      <div className="flex-1 min-w-0">
-                        <div
-                          className={`font-body text-sm ${practice.completed ? "text-foreground/60 line-through" : "text-foreground"}`}
-                        >
-                          {practice.name}
-                        </div>
-                        <div className="flex items-center gap-1 text-xs font-body text-foreground/40 mt-0.5">
-                          {practice.time}
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </aside>
-
+          <div className="grid grid-cols-1 gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-9 space-y-8">
+            <div className="space-y-8">
               <div className="flex items-center gap-2">
                 <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
                   Mood Tracking
