@@ -66,7 +66,7 @@ export function Movement() {
             className="text-center mb-16"
           >
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-              Move with <span className="text-secondary italic">Purpose</span>
+              Move with <span className="text-accent italic">Purpose</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
               Reconnect with your body and the earth through gentle, intentional movement practices
