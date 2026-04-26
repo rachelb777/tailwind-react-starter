@@ -110,7 +110,9 @@ export function Movement() {
 
                 {/* Title & subtitle */}
                 <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
-                <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
+                {practice.id !== "earthing" && (
+                  <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
+                )}
 
                 {/* Short description */}
                 <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
