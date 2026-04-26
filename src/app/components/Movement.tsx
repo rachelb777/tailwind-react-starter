@@ -78,6 +78,9 @@ export function Movement() {
       {/* Practices Section */}
       <section className="pb-24">
         <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
+          <p className="font-body text-base md:text-lg text-foreground/80 max-w-xl mx-auto leading-relaxed text-center mb-12">
+            Watch the video, try the practice, check Completed, then tell us how you feel.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 lg:gap-20 items-start">
             {practices.map((practice, index) => (
               <motion.div
@@ -142,7 +145,7 @@ export function Movement() {
           </div>
 
           <div className="flex flex-col items-center mt-32 gap-5">
-            <p className="font-body italic text-base text-muted-foreground">
+            <p className="font-body italic text-xl text-foreground/80">
               Ready to see your patterns?
             </p>
             <button
