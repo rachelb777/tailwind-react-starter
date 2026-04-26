@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Play, Activity, Footprints, Check } from "lucide-react";
+import { Play, Activity, Footprints, Check, ChevronDown } from "lucide-react";
 import { FeelingModal } from "./FeelingModal";
 import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 import earthingImage from "@/assets/earthing-barefoot.jpg";
 
 export function Movement() {
@@ -69,7 +70,10 @@ export function Movement() {
               Move with <span className="text-accent italic">Purpose</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-              Reconnect with your body and the earth through gentle, intentional movement practices
+              Reconnect with your body and the earth through rebounding and earthing — practices that connect you to natural rhythms.
+            </p>
+            <p className="font-body text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed mt-4">
+              Watch the video, try the practice, check Completed, then tell us how you feel.
             </p>
           </motion.div>
         </div>
@@ -112,6 +116,39 @@ export function Movement() {
                 <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
                   {practice.description}
                 </p>
+
+                {/* Learn more collapsible */}
+                <Collapsible className="w-full max-w-md mb-8">
+                  <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm text-accent hover:text-accent/80 transition-colors">
+                    {practice.id === "rebounding"
+                      ? "Learn about Rebounding"
+                      : "Learn about Earthing"}
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+                    <div className="mt-4 rounded-2xl bg-accent/5 px-6 py-6 text-left font-body text-sm text-foreground/70 leading-relaxed space-y-4">
+                      {practice.id === "rebounding" ? (
+                        <>
+                          <p>
+                            Gentle bouncing on a mini trampoline stimulates the lymphatic system — the body's internal drainage network — in a way few other exercises can. Unlike the cardiovascular system, lymph has no pump of its own and depends on movement and gravity to circulate. For an added benefit, position your rebounder near an east-facing window to combine light exposure with movement in a single morning ritual.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Stimulates lymphatic drainage · Supports detoxification · Low impact cardio · Boosts energy and focus
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <p>
+                            Direct contact between bare skin and the earth's surface allows the body to absorb free electrons naturally present in the ground. This exchange is thought to reduce inflammation, neutralize oxidative stress, and restore a sense of physical calm. Even a few minutes of standing or walking barefoot outdoors counts.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Reduces inflammation · Calms the nervous system · Improves sleep · Reconnects you to natural rhythms
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
