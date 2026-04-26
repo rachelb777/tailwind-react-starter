@@ -70,8 +70,6 @@ export function Layout() {
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </div>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md">
-                A holistic wellness program helping you maintain health through natural daily routines. Build
-                sustainable habits, one rhythm at a time.
               </p>
               <div className="mt-8 text-muted-foreground text-xs md:text-sm">
                 © 2026 Solara. All rights reserved.
@@ -82,12 +80,12 @@ export function Layout() {
               <ul className="space-y-2  text-sm md:text-base text-muted-foreground">
                 <li>
                   <Link to="/morning" className="hover:text-foreground transition-colors duration-200">
-                    Morning Practices
+                    Morning
                   </Link>
                 </li>
                 <li>
                   <Link to="/movement" className="hover:text-foreground transition-colors duration-200">
-                    Movement Guide
+                    Movement
                   </Link>
                 </li>
                 <li>
@@ -101,19 +99,9 @@ export function Layout() {
               <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Community</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors duration-200">
-                    Join Live Sessions
-                  </a>
-                </li>
-                <li>
                   <Link to="/solara-circle" className="hover:text-foreground transition-colors duration-200">
                     The Solara Circle
                   </Link>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground transition-colors duration-200">
-                    Support
-                  </a>
                 </li>
               </ul>
             </div>
