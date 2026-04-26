@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { CheckCircle2, Circle } from "lucide-react";
 
 import { WellnessDashboardGrid, type GridValues, type MoodKey } from "./WellnessDashboardGrid";
 
@@ -79,13 +78,6 @@ function buildSunGazingValues(entries: LiveEntry[]): GridValues {
 }
 
 export function Profile() {
-  const todaysPractices = [
-    { name: "Sun Gazing", completed: true, time: "6:30 AM" },
-    { name: "Morning Stretching", completed: false, time: "6:45 AM" },
-    { name: "Rebounding", completed: true, time: "2:00 PM" },
-    { name: "Earthing", completed: false, time: "5:30 PM" },
-  ];
-
   // Detect a fresh page refresh: if the sessionStorage flag is missing, this
   // is a new browser session OR a hard reload — either way, clear days 12-14.
   // If the flag is present, we're navigating within the SPA and should keep
