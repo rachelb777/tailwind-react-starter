@@ -125,6 +125,42 @@ export function Morning() {
                     : "Gentle stretching awakens your body and prepares you for the day."}
                 </p>
 
+                {/* Learn more collapsible */}
+                <Collapsible className="w-full max-w-md mb-8">
+                  <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm text-accent hover:text-accent/80 transition-colors">
+                    {practice.id === "sun-gazing"
+                      ? "Learn about Sun Gazing"
+                      : "Learn about Morning Stretching"}
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+                    <div className="mt-4 rounded-2xl bg-accent/5 px-6 py-6 text-left font-body text-sm text-foreground/70 leading-relaxed space-y-4">
+                      {practice.id === "sun-gazing" ? (
+                        <>
+                          <p>
+                            Morning light is the daily signal that starts your biological clock. When sunlight enters the eyes, it travels directly to the brain's circadian center — triggering hormones, activating metabolism, and synchronizing internal systems across the body. The angle and movement of the sun also provides deeper orientation signals, telling living systems the time of day, the season, and where we are on the planet.
+                          </p>
+                          <p>
+                            Some people extend this practice by briefly gazing toward the sun during the first few minutes after sunrise, when light intensity is at its lowest. Used this way, sun gazing reinforces circadian awareness and a felt sense of connection with the natural solar cycle.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Resets circadian rhythm · Stabilizes mood · Boosts morning energy · Supports hormonal balance
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <p>
+                            Gentle movement in the morning warms the muscles, increases circulation, and signals the nervous system that the day has begun. Focusing on the legs and hips — where tension accumulates overnight — creates a grounded, supported feeling that carries through the day.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Reduces muscle tension · Improves circulation · Increases flexibility · Enhances body awareness
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
                   <label className="flex items-center justify-center gap-2 font-body text-sm text-foreground cursor-pointer select-none">
