@@ -69,6 +69,75 @@ export function Home() {
         </div>
       </section>
 
+      {/* How Solara Works */}
+      <section id="how-solara-works" className="py-24 bg-background">
+        <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+              How Solara Works
+            </h2>
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+              Solara is a wellness companion designed to help you get in tune with your own body and
+              discover what truly supports your wellbeing. Instead of pushing you toward generic goals,
+              it listens — helping you notice what actually makes you feel better — your feelings, your
+              energy, your patterns. By tracking both your daily practices and how you feel, Solara
+              helps you become more self-aware and see how your activity choices actually affect you.
+            </p>
+          </motion.div>
+
+          <motion.ol
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-5 max-w-3xl mx-auto mb-16"
+          >
+            {[
+              "Choose one of four practices — sun gazing, morning stretches, rebounding, or earthing",
+              "Visit Your Daily Practice page each day to do your practice and record how you feel",
+              "Check your Wellness Dashboard to see your daily scores building over time",
+              "After 14 days, receive your personal Insight — a real correlation drawn from your own data",
+              "Visit The Solara Circle to see what the community is discovering and share your own journey",
+            ].map((step, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-[#1B3022] text-white font-display text-base flex items-center justify-center">
+                  {i + 1}
+                </span>
+                <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed pt-1">
+                  {step}
+                </p>
+              </li>
+            ))}
+          </motion.ol>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4">
+              Making It Meaningful
+            </h3>
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed">
+              Learn how your daily choices affect how you feel, and let your own patterns guide your
+              path. For the clearest picture, focus on one practice at a time. The more consistently
+              you log, the more accurate your insights become. After two weeks of consistent logging —
+              enough time for genuine patterns to emerge — your personal dashboard will begin showing
+              correlations that are uniquely yours — not generic wellness advice, but real feedback
+              from your own experience.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Overview */}
       <section className="pt-24 pb-0 bg-background">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
