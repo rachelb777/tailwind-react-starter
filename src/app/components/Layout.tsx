@@ -16,7 +16,7 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 bg-muted/85 backdrop-blur-xl border-b border-border">
+      <header className="sticky top-0 z-50 bg-muted/90 backdrop-blur-xl border-b border-border">
         <nav className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
