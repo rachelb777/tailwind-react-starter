@@ -137,11 +137,6 @@ export function Profile() {
           <div className="grid grid-cols-1 gap-12">
             {/* Main Content */}
             <div className="space-y-8">
-              <div className="flex items-center gap-2">
-                <h2 className="font-body text-base uppercase tracking-wider text-foreground/80 font-medium">
-                  Mood Tracking
-                </h2>
-              </div>
               <WellnessDashboardGrid
                 activity="Sun Gazing"
                 values={sunGazingValues}
