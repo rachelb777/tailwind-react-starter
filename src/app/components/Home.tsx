@@ -86,7 +86,7 @@ export function Home() {
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               How Solara Works
             </h2>
-            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto text-left">
               Solara is a wellness companion designed to help you get in tune with your own body and
               discover what truly supports your wellbeing. Instead of pushing you toward generic goals,
               it listens — helping you notice what actually makes you feel better — your feelings, your
@@ -125,12 +125,12 @@ export function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto"
           >
-            <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4">
+            <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 text-center">
               Making It Meaningful
             </h3>
-            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed">
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed text-left">
               Learn how your daily choices affect how you feel, and let your own patterns guide your
               path. For the clearest picture, focus on one practice at a time. The more consistently
               you log, the more accurate your insights become. After two weeks of consistent logging —
