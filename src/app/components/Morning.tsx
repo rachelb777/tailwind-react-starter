@@ -67,15 +67,15 @@ export function Morning() {
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
               Start your day with sun gazing and gentle stretching to align with natural light cycles.
             </p>
-            <p className="font-body text-sm text-foreground/70 max-w-xl mx-auto leading-relaxed mt-4">
-              Watch the video, try the practice, check Completed, then tell us how you feel.
-            </p>
           </motion.div>
         </div>
       </section>
       {/* Practices Section */}
       <section className="pb-24">
         <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
+          <p className="font-body text-base md:text-lg text-foreground/80 max-w-xl mx-auto leading-relaxed text-center mb-12">
+            Watch the video, try the practice, check Completed, then tell us how you feel.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 lg:gap-20 items-start">
             {practices.map((practice, index) => (
               <motion.div
