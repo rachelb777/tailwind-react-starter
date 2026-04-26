@@ -144,7 +144,7 @@ export function Home() {
       {/* Features Overview */}
       <section className="pt-12 pb-0 bg-background">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <div className="relative flex items-center justify-center" style={{ height: "680px" }}>
+          <div className="relative flex items-center justify-center" style={{ height: "600px" }}>
             {/* Morning Practices — circle upper left, text to its left */}
             <motion.div
               initial={{ opacity: 0 }}
