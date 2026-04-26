@@ -67,7 +67,7 @@ export function Morning() {
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
               Start your day with sun gazing and gentle stretching to align with natural light cycles.
             </p>
-            <p className="font-body text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed mt-4">
+            <p className="font-body text-sm text-foreground/70 max-w-xl mx-auto leading-relaxed mt-4">
               Watch the video, try the practice, check Completed, then tell us how you feel.
             </p>
           </motion.div>
@@ -190,7 +190,7 @@ export function Morning() {
             ))}
           </div>
           <div className="flex flex-col items-center mt-32 gap-5">
-            <p className="font-body italic text-base text-muted-foreground">
+            <p className="font-body italic text-xl text-foreground/80">
               Ready to see your patterns?
             </p>
             <button
