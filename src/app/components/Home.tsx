@@ -76,7 +76,7 @@ export function Home() {
       </section>
 
       {/* Features Overview */}
-      <section className="pt-24 pb-0 bg-background">
+      <section id="how-solara-works" className="pt-24 pb-0 bg-background scroll-mt-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
