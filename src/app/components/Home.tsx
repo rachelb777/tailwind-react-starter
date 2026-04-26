@@ -51,18 +51,22 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-start mt-40"
             >
-              <Link
-                to="/morning"
+              <a
+                href="#how-solara-works"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("how-solara-works")?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="group px-8 py-4 bg-[#1B3022] text-white rounded-full font-body text-lg font-semibold hover:bg-[#4A5D4E] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-3 shadow-lg shadow-black/20"
               >
-                Get Started
+                How Solara Works
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
               <Link
-                to="/profile"
+                to="/morning"
                 className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/40 text-white rounded-full font-body text-lg font-semibold hover:bg-white/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                View Your Progress
+                Get Started
               </Link>
             </motion.div>
           </motion.div>
