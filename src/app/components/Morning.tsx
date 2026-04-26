@@ -189,10 +189,13 @@ export function Morning() {
               </motion.div>
             ))}
           </div>
-          <div className="flex justify-center mt-16">
+          <div className="flex flex-col items-center mt-32 gap-5">
+            <p className="font-body italic text-base text-muted-foreground">
+              Ready to see your patterns?
+            </p>
             <button
               onClick={() => (window.location.href = "/profile")}
-              className="px-8 py-3 rounded-xl border border-accent font-body text-sm text-accent hover:bg-accent/10 transition-colors"
+              className="px-10 py-4 rounded-xl border-2 border-accent font-body text-base font-medium text-accent hover:bg-accent/10 transition-colors"
             >
               See My Progress
             </button>
