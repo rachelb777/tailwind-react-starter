@@ -66,7 +66,7 @@ export function Movement() {
             className="text-center mb-16"
           >
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-              Ground Yourself in<span className="text-accent italic">Motion</span>
+              Ground Yourself in <span className="text-accent italic">Motion</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
               Rebounding and earthing — practices that draw energy from the earth and restore your body's natural rhythm
