@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import { Play, Sun, Wind, Check } from "lucide-react";
 import { FeelingModal } from "./FeelingModal";
 import { toggleCompletedActivity, isActivityCompleted } from "../lib/dailyEntry";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
+import { ChevronDown } from "lucide-react";
 
 export function Morning() {
   const [feelingOpen, setFeelingOpen] = useState(false);
@@ -63,7 +65,10 @@ export function Morning() {
               Greet the Day with <span className="text-accent italic">Intention</span>
             </h1>
             <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-              Build a morning routine that aligns with nature's rhythms and sets a positive tone for your entire day
+              Start your day with sun gazing and gentle stretching to align with natural light cycles.
+            </p>
+            <p className="font-body text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed mt-4">
+              Watch the video, try the practice, check Completed, then tell us how you feel.
             </p>
           </motion.div>
         </div>
