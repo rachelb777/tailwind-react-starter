@@ -4,7 +4,6 @@ import { ArrowRight, Sun, Heart, Users, Calendar } from "lucide-react";
 import heroImage from "../../imports/jesse-uli-7f7C-8u_VIo-unsplash.jpg";
 import sunSaluteImage from "@/assets/sun-salute.jpg";
 import movementImage from "@/assets/movement-grounding.jpg";
-import wellnessImage from "@/assets/wellness-circle.jpg";
 
 export function Home() {
   return (
@@ -145,20 +144,6 @@ export function Home() {
       {/* Features Overview */}
       <section className="pt-24 pb-0 bg-background">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">Your Wellness Circle</h2>
-            <p className="font-body text-sm md:text-base lg:text-lg font-medium text-foreground/80 max-w-2xl mx-auto">
-              Explore daily practices, track your progress, discover what works — alongside a community on the same
-              journey
-            </p>
-          </motion.div>
-
           <div className="relative flex items-center justify-center" style={{ height: "680px" }}>
             {/* Morning Practices — circle upper left, text to its left */}
             <motion.div
@@ -182,12 +167,6 @@ export function Home() {
                 />
               </Link>
             </motion.div>
-            <div className="absolute text-left" style={{ width: "180px", left: "calc(50% - 560px)", top: "80px" }}>
-              <h3 className="font-display text-xl text-foreground mb-2">Morning Practices</h3>
-              <p className="font-body text-sm text-foreground/60">
-                Start your day with sun gazing and gentle stretching to align with natural light cycles
-              </p>
-            </div>
 
             {/* Movement — circle center, text underneath */}
             <motion.div
@@ -199,7 +178,7 @@ export function Home() {
               style={{ width: "220px", height: "220px", left: "calc(50% - 140px)", top: "340px" }}
             >
               <Link
-                to="/movement"
+                to="/morning"
                 className="block w-full h-full rounded-full hover:scale-105 transition-transform duration-300"
                 style={{ overflow: "hidden" }}
               >
@@ -211,12 +190,6 @@ export function Home() {
                 />
               </Link>
             </motion.div>
-            <div className="absolute text-center" style={{ width: "220px", left: "calc(50% - 130px)", top: "580px" }}>
-              <h3 className="font-display text-xl text-foreground mb-2">Movement & Grounding</h3>
-              <p className="font-body text-sm text-foreground/60">
-                Rebounding and earthing practices that connect you to the earth
-              </p>
-            </div>
 
             {/* Your Wellness Circle — upper right, text to its right */}
             <motion.div
@@ -228,24 +201,18 @@ export function Home() {
               style={{ width: "250px", height: "250px", right: "calc(50% - 330px)", top: "100px" }}
             >
               <Link
-                to="/profile"
+                to="/solara-circle"
                 className="block w-full h-full rounded-full hover:scale-105 transition-transform duration-300"
                 style={{ overflow: "hidden" }}
               >
                 <img
-                  src={wellnessImage}
-                  alt="Your wellness circle community"
+                  src="/hero/group_stretch.jpg"
+                  alt="Solara Circle community group stretch"
                   className="w-full h-full"
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </Link>
             </motion.div>
-            <div className="absolute text-left" style={{ width: "180px", right: "calc(50% - 540px)", top: "140px" }}>
-              <h3 className="font-display text-xl text-foreground mb-2">Grow With Solara</h3>
-              <p className="font-body text-sm text-foreground/60">
-                See your patterns, share your journey, grow together
-              </p>
-            </div>
           </div>
         </div>
       </section>
