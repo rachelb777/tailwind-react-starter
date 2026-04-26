@@ -3,7 +3,6 @@ export type MoodScores = {
   mood?: number | null;
   focus?: number | null;
   pain?: number | null;
-  sleepQuality?: number | null;
 };
 
 export type DailyEntry = {
@@ -52,7 +51,7 @@ export function getActivityCounts(entries: DailyEntry[]): Record<string, number>
 }
 
 export function getMoodAverages(entries: DailyEntry[]) {
-  const keys = ["energy", "mood", "focus", "pain", "sleepQuality"] as const;
+  const keys = ["energy", "mood", "focus", "pain"] as const;
   const sums: Record<string, number> = {};
   const counts: Record<string, number> = {};
   keys.forEach((k) => {
@@ -82,6 +81,5 @@ export function getMoodAverages(entries: DailyEntry[]) {
     mood: number | null;
     focus: number | null;
     pain: number | null;
-    sleepQuality: number | null;
   };
 }

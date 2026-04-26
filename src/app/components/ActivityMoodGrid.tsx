@@ -7,7 +7,7 @@ type Props = {
   entries: DailyEntry[];
 };
 
-const MOOD_KEYS: Array<keyof MoodScores> = ["energy", "mood", "focus", "pain", "sleepQuality"];
+const MOOD_KEYS: Array<keyof MoodScores> = ["energy", "mood", "focus", "pain"];
 
 function averageMoodScore(ms: MoodScores | undefined | null): number | null {
   if (!ms) return null;
@@ -164,7 +164,7 @@ export function ActivityMoodGrid({ entries }: Props) {
       </div>
 
       <p className="font-body text-xs text-foreground/40 mt-3">
-        Each cell shows the average of your mood scales (Energy, Mood, Focus, Pain, Sleep Quality) for that activity on
+        Each cell shows the average of your mood scales (Energy, Mood, Focus, Pain) for that activity on
         that day. The Average column reflects all completed days.
       </p>
     </motion.div>
