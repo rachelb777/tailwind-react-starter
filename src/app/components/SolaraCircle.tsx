@@ -341,7 +341,7 @@ export function SolaraCircle() {
       </section>
 
       {/* Community Feed */}
-      <section className="max-w-[1200px] mx-auto px-8 lg:px-16 pt-16 md:pt-24 pb-8">
+      <section className="max-w-[1200px] mx-auto px-8 lg:px-16 pt-8 md:pt-12 pb-8">
         <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground text-center mb-12 md:mb-16">
           What the community is <span className="text-accent italic">discovering</span>
         </h3>
