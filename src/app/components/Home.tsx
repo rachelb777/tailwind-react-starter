@@ -178,7 +178,7 @@ export function Home() {
               style={{ width: "220px", height: "220px", left: "calc(50% - 140px)", top: "340px" }}
             >
               <Link
-                to="/morning"
+                to="/movement"
                 className="block w-full h-full rounded-full hover:scale-105 transition-transform duration-300"
                 style={{ overflow: "hidden" }}
               >
