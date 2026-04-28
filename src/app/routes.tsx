@@ -5,8 +5,13 @@ import { Morning } from "./components/Morning";
 import { Movement } from "./components/Movement";
 import { Profile } from "./components/Profile";
 import { SolaraCircle } from "./components/SolaraCircle";
+import { AnimationTest } from "./components/AnimationTest";
 
 export const router = createBrowserRouter([
+  {
+    path: "/animation-test",
+    Component: AnimationTest,
+  },
   {
     path: "/",
     Component: Layout,
