@@ -107,7 +107,7 @@ export function Home() {
               "Visit The Solara Circle to see what the community is discovering and share your own journey",
             ].map((step, i) => (
               <li key={i} className="flex items-start">
-                <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed pt-1">{step}</p>
+                <p className="font-display italic font-bold text-lg md:text-xl text-foreground leading-relaxed pt-1">{step}</p>
               </li>
             ))}
           </motion.ol>
