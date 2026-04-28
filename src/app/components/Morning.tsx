@@ -40,7 +40,6 @@ export function Morning() {
         "Gentle stretching awakens your body, increases blood flow, and prepares you for the day ahead. Focus on slow, mindful movements that honor your body's natural rhythms.",
       benefits: ["Increases flexibility", "Reduces muscle tension", "Improves circulation", "Enhances body awareness"],
       duration: "10-20 minutes",
-      bestTime: "After sun gazing",
       color: "from-primary to-primary/70",
     },
   ];
@@ -116,7 +115,7 @@ export function Morning() {
 
                 {/* Title & subtitle */}
                 <h2 className="font-display text-xl md:text-2xl text-foreground mb-1">{practice.title}</h2>
-                <p className="text-sm text-foreground/50 font-body mb-4">{practice.bestTime}</p>
+                <div className="mb-4" />
 
                 {/* Short description */}
                 <p className="font-body text-foreground/60 leading-relaxed mb-8 max-w-xs text-sm">
