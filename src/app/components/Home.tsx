@@ -64,11 +64,11 @@ export function Home() {
             mask: "lines",
             onSplit: (self: any) => {
               return gsap.from(self.lines, {
-                duration: 0.6,
+                duration: 1.2,
                 yPercent: 100,
                 opacity: 0,
                 stagger: 0.1,
-                ease: "expo.out",
+                ease: "sine.out",
                 scrollTrigger: {
                   trigger: el,
                   start: "top 85%",
@@ -193,7 +193,12 @@ export function Home() {
               "Visit The Solara Circle to see what the community is discovering and share your own journey",
             ].map((step, i) => (
               <li key={i} className="flex items-start">
-                <p className="solara-step font-display italic font-bold text-lg md:text-xl text-foreground leading-relaxed pt-1" style={{ opacity: 0 }}>{step}</p>
+                <p
+                  className="solara-step font-display italic font-bold text-lg md:text-xl text-foreground leading-relaxed pt-1"
+                  style={{ opacity: 0 }}
+                >
+                  {step}
+                </p>
               </li>
             ))}
           </motion.ol>
