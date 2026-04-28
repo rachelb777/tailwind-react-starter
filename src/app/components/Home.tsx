@@ -108,10 +108,7 @@ export function Home() {
               "After 14 days, receive your personal Insight — a real correlation drawn from your own data",
               "Visit The Solara Circle to see what the community is discovering and share your own journey",
             ].map((step, i) => (
-              <li key={i} className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-9 h-9 rounded-full bg-[#1B3022] text-white font-display text-base flex items-center justify-center">
-                  {i + 1}
-                </span>
+              <li key={i} className="flex items-start">
                 <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed pt-1">
                   {step}
                 </p>
