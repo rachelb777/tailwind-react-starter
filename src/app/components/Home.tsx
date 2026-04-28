@@ -99,7 +99,7 @@ export function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-5 max-w-3xl mx-auto mb-16"
+            className="space-y-8 max-w-3xl mx-auto mb-16"
           >
             {[
               "Choose one of four practices — sun gazing, morning stretches, rebounding, or earthing",
