@@ -1,11 +1,96 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import { ArrowRight, Sun, Heart, Users, Calendar } from "lucide-react";
 import heroImage from "../../imports/jesse-uli-7f7C-8u_VIo-unsplash.jpg";
 import sunSaluteImage from "@/assets/sun-salute.jpg";
 import movementImage from "@/assets/movement-grounding.jpg";
 
 export function Home() {
+  const stepsRef = useRef<HTMLOListElement>(null);
+
+  useEffect(() => {
+    const loadScript = (src: string): Promise<void> =>
+      new Promise((resolve, reject) => {
+        const existing = document.querySelector(`script[data-src="${src}"]`) as HTMLScriptElement | null;
+        if (existing) {
+          if ((existing as any).dataset.loaded === "true") return resolve();
+          existing.addEventListener("load", () => resolve());
+          existing.addEventListener("error", () => reject(new Error(`Failed ${src}`)));
+          return;
+        }
+        const s = document.createElement("script");
+        s.src = src;
+        s.async = false;
+        s.dataset.src = src;
+        s.onload = () => {
+          s.dataset.loaded = "true";
+          resolve();
+        };
+        s.onerror = () => reject(new Error(`Failed ${src}`));
+        document.body.appendChild(s);
+      });
+
+    let cancelled = false;
+    const splits: any[] = [];
+    const triggers: any[] = [];
+
+    (async () => {
+      try {
+        await loadScript("https://unpkg.com/gsap@3/dist/gsap.min.js");
+        if (cancelled) return;
+        await Promise.all([
+          loadScript("https://assets.codepen.io/16327/SplitText3-beta.min.js?b=26"),
+          loadScript("https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"),
+        ]);
+        if (cancelled) return;
+
+        const gsap = (window as any).gsap;
+        const SplitText = (window as any).SplitText;
+        const ScrollTrigger = (window as any).ScrollTrigger;
+        if (!gsap || !SplitText || !ScrollTrigger) return;
+        gsap.registerPlugin(SplitText, ScrollTrigger);
+
+        await (document as any).fonts?.ready;
+        if (cancelled || !stepsRef.current) return;
+
+        const items = stepsRef.current.querySelectorAll<HTMLElement>(".solara-step");
+        items.forEach((el) => {
+          gsap.set(el, { opacity: 1 });
+          const split = SplitText.create(el, {
+            type: "words,lines",
+            linesClass: "line",
+            autoSplit: true,
+            mask: "lines",
+            onSplit: (self: any) => {
+              return gsap.from(self.lines, {
+                duration: 0.6,
+                yPercent: 100,
+                opacity: 0,
+                stagger: 0.1,
+                ease: "expo.out",
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 85%",
+                  toggleActions: "play none none none",
+                },
+              });
+            },
+          });
+          splits.push(split);
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      splits.forEach((s) => s?.revert?.());
+      triggers.forEach((t) => t?.kill?.());
+    };
+  }, []);
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -98,6 +183,7 @@ export function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-5 max-w-3xl mx-auto mb-16"
+            ref={stepsRef}
           >
             {[
               "Choose one of four practices — sun gazing, morning stretches, rebounding, or earthing",
@@ -107,7 +193,7 @@ export function Home() {
               "Visit The Solara Circle to see what the community is discovering and share your own journey",
             ].map((step, i) => (
               <li key={i} className="flex items-start">
-                <p className="font-display italic font-bold text-lg md:text-xl text-foreground leading-relaxed pt-1">{step}</p>
+                <p className="solara-step font-display italic font-bold text-lg md:text-xl text-foreground leading-relaxed pt-1" style={{ opacity: 0 }}>{step}</p>
               </li>
             ))}
           </motion.ol>
