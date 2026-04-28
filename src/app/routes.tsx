@@ -5,6 +5,7 @@ import { Morning } from "./components/Morning";
 import { Movement } from "./components/Movement";
 import { Profile } from "./components/Profile";
 import { SolaraCircle } from "./components/SolaraCircle";
+import { AnimationLab } from "./components/AnimationLab";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { path: "movement", Component: Movement },
       { path: "solara-circle", Component: SolaraCircle },
       { path: "profile", Component: Profile },
+      { path: "animation-lab", Component: AnimationLab },
     ],
   },
 ]);
