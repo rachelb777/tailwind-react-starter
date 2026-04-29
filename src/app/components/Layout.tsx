@@ -8,8 +8,7 @@ export function Layout() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 0);
-    onScroll();
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -27,9 +26,7 @@ export function Layout() {
       {/* Navigation Header */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-background shadow-[0_2px_12px_-4px_hsl(var(--foreground)/0.1)]"
-            : "bg-transparent shadow-none"
+          scrolled ? "bg-background shadow-[0_2px_12px_-4px_hsl(var(--foreground)/0.1)]" : "bg-transparent shadow-none"
         }`}
       >
         <nav className="max-w-[1600px] mx-auto px-8 lg:px-16">
@@ -84,11 +81,8 @@ export function Layout() {
                 </div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </Link>
-              <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md">
-              </p>
-              <div className="mt-8 text-muted-foreground text-xs md:text-sm">
-                © 2026 Solara. All rights reserved.
-              </div>
+              <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md"></p>
+              <div className="mt-8 text-muted-foreground text-xs md:text-sm">© 2026 Solara. All rights reserved.</div>
             </div>
             <div className="space-y-6">
               <h4 className="font-display text-xl md:text-2xl text-foreground mb-4">Resources</h4>
