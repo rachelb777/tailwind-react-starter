@@ -25,7 +25,7 @@ export function Layout() {
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled ? "bg-background shadow-[0_2px_12px_-4px_hsl(var(--foreground)/0.1)]" : "bg-transparent shadow-none"
         }`}
       >
