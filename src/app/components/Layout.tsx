@@ -26,7 +26,7 @@ export function Layout() {
       {/* Navigation Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-background shadow-[0_2px_12px_-4px_hsl(var(--foreground)/0.1)]" : "bg-transparent shadow-none"
+          scrolled ? "bg-background shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.15)]" : "bg-transparent shadow-none"
         }`}
       >
         <nav className="max-w-[1600px] mx-auto px-8 lg:px-16">
