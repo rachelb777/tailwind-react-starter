@@ -1,9 +1,18 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
 import { Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function Layout() {
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -16,7 +25,13 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 bg-muted/90 backdrop-blur-xl border-b border-border">
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-background shadow-[0_2px_12px_-4px_hsl(var(--foreground)/0.1)]"
+            : "bg-transparent shadow-none"
+        }`}
+      >
         <nav className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
