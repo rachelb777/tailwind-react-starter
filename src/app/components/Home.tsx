@@ -190,7 +190,7 @@ export function Home() {
               "Each day, visit the Morning or Movement page to do your practice and log how you feel.",
               "Check your Wellness Dashboard to see your daily scores building over time",
               "After 14 days, receive your personal Insight — a real correlation drawn from your own data",
-              "Visit The Solara Circle to see what the community is discovering and share your own journey",
+              "Visit the Solara Circle to see what the community is discovering and share your own journey",
             ].map((step, i) => (
               <li key={i} className="flex items-start">
                 <p
