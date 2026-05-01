@@ -232,7 +232,7 @@ export function Home() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="absolute"
+              className="absolute group"
               style={{ width: "280px", height: "280px", left: "calc(50% - 380px)", top: "20px" }}
             >
               <Link
@@ -278,7 +278,7 @@ export function Home() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="absolute"
+              className="absolute group"
               style={{ width: "250px", height: "250px", right: "calc(50% - 330px)", top: "100px" }}
             >
               <Link
