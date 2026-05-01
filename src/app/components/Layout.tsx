@@ -17,7 +17,7 @@ export function Layout() {
     { path: "/", label: "Home" },
     { path: "/morning", label: "Morning" },
     { path: "/movement", label: "Movement" },
-    { path: "/solara-circle", label: "The Solara Circle" },
+    { path: "/solara-circle", label: "Solara Circle" },
     { path: "/profile", label: "Wellness Dashboard" },
   ];
 
@@ -109,7 +109,7 @@ export function Layout() {
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <Link to="/solara-circle" className="hover:text-foreground transition-colors duration-200">
-                    The Solara Circle
+                    Solara Circle
                   </Link>
                 </li>
               </ul>
