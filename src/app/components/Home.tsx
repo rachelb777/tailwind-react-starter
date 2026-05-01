@@ -253,6 +253,12 @@ export function Home() {
               >
                 Morning Practices
               </p>
+              <div
+                className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-44 px-3 py-2 rounded-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{ backgroundColor: "#2d3319", color: "#fdfcfa", fontFamily: "var(--font-body)" }}
+              >
+                Rise with the light
+              </div>
             </motion.div>
 
             {/* Movement — circle center, text underneath */}
@@ -282,6 +288,12 @@ export function Home() {
               >
                 Movement
               </p>
+              <div
+                className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-44 px-3 py-2 rounded-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{ backgroundColor: "#2d3319", color: "#fdfcfa", fontFamily: "var(--font-body)" }}
+              >
+                Move. Root. Restore
+              </div>
             </motion.div>
 
             {/* Your Wellness Circle — upper right, text to its right */}
@@ -311,6 +323,12 @@ export function Home() {
               >
                 Solara Circle
               </p>
+              <div
+                className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-44 px-3 py-2 rounded-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{ backgroundColor: "#2d3319", color: "#fdfcfa", fontFamily: "var(--font-body)" }}
+              >
+                Your people are here
+              </div>
             </motion.div>
           </div>
         </div>
