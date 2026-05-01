@@ -247,6 +247,12 @@ export function Home() {
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </Link>
+              <p
+                className="mt-3 text-center text-sm tracking-wide"
+                style={{ color: "#6b7158", fontFamily: "var(--font-body)" }}
+              >
+                Morning Practices
+              </p>
             </motion.div>
 
             {/* Movement — circle center, text underneath */}
@@ -270,6 +276,12 @@ export function Home() {
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </Link>
+              <p
+                className="mt-3 text-center text-sm tracking-wide"
+                style={{ color: "#6b7158", fontFamily: "var(--font-body)" }}
+              >
+                Movement
+              </p>
             </motion.div>
 
             {/* Your Wellness Circle — upper right, text to its right */}
@@ -293,6 +305,12 @@ export function Home() {
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </Link>
+              <p
+                className="mt-3 text-center text-sm tracking-wide"
+                style={{ color: "#6b7158", fontFamily: "var(--font-body)" }}
+              >
+                Solara Circle
+              </p>
             </motion.div>
           </div>
         </div>
