@@ -382,9 +382,6 @@ export function SolaraCircle() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="font-display text-2xl text-foreground">Welcome to the Circle</DialogTitle>
-            <DialogDescription className="font-body text-base text-foreground/70 pt-2">
-              Thank you for being part of the Circle. Photo sharing coming soon!
-            </DialogDescription>
           </DialogHeader>
           <DialogFooter>
             <DialogClose asChild>
