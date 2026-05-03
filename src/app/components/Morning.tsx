@@ -126,11 +126,11 @@ export function Morning() {
 
                 {/* Learn more collapsible */}
                 <Collapsible className="w-full max-w-md mb-8">
-                  <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm text-accent hover:text-accent/80 transition-colors">
+                  <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm font-bold text-accent hover:text-accent/80 transition-colors">
                     {practice.id === "sun-gazing"
                       ? "Learn about Sun Gazing"
                       : "Learn about Morning Stretching"}
-                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                    <ChevronDown className="w-3.5 h-3.5 text-accent-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </CollapsibleTrigger>
                   <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
                     <div className="mt-4 rounded-2xl bg-accent/5 px-6 py-6 text-left font-body text-sm text-foreground/70 leading-relaxed space-y-4">
