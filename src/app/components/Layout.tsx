@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { Sun } from "lucide-react";
+import { Sun, LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Layout() {
@@ -60,6 +60,17 @@ export function Layout() {
                   </Link>
                 );
               })}
+              <button
+                type="button"
+                onClick={() => {
+                  /* TODO: hook up to auth sign-out when available */
+                }}
+                className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-lg font-body text-base font-medium text-foreground/70 hover:text-foreground hover:bg-primary/10 transition-colors"
+                aria-label="Logout"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
+              </button>
             </div>
           </div>
         </nav>
