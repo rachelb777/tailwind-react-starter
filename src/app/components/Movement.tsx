@@ -117,25 +117,37 @@ export function Movement() {
                   {practice.description}
                 </p>
 
-                {/* Learn more collapsible (Earthing only) */}
-                {practice.id === "earthing" && (
-                  <Collapsible className="w-full max-w-md mb-8">
-                    <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm font-bold text-accent hover:text-accent/80 transition-colors">
-                      Learn about Earthing
-                      <ChevronDown className="w-3.5 h-3.5 text-accent-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-                      <div className="mt-4 rounded-2xl bg-accent/5 px-6 py-6 text-left font-body text-sm text-foreground/70 leading-relaxed space-y-4">
-                        <p>
-                          Direct contact with the earth's surface — bare feet on grass, soil, or sand — allows the body to absorb the ground's natural electric charge. This simple practice has been linked to reduced inflammation, improved sleep, and a subtle but profound sense of calm and connection.
-                        </p>
-                        <p className="text-foreground/60">
-                          <span className="text-accent">Benefits:</span> Reduces inflammation · Improves sleep quality · Calms the nervous system · Restores natural rhythm
-                        </p>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
-                )}
+                {/* Learn more collapsible */}
+                <Collapsible className="w-full max-w-md mb-8">
+                  <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm font-bold text-accent hover:text-accent/80 transition-colors">
+                    {practice.id === "earthing" ? "Learn about Earthing" : "Learn about Rebounding"}
+                    <ChevronDown className="w-3.5 h-3.5 text-accent-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+                    <div className="mt-4 rounded-2xl bg-accent/5 px-6 py-6 text-left font-body text-sm text-foreground/70 leading-relaxed space-y-4">
+                      {practice.id === "earthing" ? (
+                        <>
+                          <p>
+                            Direct contact with the earth's surface — bare feet on grass, soil, or sand — allows the body to absorb the ground's natural electric charge. This simple practice has been linked to reduced inflammation, improved sleep, and a subtle but profound sense of calm and connection.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Reduces inflammation · Improves sleep quality · Calms the nervous system · Restores natural rhythm
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <p>
+                            Gentle bouncing on a mini trampoline engages the lymphatic system, which has no pump of its own and relies on movement to circulate. Even a few minutes stimulates detoxification, improves balance, and brings a quiet joy that heavier exercise rarely does.
+                          </p>
+                          <p className="text-foreground/60">
+                            <span className="text-accent">Benefits:</span> Stimulates lymphatic flow · Improves balance · Boosts circulation · Energizes without strain
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3 w-full max-w-xs">
