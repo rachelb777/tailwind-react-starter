@@ -436,7 +436,10 @@ export function SolaraCircle() {
       </Dialog>
 
       {/* Masonry gallery */}
-      <section className="solara-gallery max-w-[1200px] mx-auto px-8 lg:px-16 py-16 md:py-24">
+      <section className="solara-gallery max-w-[1200px] mx-auto px-8 lg:px-16 pt-8 md:pt-12 pb-16 md:pb-24">
+        <h3 className="font-display text-3xl md:text-4xl text-foreground text-center mb-12 md:mb-16">
+          Moments from the Circle
+        </h3>
         <div ref={gridRef} className="grid mx-auto">
           {galleryItems.map((item) => (
             <div
