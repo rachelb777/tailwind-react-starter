@@ -2,6 +2,9 @@ import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogContent,
@@ -383,11 +386,36 @@ export function SolaraCircle() {
           <DialogHeader>
             <DialogTitle className="font-display text-2xl text-foreground">Welcome to the Circle</DialogTitle>
           </DialogHeader>
-          <DialogFooter>
-            <DialogClose asChild>
-              <Button variant="outline">Close</Button>
-            </DialogClose>
-          </DialogFooter>
+          <form
+            className="flex flex-col gap-4"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setShareOpen(false);
+            }}
+          >
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="share-story">Share your story</Label>
+              <Textarea
+                id="share-story"
+                placeholder="What did you experience today?"
+                rows={5}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="share-photo">Add a photo</Label>
+              <Input id="share-photo" type="file" accept="image/*" />
+            </div>
+            <DialogFooter>
+              <DialogClose asChild>
+                <Button type="button" variant="outline">
+                  Close
+                </Button>
+              </DialogClose>
+              <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                Submit
+              </Button>
+            </DialogFooter>
+          </form>
         </DialogContent>
       </Dialog>
 
