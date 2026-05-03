@@ -251,6 +251,7 @@ function FeaturedFeedCard({ post }: { post: FeedPost }) {
 export function SolaraCircle() {
   const gridRef = useRef<HTMLDivElement | null>(null);
   const [shareOpen, setShareOpen] = useState(false);
+  const [shareSubmitted, setShareSubmitted] = useState(false);
 
   useEffect(() => {
     let masonryInstance: any = null;
@@ -381,16 +382,34 @@ export function SolaraCircle() {
         </Button>
       </section>
 
-      <Dialog open={shareOpen} onOpenChange={setShareOpen}>
+      <Dialog
+        open={shareOpen}
+        onOpenChange={(open) => {
+          setShareOpen(open);
+          if (!open) setShareSubmitted(false);
+        }}
+      >
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="font-display text-2xl text-foreground">Welcome to the Circle</DialogTitle>
           </DialogHeader>
+          {shareSubmitted ? (
+            <div className="flex flex-col gap-4">
+              <p className="font-body text-foreground/80">
+                Thank you for sharing your practice with the Circle!
+              </p>
+              <DialogFooter>
+                <DialogClose asChild>
+                  <Button variant="outline">Close</Button>
+                </DialogClose>
+              </DialogFooter>
+            </div>
+          ) : (
           <form
             className="flex flex-col gap-4"
             onSubmit={(e) => {
               e.preventDefault();
-              setShareOpen(false);
+              setShareSubmitted(true);
             }}
           >
             <div className="flex flex-col gap-2">
@@ -412,6 +431,7 @@ export function SolaraCircle() {
               </Button>
             </DialogFooter>
           </form>
+          )}
         </DialogContent>
       </Dialog>
 
