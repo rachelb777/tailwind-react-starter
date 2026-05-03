@@ -161,7 +161,7 @@ export function Morning() {
                 </Collapsible>
 
                 {/* Buttons */}
-                <div className="flex flex-col gap-3 w-full max-w-xs">
+                <div className="flex flex-col gap-5 w-full max-w-xs">
                   <label className="flex items-center justify-center gap-2 font-body text-sm text-foreground cursor-pointer select-none">
                     <button
                       type="button"
@@ -171,7 +171,7 @@ export function Morning() {
                       className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${
                         completed[practice.title]
                           ? "bg-primary border-primary text-primary-foreground"
-                          : "bg-background border-border"
+                          : "bg-background border-foreground/30"
                       }`}
                     >
                       {completed[practice.title] && <Check className="w-3.5 h-3.5" />}
