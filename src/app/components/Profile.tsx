@@ -120,14 +120,31 @@ export function Profile() {
         </div>
 
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1
-              className="font-display text-3xl md:text-5xl lg:text-6xl
- text-foreground mb-4 leading-tight"
-            >
-              Welcome Back
-            </h1>
-            <p className="font-body text-2xl text-foreground/70 max-w-2xl">Your wellness flow and community insights</p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+          >
+            <div className="w-full">
+              <video
+                src="/videos/welcome.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                controlsList="nodownload nofullscreen"
+                disablePictureInPicture
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
+            </div>
+            <div>
+              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-4 leading-tight">
+                Welcome Back
+              </h1>
+              <p className="font-body text-2xl text-foreground/70 max-w-2xl">
+                Your wellness flow and community insights
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
