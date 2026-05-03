@@ -313,7 +313,7 @@ export function SolaraCircle() {
       `}</style>
 
       {/* Hero */}
-      <section className="relative w-full bg-gradient-to-b from-background to-muted/40 pt-32 pb-20 md:pt-40 md:pb-28">
+      <section className="relative w-full bg-gradient-to-b from-background to-muted/40 pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16 text-center flex flex-col items-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -345,7 +345,7 @@ export function SolaraCircle() {
       </section>
 
       {/* Community Feed */}
-      <section className="max-w-[1200px] mx-auto px-8 lg:px-16 pt-8 md:pt-12 pb-8">
+      <section className="max-w-[1200px] mx-auto px-8 lg:px-16 pt-4 md:pt-6 pb-8">
         <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground text-center mb-12 md:mb-16">
           What the community is <span className="text-accent italic">discovering</span>
         </h3>
