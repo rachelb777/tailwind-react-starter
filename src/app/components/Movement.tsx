@@ -54,7 +54,7 @@ export function Movement() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[100px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[80px]" />
