@@ -179,7 +179,7 @@ export function Movement() {
           </div>
 
           <div className="flex flex-col items-center mt-32 gap-5">
-            <p className="font-body italic text-xl text-foreground/80">
+            <p className="font-body italic text-2xl text-foreground/80">
               Ready to see your patterns?
             </p>
             <button
