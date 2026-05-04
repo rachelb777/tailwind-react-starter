@@ -114,7 +114,7 @@ export function Profile() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px]" />
         </div>
