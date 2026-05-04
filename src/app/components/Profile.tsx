@@ -132,6 +132,25 @@ export function Profile() {
         </div>
       </section>
 
+      {/* Featured Insight */}
+      <section className="px-8 lg:px-16 py-[60px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <h3 className="font-display text-xl md:text-2xl text-foreground mb-4">Insight</h3>
+          <p className="font-body italic text-foreground/70 leading-relaxed" style={{ fontSize: "20px" }}>
+            Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
+          </p>
+          <p className="font-body italic text-foreground/70 leading-relaxed mt-4" style={{ fontSize: "20px" }}>
+            Rebounding shows a positive association with increased focus and reduced pain levels based on recent
+            activity.
+          </p>
+        </motion.div>
+      </section>
+
       <section className="pb-24">
         <div className="max-w-[1600px] mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-1 gap-12">
