@@ -135,12 +135,6 @@ export function Profile() {
                 controlsList="nodownload nofullscreen"
                 disablePictureInPicture
                 className="w-full h-auto rounded-2xl shadow-lg"
-                onEnded={(e) => {
-                  const v = e.currentTarget;
-                  v.pause();
-                  v.currentTime = 0;
-                  v.load();
-                }}
               />
             </div>
             <div>
