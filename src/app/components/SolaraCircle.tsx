@@ -331,7 +331,7 @@ export function SolaraCircle() {
             alt="Group of people practicing yoga together in a sunlit meadow at sunrise"
             className="w-full max-w-md h-auto rounded-2xl shadow-xl mb-8"
           />
-          <motion.p
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -340,7 +340,7 @@ export function SolaraCircle() {
             The Solara Circle is your community for inspiration and connection. See what your community is practicing
             right now, share your own journey, and draw strength from a supportive Solara community that shows up for
             each other every day.
-          </motion.p>
+          </motion.h2>
         </div>
       </section>
 
@@ -395,9 +395,7 @@ export function SolaraCircle() {
           </DialogHeader>
           {shareSubmitted ? (
             <div className="flex flex-col gap-4">
-              <p className="font-body text-foreground/80">
-                Thank you for sharing your practice with the Circle!
-              </p>
+              <p className="font-body text-foreground/80">Thank you for sharing your practice with the Circle!</p>
               <DialogFooter>
                 <DialogClose asChild>
                   <Button variant="outline">Close</Button>
@@ -405,32 +403,32 @@ export function SolaraCircle() {
               </DialogFooter>
             </div>
           ) : (
-          <form
-            className="flex flex-col gap-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setShareSubmitted(true);
-            }}
-          >
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="share-story">Share your story</Label>
-              <Textarea id="share-story" placeholder="What did you experience today?" rows={5} />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="share-photo">Add a photo</Label>
-              <Input id="share-photo" type="file" accept="image/*" />
-            </div>
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button type="button" variant="outline">
-                  Close
+            <form
+              className="flex flex-col gap-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setShareSubmitted(true);
+              }}
+            >
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="share-story">Share your story</Label>
+                <Textarea id="share-story" placeholder="What did you experience today?" rows={5} />
+              </div>
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="share-photo">Add a photo</Label>
+                <Input id="share-photo" type="file" accept="image/*" />
+              </div>
+              <DialogFooter>
+                <DialogClose asChild>
+                  <Button type="button" variant="outline">
+                    Close
+                  </Button>
+                </DialogClose>
+                <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                  Submit
                 </Button>
-              </DialogClose>
-              <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                Submit
-              </Button>
-            </DialogFooter>
-          </form>
+              </DialogFooter>
+            </form>
           )}
         </DialogContent>
       </Dialog>
