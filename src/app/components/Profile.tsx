@@ -5,30 +5,30 @@ import { WellnessDashboardGrid, type GridValues, type MoodKey } from "./Wellness
 
 const SUN_GAZING_BASE: GridValues = {
   energy: [3, 3, 3, 3, 3, 3, 3, 4, 3, 4, 3, null, null, null],
-  mood:   [2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, null, null, null],
-  focus:  [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, null, null, null],
-  pain:   [4, 4, 3, 3, 3, 2, 2, 2, 2, 1, 1, null, null, null],
+  mood: [2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, null, null, null],
+  focus: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, null, null, null],
+  pain: [4, 4, 3, 3, 3, 2, 2, 2, 2, 1, 1, null, null, null],
 };
 
 const MORNING_STRETCHES: GridValues = {
   energy: [2, 2, 3, 3, 3, 4, 3, 4, 4, 4, 5, 5, 5, 5],
-  mood:   [2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 4, 5, 5, 5],
-  focus:  [3, 3, 3, 3, 3, 3, 4, 3, 4, 4, 4, 4, 4, 5],
-  pain:   [4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1],
+  mood: [2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 4, 5, 5, 5],
+  focus: [3, 3, 3, 3, 3, 3, 4, 3, 4, 4, 4, 4, 4, 5],
+  pain: [4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1],
 };
 
 const REBOUNDING: GridValues = {
   energy: [2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5],
-  mood:   [3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 4, 5],
-  focus:  [2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5],
-  pain:   [3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1],
+  mood: [3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 4, 5],
+  focus: [2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5],
+  pain: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1],
 };
 
 const EARTHING: GridValues = {
   energy: [2, 2, 3, 3, 3, 3, 3, 4, 3, 4, 4, 4, 4, 5],
-  mood:   [2, 3, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 4, 5],
-  focus:  [3, 3, 3, 3, 2, 3, 3, 3, 3, 4, 3, 4, 4, 4],
-  pain:   [4, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1],
+  mood: [2, 3, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 4, 5],
+  focus: [3, 3, 3, 3, 2, 3, 3, 3, 3, 4, 3, 4, 4, 4],
+  pain: [4, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1],
 };
 
 const SUN_GAZING_INSIGHT =
@@ -148,7 +148,7 @@ export function Profile() {
                 Welcome Back
               </h1>
               <p className="font-body text-2xl text-foreground/70 max-w-2xl">
-                Your wellness flow and community insights
+                Track your practices and well being. Discover what moves you.
               </p>
             </div>
           </motion.div>
@@ -197,12 +197,7 @@ export function Profile() {
                 insight={REBOUNDING_INSIGHT}
                 position={2}
               />
-              <WellnessDashboardGrid
-                activity="Earthing"
-                values={EARTHING}
-                insight={EARTHING_INSIGHT}
-                position={3}
-              />
+              <WellnessDashboardGrid activity="Earthing" values={EARTHING} insight={EARTHING_INSIGHT} position={3} />
             </div>
           </div>
         </div>
