@@ -148,7 +148,8 @@ export function Profile() {
                 Welcome Back
               </h1>
               <p className="font-body text-2xl text-foreground/70 max-w-2xl">
-                Track your practices and well being. Discover what moves you.
+                Track your practices and well being. 
+                <br /> Discover what moves you.
               </p>
             </div>
           </motion.div>
