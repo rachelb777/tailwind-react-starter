@@ -63,7 +63,7 @@ export function Morning() {
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Greet the Day with <span className="text-accent italic">Intention</span>
             </h1>
-            <h2 className="font-body text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto leading-relaxed mt-4">
+            <h2 className="font-body text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto leading-loose mt-4">
               Start your day with sun gazing and gentle stretching <br /> to align with natural light cycles.
             </h2>
           </motion.div>
