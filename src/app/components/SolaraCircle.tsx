@@ -337,9 +337,9 @@ export function SolaraCircle() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed"
           >
-            The Solara Circle is your community for inspiration and connection. See what your community is practicing
-            right now, share your own journey, and draw strength from a supportive Solara community that shows up for
-            each other every day.
+            The Solara Circle is your community for inspiration and connection. <br /> See what your community is
+            practicing right now, share your own journey, and draw strength from a supportive Solara community that
+            shows up for each other every day.
           </motion.h2>
         </div>
       </section>
