@@ -63,9 +63,9 @@ export function Morning() {
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Greet the Day with <span className="text-accent italic">Intention</span>
             </h1>
-            <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="font-body text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto leading-relaxed mt-4">
               Start your day with sun gazing and gentle stretching to align with natural light cycles.
-            </p>
+            </h2>
           </motion.div>
         </div>
       </section>
@@ -127,9 +127,7 @@ export function Morning() {
                 {/* Learn more collapsible */}
                 <Collapsible className="w-full max-w-md mb-8">
                   <CollapsibleTrigger className="group inline-flex items-center gap-1 mx-auto font-body text-sm font-bold text-accent hover:text-accent/80 transition-colors">
-                    {practice.id === "sun-gazing"
-                      ? "Learn about Sun Gazing"
-                      : "Learn about Morning Stretching"}
+                    {practice.id === "sun-gazing" ? "Learn about Sun Gazing" : "Learn about Morning Stretching"}
                     <ChevronDown className="w-3.5 h-3.5 text-accent-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </CollapsibleTrigger>
                   <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
@@ -137,22 +135,32 @@ export function Morning() {
                       {practice.id === "sun-gazing" ? (
                         <>
                           <p>
-                            Morning light is the daily signal that starts your biological clock. When sunlight enters the eyes, it travels directly to the brain's circadian center — triggering hormones, activating metabolism, and synchronizing internal systems across the body. The angle and movement of the sun also provides deeper orientation signals, telling living systems the time of day, the season, and where we are on the planet.
+                            Morning light is the daily signal that starts your biological clock. When sunlight enters
+                            the eyes, it travels directly to the brain's circadian center — triggering hormones,
+                            activating metabolism, and synchronizing internal systems across the body. The angle and
+                            movement of the sun also provides deeper orientation signals, telling living systems the
+                            time of day, the season, and where we are on the planet.
                           </p>
                           <p>
-                            Some people extend this practice by briefly gazing toward the sun during the first few minutes after sunrise, when light intensity is at its lowest. Used this way, sun gazing reinforces circadian awareness and a felt sense of connection with the natural solar cycle.
+                            Some people extend this practice by briefly gazing toward the sun during the first few
+                            minutes after sunrise, when light intensity is at its lowest. Used this way, sun gazing
+                            reinforces circadian awareness and a felt sense of connection with the natural solar cycle.
                           </p>
                           <p className="text-foreground/60">
-                            <span className="text-accent">Benefits:</span> Resets circadian rhythm · Stabilizes mood · Boosts morning energy · Supports hormonal balance
+                            <span className="text-accent">Benefits:</span> Resets circadian rhythm · Stabilizes mood ·
+                            Boosts morning energy · Supports hormonal balance
                           </p>
                         </>
                       ) : (
                         <>
                           <p>
-                            Gentle movement in the morning warms the muscles, increases circulation, and signals the nervous system that the day has begun. Focusing on the legs and hips — where tension accumulates overnight — creates a grounded, supported feeling that carries through the day.
+                            Gentle movement in the morning warms the muscles, increases circulation, and signals the
+                            nervous system that the day has begun. Focusing on the legs and hips — where tension
+                            accumulates overnight — creates a grounded, supported feeling that carries through the day.
                           </p>
                           <p className="text-foreground/60">
-                            <span className="text-accent">Benefits:</span> Reduces muscle tension · Improves circulation · Increases flexibility · Enhances body awareness
+                            <span className="text-accent">Benefits:</span> Reduces muscle tension · Improves circulation
+                            · Increases flexibility · Enhances body awareness
                           </p>
                         </>
                       )}
@@ -189,9 +197,7 @@ export function Morning() {
             ))}
           </div>
           <div className="flex flex-col items-center mt-32 gap-5">
-            <p className="font-body italic text-2xl text-foreground/80">
-              Ready to see your patterns?
-            </p>
+            <p className="font-body italic text-2xl text-foreground/80">Ready to see your patterns?</p>
             <button
               onClick={() => (window.location.href = "/profile")}
               className="px-10 py-4 rounded-xl border-2 border-accent font-body text-base font-medium text-accent hover:bg-accent/10 transition-colors"
