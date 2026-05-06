@@ -161,7 +161,10 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
 
       {isComplete && (
         <div className="pt-2 space-y-1">
-          <p className="font-display text-xs uppercase tracking-[0.2em]" style={{ color: "hsl(var(--accent))" }}>
+          <p
+            className="font-display text-xs uppercase tracking-[0.2em]"
+            style={{ color: "hsl(var(--accent-foreground))" }}
+          >
             Insight
           </p>
           <p
