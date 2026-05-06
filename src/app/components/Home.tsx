@@ -212,7 +212,7 @@ export function Home() {
             className="max-w-3xl mx-auto"
           >
             <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 text-center">Making It Meaningful</h3>
-            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed text-left">
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-[2] text-left">
               Learn how your daily choices affect how you feel, and let your own patterns guide your path. For the
               clearest picture, focus on one practice at a time. The more consistently you log, the more accurate your
               insights become. After two weeks of consistent logging — enough time for genuine patterns to emerge — your
