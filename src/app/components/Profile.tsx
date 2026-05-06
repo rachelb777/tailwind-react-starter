@@ -168,7 +168,7 @@ export function Profile() {
         >
           <h3 className="font-display text-3xl md:text-4xl text-foreground mb-4">Your Patterns</h3>
           <p className="font-body text-foreground/80 leading-relaxed" style={{ fontSize: "20px" }}>
-            See how each practice correlates with your wellness measures over the past 14 days.
+            See how each practice correlates with your wellness measures over the past 14&nbsp;days
           </p>
         </motion.div>
       </section>
