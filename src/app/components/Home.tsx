@@ -169,7 +169,7 @@ export function Home() {
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">How Solara Works</h2>
-            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto text-left">
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-[2] max-w-3xl mx-auto text-left">
               Solara is a wellness companion designed to help you get in tune with your own body and discover what truly
               supports your wellbeing. Instead of pushing you toward generic goals, it listens — helping you notice what
               actually makes you feel better — your feelings, your energy, your patterns. By tracking both your daily
