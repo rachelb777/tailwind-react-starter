@@ -84,7 +84,7 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
             <div className="col-span-2">
               <Link to="/" className="flex items-center gap-3 mb-4 w-fit">
-                <span className="font-display italic text-[1.2rem] tracking-[0.1em] text-[#B15607]">Solara</span>
+                <span className="font-display italic text-[1.4rem] tracking-[0.12em] text-[#B15607]">Solara</span>
               </Link>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md"></p>
               <div className="mt-8 text-muted-foreground text-xs md:text-sm">© 2026 Solara. All rights reserved.</div>
