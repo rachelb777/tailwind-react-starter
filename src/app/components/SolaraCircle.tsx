@@ -210,7 +210,7 @@ function FeedCard({ post, tall = false }: { post: FeedPost; tall?: boolean }) {
         {post.initial}
       </div>
       <h4 className="font-body font-semibold text-foreground text-lg leading-tight">{post.name}</h4>
-      <p className="font-body text-sm text-foreground/55 mt-1 mb-4">
+      <p className="font-body text-sm text-foreground/80 mt-1 mb-4">
         {post.practice} · {post.day}
       </p>
       <p
@@ -238,7 +238,7 @@ function FeaturedFeedCard({ post }: { post: FeedPost }) {
         </div>
         <div className="text-left">
           <h4 className="font-body font-semibold text-foreground text-lg leading-tight">{post.name}</h4>
-          <p className="font-body text-sm text-foreground/55 mt-0.5">
+          <p className="font-body text-sm text-foreground/80 mt-0.5">
             {post.practice} · {post.day}
           </p>
         </div>
