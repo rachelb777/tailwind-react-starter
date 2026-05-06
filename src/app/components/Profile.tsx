@@ -147,7 +147,7 @@ export function Profile() {
               <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-4 leading-tight">
                 Welcome Back
               </h1>
-              <p className="font-body text-2xl text-foreground/70 max-w-2xl">
+              <p className="font-body text-2xl text-foreground/70 max-w-2xl mx-auto text-left flex flex-col">
                 <span className="block mb-4">Track your practices and well-being</span>
                 <span className="block">
                   Discover what <span className="italic text-[#8B4305] mx-2">moves</span> you
