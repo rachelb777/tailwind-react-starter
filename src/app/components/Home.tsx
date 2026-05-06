@@ -249,7 +249,7 @@ export function Home() {
               </Link>
               <p
                 className="mt-3 text-center text-sm tracking-wide"
-                style={{ color: "#6b7158", fontFamily: "var(--font-body)" }}
+                style={{ color: "#2d3319", fontFamily: "var(--font-body)" }}
               >
                 Morning Practices
               </p>
@@ -284,7 +284,7 @@ export function Home() {
               </Link>
               <p
                 className="mt-3 text-center text-sm tracking-wide"
-                style={{ color: "#6b7158", fontFamily: "var(--font-body)" }}
+                style={{ color: "#2d3319", fontFamily: "var(--font-body)" }}
               >
                 Movement
               </p>
@@ -319,7 +319,7 @@ export function Home() {
               </Link>
               <p
                 className="mt-3 text-center text-sm tracking-wide"
-                style={{ color: "#6b7158", fontFamily: "var(--font-body)" }}
+                style={{ color: "#2d3319", fontFamily: "var(--font-body)" }}
               >
                 Solara Circle
               </p>
