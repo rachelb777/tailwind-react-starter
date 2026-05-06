@@ -338,8 +338,8 @@ export function SolaraCircle() {
             className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed"
           >
             The Solara Circle is your community for inspiration and connection. <br /> See what your community is
-            practicing right now, share your own journey, and draw strength from a supportive Solara community that
-            shows up for each other every day.
+            practicing right now, share your own journey, <br /> and draw strength from a supportive Solara community
+            that shows up for each other every day.
           </motion.h2>
         </div>
       </section>
