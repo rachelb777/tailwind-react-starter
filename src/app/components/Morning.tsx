@@ -72,7 +72,7 @@ export function Morning() {
       {/* Practices Section */}
       <section className="pb-24 mt-12">
         <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
-          <p className="font-body text-base md:text-lg text-foreground/80 max-w-xl mx-auto leading-relaxed text-center mb-6">
+          <p className="font-body text-base md:text-lg text-foreground/80 max-w-xl mx-auto leading-relaxed text-center mb-12">
             Watch the video, try the practice, check Completed, and record how you feel. Your Wellness Dashboard tracks
             your daily scores and reveals your patterns over time.
           </p>
