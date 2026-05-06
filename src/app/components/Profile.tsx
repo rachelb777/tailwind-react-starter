@@ -158,7 +158,7 @@ export function Profile() {
         </div>
       </section>
 
-      {/* Featured Insight */}
+      {/* Dashboard Introduction */}
       <section className="px-8 lg:px-16 py-[60px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -166,13 +166,9 @@ export function Profile() {
           transition={{ duration: 0.6, delay: 0.05 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h3 className="font-display text-3xl md:text-4xl text-foreground mb-4">Insight</h3>
-          <p className="font-body italic text-foreground/70 leading-relaxed" style={{ fontSize: "20px" }}>
-            Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
-          </p>
-          <p className="font-body italic text-foreground/70 leading-relaxed mt-4" style={{ fontSize: "20px" }}>
-            Rebounding shows a positive association with increased focus and reduced pain levels based on recent
-            activity.
+          <h3 className="font-display text-3xl md:text-4xl text-foreground mb-4">Your Patterns</h3>
+          <p className="font-body text-foreground/70 leading-relaxed" style={{ fontSize: "18px" }}>
+            See how each practice correlates with your wellness measures over the past 14 days.
           </p>
         </motion.div>
       </section>
