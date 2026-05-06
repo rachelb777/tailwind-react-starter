@@ -70,7 +70,7 @@ export function Morning() {
         </div>
       </section>
       {/* Practices Section */}
-      <section className="pb-24 mt-12">
+      <section className="pb-20 mt-6">
         <div className="max-w-[1100px] mx-auto px-8 lg:px-16">
           <p className="font-body text-base md:text-lg text-foreground/80 max-w-xl mx-auto leading-relaxed text-center mb-6">
             Watch the video, try the practice, check Completed, and record how you feel. Your Wellness Dashboard tracks
@@ -83,7 +83,7 @@ export function Morning() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col items-center text-center ${practice.id === "sun-gazing" ? "" : "md:mt-32"}`}
+                className={`flex flex-col items-center text-center ${practice.id === "sun-gazing" ? "" : "md:mt-16"}`}
               >
                 {/* Video card */}
                 <div
