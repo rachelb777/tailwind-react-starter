@@ -161,7 +161,7 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
 
       {isComplete && (
         <div className="pt-2 space-y-1">
-          <p className="font-body font-bold text-accent mb-3" style={{ fontSize: "18px" }}>
+          <p className="font-body font-bold text-[#8B4305] mb-3" style={{ fontSize: "18px" }}>
             Insight
           </p>
           <p
