@@ -83,7 +83,7 @@ export function Morning() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col items-center text-center ${practice.id === "sun-gazing" ? "" : "md:mt-32"}`}
+                className={`flex flex-col items-center text-center ${practice.id === "sun-gazing" ? "" : "md:mt-16"}`}
               >
                 {/* Video card */}
                 <div
