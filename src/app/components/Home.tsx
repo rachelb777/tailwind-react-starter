@@ -126,8 +126,8 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-body text-xl md:text-2xl lg:text-3xl text-white font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-6 md:mb-16 leading-relaxed max-w-2xl text-left mt-4"
             >
-              <span className="block pl-4">A free community resource</span>
-              <span className="block pl-8">for holistic wellness</span>
+              <span className="block pl-8">A free community resource</span>
+              <span className="block pl-12">for holistic wellness</span>
             </motion.h2>
 
             <motion.div
