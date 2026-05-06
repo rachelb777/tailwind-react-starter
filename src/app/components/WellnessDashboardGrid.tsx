@@ -38,10 +38,7 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
 
   const isComplete = MOOD_ROWS.every(({ key }) => averages[key] !== null);
   const filledDays = MOOD_ROWS.reduce((max, { key }) => {
-    const lastFilled = values[key].reduce(
-      (acc, v, i) => (typeof v === "number" ? i + 1 : acc),
-      0,
-    );
+    const lastFilled = values[key].reduce((acc, v, i) => (typeof v === "number" ? i + 1 : acc), 0);
     return Math.max(max, lastFilled);
   }, 0);
 
@@ -54,10 +51,8 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
     >
       <div className="flex items-baseline justify-between flex-wrap gap-2">
         <h2 className="font-display text-2xl md:text-3xl text-foreground">{activity}</h2>
-        <span className="font-body text-xs uppercase tracking-wider text-foreground/50">
-          {isComplete
-            ? "14-Day Cycle • Complete"
-            : `Day ${filledDays} of ${CYCLE_LENGTH}`}
+        <span className="font-body text-xs uppercase tracking-wider text-foreground/70">
+          {isComplete ? "14-Day Cycle • Complete" : `Day ${filledDays} of ${CYCLE_LENGTH}`}
         </span>
       </div>
 
@@ -71,10 +66,7 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
         <div className="overflow-x-auto">
           <div className="min-w-fit">
             {/* Header row */}
-            <div
-              className="flex items-stretch"
-              style={{ backgroundColor: "hsl(var(--grid-surface-deep))" }}
-            >
+            <div className="flex items-stretch" style={{ backgroundColor: "hsl(var(--grid-surface-deep))" }}>
               <div className="flex-shrink-0 w-32 px-5 py-4 font-body text-xs uppercase tracking-wider text-foreground/70 font-medium">
                 Mood
               </div>
@@ -82,7 +74,7 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
                 {dayNumbers.map((n) => (
                   <div
                     key={n}
-                    className="flex-1 min-w-[40px] px-1 py-4 text-center font-body text-xs text-foreground/60 border-l"
+                    className="flex-1 min-w-[40px] px-1 py-4 text-center font-body text-xs text-foreground/80 border-l"
                     style={{ borderColor: "hsl(var(--grid-cell-border) / 0.6)" }}
                   >
                     {n}
@@ -169,10 +161,7 @@ export function WellnessDashboardGrid({ activity, values, insight, position = 0 
 
       {isComplete && (
         <div className="pt-2 space-y-1">
-          <p
-            className="font-display text-xs uppercase tracking-[0.2em]"
-            style={{ color: "hsl(var(--accent))" }}
-          >
+          <p className="font-display text-xs uppercase tracking-[0.2em]" style={{ color: "hsl(var(--accent))" }}>
             Insight
           </p>
           <p
