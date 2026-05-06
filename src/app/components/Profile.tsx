@@ -147,10 +147,10 @@ export function Profile() {
               <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-4 leading-tight">
                 Welcome Back
               </h1>
-              <p className="font-body text-2xl text-foreground/70 max-w-2xl mt-5 pl-4">
-                <span className="block mb-4">Track your practices and well-being.</span>
-                <span className="block pl-8">
-                  Discover what <span className="italic text-[#8B4305] mx-2">moves</span> you.
+              <p className="font-body text-2xl text-foreground/70 max-w-2xl text-center mx-auto">
+                <span className="block mb-4">Track your practices and well-being</span>
+                <span className="block">
+                  Discover what <span className="italic text-[#8B4305] mx-2">moves</span> you
                 </span>
               </p>
             </div>
