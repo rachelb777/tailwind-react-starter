@@ -164,7 +164,7 @@ export function Profile() {
           transition={{ duration: 0.6, delay: 0.05 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h3 className="font-display text-xl md:text-2xl text-foreground mb-4">Insight</h3>
+          <h3 className="font-display text-3xl md:text-4xl text-foreground mb-4">Insight</h3>
           <p className="font-body italic text-foreground/70 leading-relaxed" style={{ fontSize: "20px" }}>
             Sun Gazing shows a positive association with improved mood and energy levels based on completed days.
           </p>
