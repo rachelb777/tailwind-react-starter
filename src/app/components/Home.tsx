@@ -187,10 +187,10 @@ export function Home() {
             ref={stepsRef}
           >
             {[
-              "Choose one of four practices — <br/> sun gazing, morning stretches, rebounding, or earthing",
-              "Each day, visit the Morning or Movement page <br/> to do your practice and log how you feel.",
-              "Check your Wellness Dashboard to see your <br/> daily scores building over time",
-              "After 14 days, receive your personal Insight — <br/> a real correlation drawn from your own data",
+              "Choose one of four practices — sun gazing, morning stretches, rebounding, or earthing",
+              "Each day, visit the Morning or Movement page to do your practice and log how you feel.",
+              "Check your Wellness Dashboard to see your daily scores building over time",
+              "After 14 days, receive your personal Insight — a real correlation drawn from your own data",
               "Visit the Solara Circle to see what the community is discovering and share your own journey",
             ].map((step, i) => (
               <li key={i} className="flex items-start">
