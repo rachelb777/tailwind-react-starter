@@ -84,7 +84,6 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
             <div className="col-span-2">
               <Link to="/" className="flex items-center gap-3 mb-4 w-fit">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center"></div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </Link>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md"></p>
