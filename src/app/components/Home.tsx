@@ -267,7 +267,7 @@ export function Home() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="absolute"
+              className="absolute group"
               style={{ width: "220px", height: "220px", left: "calc(50% - 140px)", top: "340px" }}
             >
               <Link
