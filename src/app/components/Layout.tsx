@@ -36,7 +36,7 @@ export function Layout() {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <Sun className="w-5 h-5 text-white" />
               </div>
-              <span className="font-display text-2xl text-[#B15607] tracking-[0.14em]">Solara</span>
+              <span className="font-display text-2xl text-[#B15607] tracking-[0.12em]">Solara</span>
             </Link>
 
             {/* Navigation Links */}
