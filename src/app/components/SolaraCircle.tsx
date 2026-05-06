@@ -396,7 +396,8 @@ export function SolaraCircle() {
           {shareSubmitted ? (
             <div className="flex flex-col gap-4">
               <p className="font-body text-foreground/80">
-                Thank you for sharing your practice with the Circle. We'll review your submission and post it soon!
+                Thank you for sharing your practice with the Circle. <br /> We'll review your submission and post it
+                soon!
               </p>
               <DialogFooter>
                 <DialogClose asChild>
