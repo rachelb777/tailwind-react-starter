@@ -97,11 +97,7 @@ export function Home() {
       <section className="relative w-full min-h-[70vh] md:min-h-[85vh] flex items-start justify-start  overflow-hidden">
         {/* Full-width Background Image */}
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Person in field at sunset"
-            className="w-full h-full object-cover object-right-top"
-          />
+          <img src={heroImage} alt="Person in field at sunset" className="w-full h-full object-cover object-center" />
         </div>
 
         <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-24 w-full pt-32 md:pt-40">
