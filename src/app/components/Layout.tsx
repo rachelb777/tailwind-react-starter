@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { Sun, LogOut } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Layout() {
@@ -33,9 +33,7 @@ export function Layout() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Sun className="w-5 h-5 text-[#C1793A]" />
-              </div>
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center"></div>
               <span className="font-display italic text-[1.7rem] text-[#B15607] tracking-[0.14em]">Solara</span>
             </Link>
 
@@ -87,9 +85,7 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
             <div className="col-span-2">
               <Link to="/" className="flex items-center gap-3 mb-4 w-fit">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Sun className="w-5 h-5 text-white" />
-                </div>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center"></div>
                 <span className="font-display text-2xl text-foreground tracking-tight">Solara</span>
               </Link>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground/80 leading-relaxed max-w-md"></p>
