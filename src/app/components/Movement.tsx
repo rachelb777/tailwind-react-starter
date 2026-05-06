@@ -70,9 +70,10 @@ export function Movement() {
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
               Ground Yourself in <span className="text-accent italic">Motion</span>
             </h1>
-            <p className="font-body text-xl text-foreground/60 max-w-2xl mx-auto leading-relaxed">
-              Rebounding and earthing — practices that draw energy from the earth and restore your body's natural rhythm
-            </p>
+            <h2 className="font-body text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto leading-loose mt-4">
+              Rebounding and earthing — practices that draw energy <br /> from the earth and restore your body's natural
+              rhythm
+            </h2>
           </motion.div>
         </div>
       </section>
@@ -128,26 +129,32 @@ export function Movement() {
                       {practice.id === "earthing" ? (
                         <>
                           <p>
-                            Direct contact with the earth's surface — bare feet on grass, soil, or sand — allows the body to absorb the ground's natural electric charge. This simple practice has been linked to reduced inflammation, improved sleep, and a subtle but profound sense of calm and connection.
+                            Direct contact with the earth's surface — bare feet on grass, soil, or sand — allows the
+                            body to absorb the ground's natural electric charge. This simple practice has been linked to
+                            reduced inflammation, improved sleep, and a subtle but profound sense of calm and
+                            connection.
                           </p>
                           <p className="text-foreground/60">
-                            <span className="text-accent">Benefits:</span> Reduces inflammation · Improves sleep quality · Calms the nervous system · Restores natural rhythm
+                            <span className="text-accent">Benefits:</span> Reduces inflammation · Improves sleep quality
+                            · Calms the nervous system · Restores natural rhythm
                           </p>
                         </>
                       ) : (
                         <>
                           <p>
-                            Gentle bouncing on a mini trampoline engages the lymphatic system, which has no pump of its own and relies on movement to circulate. Even a few minutes stimulates detoxification, improves balance, and brings a quiet joy that heavier exercise rarely does.
+                            Gentle bouncing on a mini trampoline engages the lymphatic system, which has no pump of its
+                            own and relies on movement to circulate. Even a few minutes stimulates detoxification,
+                            improves balance, and brings a quiet joy that heavier exercise rarely does.
                           </p>
                           <p className="text-foreground/60">
-                            <span className="text-accent">Benefits:</span> Stimulates lymphatic flow · Improves balance · Boosts circulation · Energizes without strain
+                            <span className="text-accent">Benefits:</span> Stimulates lymphatic flow · Improves balance
+                            · Boosts circulation · Energizes without strain
                           </p>
                         </>
                       )}
                     </div>
                   </CollapsibleContent>
                 </Collapsible>
-
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-5 w-full max-w-xs">
@@ -179,9 +186,7 @@ export function Movement() {
           </div>
 
           <div className="flex flex-col items-center mt-32 gap-5">
-            <p className="font-body italic text-2xl text-foreground/80">
-              Ready to see your patterns?
-            </p>
+            <p className="font-body italic text-2xl text-foreground/80">Ready to see your patterns?</p>
             <button
               onClick={() => (window.location.href = "/profile")}
               className="px-10 py-4 rounded-xl border-2 border-accent font-body text-base font-medium text-accent hover:bg-accent/10 transition-colors"
